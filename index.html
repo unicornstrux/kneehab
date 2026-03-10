@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v5.3</title>
+<title>Knee Rehab v5.4</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1075,19 +1075,14 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v5.3</div>
+  <div class="ms-title">KNEE REHAB v5.4</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
   <button class="ms-btn" onclick="nav('overview',this)"><span class="ms-icon">◈</span><span class="ms-lbl">Program Overview</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('phase1',this)"><span class="ms-icon">▲</span><span class="ms-lbl">Phase 1</span><span class="ms-arr">›</span></button>
+  <button class="ms-btn" onclick="nav('phases',this)"><span class="ms-icon">▲</span><span class="ms-lbl">Phases &amp; Progression</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('rules',this)"><span class="ms-icon">◉</span><span class="ms-lbl">Key Rules</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('schedule',this)"><span class="ms-icon">≡</span><span class="ms-lbl">Schedule Reference</span><span class="ms-arr">›</span></button>
-
-  <div class="ms-group">Exercises</div>
-  <button class="ms-btn" onclick="nav('base',this)"><span class="ms-icon">○</span><span class="ms-lbl">Base Exercises</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('load',this)"><span class="ms-icon">●</span><span class="ms-lbl">Day A &amp; B Exercises</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('micro',this)"><span class="ms-icon">◎</span><span class="ms-lbl">Micro-Sessions</span><span class="ms-arr">›</span></button>
 
   <div class="ms-group">Info</div>
   <button class="ms-btn" onclick="nav('supps',this)"><span class="ms-icon">◐</span><span class="ms-lbl">Supplements</span><span class="ms-arr">›</span></button>
@@ -1164,7 +1159,7 @@ body { background: #fff; color: #000; }
   <button class="tab-btn on" id="tb-today" onclick="navTab('today','tb-today')">
     <span class="tab-icon">▣</span><span class="tab-label">Today</span>
   </button>
-  <button class="tab-btn" id="tb-load" onclick="navTab('load','tb-load')">
+  <button class="tab-btn" id="tb-exercises" onclick="navTab('exercises','tb-exercises')">
     <span class="tab-icon">●</span><span class="tab-label">Exercises</span>
   </button>
   <button class="tab-btn" id="tb-timer" onclick="navTab('timer','tb-timer')">
@@ -1188,7 +1183,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">5.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v5.3</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v5.4</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1230,20 +1225,26 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v5.2</div>
+    <div class="changes-title">Changes from v5.3</div>
     <ul class="changes-list">
-      <li>More menu restructured. Removed duplicates: Cover, Today, Timer, and Day A &amp; B Exercises were all accessible from both the tab bar and the More menu — redundant entries removed from More. Timer removed entirely from More (tab bar only).</li>
-      <li>Groups reorganised: "Program" and "Daily Practice" collapsed into "Reference" (Overview, Phase 1, Key Rules, Schedule). Exercise pages grouped under "Exercises" (Base, Day A &amp; B, Micro-Sessions). "Tools" renamed "Info" — Supplements is a reference document, not a tool.</li>
-      <li>"Architecture" renamed "Program Overview" — insider label, not user-facing language.</li>
-      <li>Micro-Sessions icon changed from middle dot (·) to (◎) — consistent visual weight with other menu icons.</li>
+      <li>Exercises tab now opens a hub page with three sub-tabs: Base · Daily, Day A &amp; B, and Micro-Sessions. Previously the Exercises tab went directly to Day A &amp; B only — Base Exercises and Micro-Sessions were buried in More. All exercise content is now in one place.</li>
+      <li>Exercise content in hub is mirrored from the source pages (base, load, micro) — no duplication in the HTML, single source of truth.</li>
+      <li>More menu exercises group removed — now redundant. More is down to 5 items across 2 groups.</li>
+      <li>Phase 1 page expanded to Phases &amp; Progression. Phase 2 (Weeks 5–10) and Phase 3 (Weeks 11+) outlined with direction and entry gates. Full prescriptions written on entry to each phase.</li>
+      <li>More menu "Phase 1" renamed "Phases &amp; Progression".</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.2 → v5.3</div>
+    <ul class="changes-list" style="color:var(--muted);">
+      <li>More menu restructured — duplicates removed, groups reorganised, "Architecture" renamed "Program Overview".</li>
+      <li>Micro-Sessions icon fixed.</li>
     </ul>
   </div>
   <div class="changes" style="margin-top:8px;border-color:var(--border);">
     <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.1 → v5.2</div>
     <ul class="changes-list" style="color:var(--muted);">
-      <li>Short Arc Quad promoted to mandatory in Knee &amp; Lower Body block and micro-sessions. Wall Sit and SAQ both required on Days A &amp; B.</li>
-      <li>TKE elevated to recommended first pick in optional knee pool.</li>
-      <li>Exercise names standardised across tabs and Today JS. Google Fonts URL ampersands escaped — fixed GitHub Pages style rendering.</li>
+      <li>Short Arc Quad promoted to mandatory. Exercise names standardised. GitHub Pages style fix.</li>
     </ul>
   </div>
 
@@ -1483,6 +1484,170 @@ body { background: #fff; color: #000; }
 
 <!-- ══════════════════════════════════════════════════ -->
 
+<!--  EXERCISES HUB                                    -->
+
+<!-- ══════════════════════════════════════════════════ -->
+
+<div id="exercises" class="page">
+<div class="doc">
+  <div class="sh"><span class="sh-title">Exercises</span></div>
+
+  <div class="sched-tabs" id="exTabs">
+    <button class="sched-tab on"  onclick="exTab('ex-base',this)">Base · Daily</button>
+    <button class="sched-tab"     onclick="exTab('ex-load',this)">Day A &amp; B</button>
+    <button class="sched-tab"     onclick="exTab('ex-micro',this)">Micro-Sessions</button>
+  </div>
+
+  <!-- Base pane -->
+  <div id="ex-base" class="sched-pane on">
+    <p class="note" style="margin-bottom:12px;">Every day — Days A, B, and C. ~18–21 min total.</p>
+
+    <div class="sub-head">Mobility — 5 min</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Mobility Block</span>
+        <span class="eg-freq">5 min · daily</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-mob"></div>
+    </div>
+
+    <div class="sub-head">Posture Block — 8–10 min</div>
+    <p class="note" style="margin-bottom:8px;">Zero knee compression. Days A &amp; B run subsets; Day C runs all 9. Bird Dog, WLYT, and External Rotation on all load days.</p>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Posture — Day A</span>
+        <span class="eg-freq">~10 min</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-postA"></div>
+    </div>
+    <div class="ex-group">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Posture — Day B</span>
+        <span class="eg-freq">~10 min</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-postB"></div>
+    </div>
+    <div class="ex-group">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Posture — Day C (all 9)</span>
+        <span class="eg-freq">~14 min</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-postC"></div>
+    </div>
+
+    <div class="sub-head">Core — 2 min</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Core</span>
+        <span class="eg-freq">2 min · daily</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-core"></div>
+    </div>
+
+    <div class="sub-head">Glute Activation — 3–4 min</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Glute Activation</span>
+        <span class="eg-freq">daily</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-base-glute"></div>
+    </div>
+  </div>
+
+  <!-- Day A & B pane -->
+  <div id="ex-load" class="sched-pane">
+    <p class="note" style="margin-bottom:12px;">Days A and B only. Collagen at T=0. Sequence is fixed.</p>
+
+    <div class="sub-head">Push &amp; Pull — T+20</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Push &amp; Pull</span>
+        <span class="eg-freq">4 min</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-load-pp"></div>
+    </div>
+
+    <div class="sub-head">Glute Load — T+26</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Single-Leg Glute Bridge</span>
+        <span class="eg-freq">Days A &amp; B</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-load-glute"></div>
+    </div>
+
+    <div class="sub-head">Knee &amp; Lower Body — T+45</div>
+    <p class="note" style="margin-bottom:8px;">Collagen rising into peak window.</p>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Knee &amp; Lower Body</span>
+        <span class="eg-freq">12 min</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-load-knee"></div>
+    </div>
+
+    <div class="sub-head">Knee-Specific Optional — Pick 2</div>
+    <p class="note" style="margin-bottom:8px;">SAQ is mandatory (above). TKE is the recommended first pick from this pool.</p>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Knee-Specific Optional</span>
+        <span class="eg-freq">pick 2</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-load-opt"></div>
+    </div>
+
+    <div class="sub-head">General Optional — Pick 1</div>
+    <div class="ex-group">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">General Optional</span>
+        <span class="eg-freq">pick 1</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="ex-load-gen"></div>
+    </div>
+  </div>
+
+  <!-- Micro-Sessions pane -->
+  <div id="ex-micro" class="sched-pane">
+    <p class="note" style="margin-bottom:12px;">2–5 min each. Minimum 45–60 min between sessions.</p>
+
+    <div class="sub-head">Mandatory Daily</div>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)" style="background:var(--green-bg);border-bottom-color:#1A3020;">
+        <span class="eg-title" style="color:#80C0A0;">Mandatory Daily</span>
+        <span class="eg-freq" style="color:#4A7A5A;border-color:#1A3020;background:var(--bg);">no recovery demand</span>
+        <span class="eg-chev" style="color:#4A7A5A;">▼</span>
+      </div>
+      <div class="ex-body" id="ex-micro-daily"></div>
+    </div>
+
+    <div class="sub-head">Mandatory Knee — Days A &amp; B</div>
+    <p class="note" style="margin-bottom:8px;">Both mandatory on Days A &amp; B. Mechanistically distinct — neither substitutes for the other.</p>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)" style="background:var(--amber-bg);border-bottom-color:var(--amber2);">
+        <span class="eg-title" style="color:var(--amber);">Knee Micro — Mandatory</span>
+        <span class="eg-freq" style="color:var(--amber2);border-color:var(--amber2);background:var(--bg);">Days A &amp; B</span>
+        <span class="eg-chev" style="color:var(--amber2);">▼</span>
+      </div>
+      <div class="ex-body" id="ex-micro-knee"></div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+
 <!--  BASE LAYER                                        -->
 
 <!-- ══════════════════════════════════════════════════ -->
@@ -1499,7 +1664,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">5 min · daily</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-mob">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">90/90 Hip Rotations</span><span class="ex-rx">10 × each side</span></div><div class="ex-desc">Floor. Rotate hips to bring front shin parallel to floor, hold 3 sec. Poor hip rotation is a primary upstream driver of patellofemoral load.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Cat-Cow</span><span class="ex-rx">10 reps · slow</span></div><div class="ex-desc">Hands and knees. Arch spine up (cat), drop belly and lift head (cow).</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">World's Greatest Stretch</span><span class="ex-rx">5 × each side</span></div><div class="ex-desc">Lunge, same-side hand to floor, rotate opposite arm to ceiling. 2 sec hold.</div></div>
@@ -1517,7 +1682,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">~10 min · Day A</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-postA">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Bird Dog</span><span class="ex-rx">2 × 5 each · 8s hold</span></div><div class="ex-desc">Extend opposite arm and leg, hold 8 sec isometric. Keep hips level — do not rotate. Anti-rotation demand for desk worker with anterior pelvic tilt.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Superman Hold</span><span class="ex-rx">2 × 5 · 5s hold</span></div><div class="ex-desc">Face down, both arms overhead, both legs straight. Lift simultaneously, hold 5 sec. Bilateral posterior chain.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">L-Sit → Reverse Plank</span><span class="ex-rx">2 × 5 transitions · 2s hold each</span></div><div class="ex-desc">L-sit: hip flexors + triceps isometric. Reverse plank: glutes + shoulder extensors. Partial lift with knees bent if L-sit unavailable. 2 sec hold each end.</div></div>
@@ -1533,7 +1698,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">~10 min · Day B</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-postB">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Bird Dog</span><span class="ex-rx">2 × 5 each · 8s hold</span></div><div class="ex-desc">Extend opposite arm and leg, hold 8 sec isometric. Keep hips level — do not rotate. Anti-rotation demand for desk worker with anterior pelvic tilt.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Down Dog → Upward Dog</span><span class="ex-rx">3 × 5 transitions</span></div><div class="ex-desc">From downward dog, shift forward into upward dog. Same hand position throughout. 2 sec hold at each end. Full anterior/posterior chain.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Floor Slide</span><span class="ex-rx">2 × 10</span></div><div class="ex-desc">Prone, goalpost arms. Slide overhead keeping forearms on floor. Scapular retraction and depression.</div></div>
@@ -1549,7 +1714,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">all 9 · Day C only</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-postC">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Bird Dog</span><span class="ex-rx">2 × 5 each · 8s hold</span></div><div class="ex-desc">Extend opposite arm and leg, hold 8 sec isometric. Keep hips level.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Superman Hold</span><span class="ex-rx">2 × 5 · 5s hold</span></div><div class="ex-desc">Face down, both arms overhead, both legs straight. Lift simultaneously, hold 5 sec.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Down Dog → Upward Dog</span><span class="ex-rx">3 × 5 transitions</span></div><div class="ex-desc">2 sec hold at each end.</div></div>
@@ -1568,7 +1733,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">2 min · daily</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-core">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Hollow Body Hold</span><span class="ex-rx">3 × 20 sec</span></div><div class="ex-desc">On back, arms overhead, legs straight. Press lower back to floor, slight leg and shoulder lift.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Side Plank</span><span class="ex-rx">2 × 20 sec each</span></div><div class="ex-desc">Forearm and side of foot. Keep hips high.</div></div>
     </div>
@@ -1581,7 +1746,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">3--4 min · daily</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-glute">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Clamshell or Hip Abduction</span><span class="ex-rx">2 × 12 each · 2s hold top</span></div><div class="ex-desc">Clamshell: lying on side, knees bent, lift top knee. Hip abduction: top leg straight, lift to 45°. Targets gluteus medius. Add band when easy. Copenhagen Plank replaces in Phase 2.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Dead Bug</span><span class="ex-rx">2 × 10 each side</span></div><div class="ex-desc">On back, arms to ceiling, knees bent 90°. Lower opposite arm and leg without arching lower back. Submaximal — no recovery demand at this prescription.</div></div>
     </div>
@@ -1608,7 +1773,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">4 min · Days A &amp; B</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-pp">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Push-Up</span><span class="ex-rx">2 × 8–15</span></div><div class="ex-desc">Standard or hands elevated. 3 sec down, 1 sec pause, 2 sec up. Technical failure — not absolute failure.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Pull-Up Progression</span><span class="ex-rx">2 × 5–8</span></div><div class="ex-desc">Ph1: dead hang scapular pull — depress shoulders fully without bending elbows, hold 2s at top. Ph2: partial pull to chin at bar height. Ph3: full pull-up. Vertical pull pattern was absent — fills lat, lower trap, rhomboid gap not covered by rows. Bar already required for dead hang.</div></div>
     </div>
@@ -1621,7 +1786,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">Days A &amp; B only</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-slgb">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Glute Bridge</span><span class="ex-rx">2 × 10 each · 2s hold top</span></div><div class="ex-desc">On back, one foot flat, other leg extended. Drive hips up through heel, squeeze glute at top, lower controlled. Do not let pelvis drop on unsupported side. Excluded from Day C — real posterior chain load.</div></div>
     </div>
   </div>
@@ -1634,7 +1799,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">12 min</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-knee">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Slant Board Step Down</span><span class="ex-rx">3×10 pri / 3×8 sec</span></div><div class="ex-desc">10cm step (Phase 1). Lower opposite foot over 5 sec, 2s pause at bottom (foot hovering, not touching), return. Hand on wall — progress to unassisted. The 2s pause converts eccentric to eccentric-plus-isometric — directly mimics sustained ski loaded position. Primary skiing exercise.</div></div>
       <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2 sec hold at top, 3 sec lower. VMO is the only quad head that pulls the patella medially — its mechanical advantage is highest in the final 20° of extension. Wall sit and split squat do not reach this range. Mandatory, not optional.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Isometric</span><span class="ex-rx">6 × 30 sec / 45 rest</span></div><div class="ex-desc">60° knee flexion. Dull ache acceptable. Sharp or >4/10 = reduce angle immediately. Start 45° in Weeks 1--2 if needed. Tissue stimulus — not strength training.</div></div>
@@ -1674,7 +1839,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq" style="color:#4A7A5A;border-color:#1A3020;background:var(--bg);">no recovery demand</span>
       <span class="eg-chev" style="color:#4A7A5A;">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-daily">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Tibialis Raise</span><span class="ex-rx">1 × 20 · 1s hold top</span></div><div class="ex-desc">Heels against wall. Lift toes as high as possible, 1s hold at top, lower slowly. Hold at dorsiflexion end-range is where the anterior tibialis stimulus is highest. At desk, kitchen counter, anywhere. Corrective habit — no recovery demand.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Backward Walk</span><span class="ex-rx">2--3 rounds 30--60s</span></div><div class="ex-desc">Walk backward slowly. Resistance band optional. Trains knee in decompressed position. Daily is the point.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Dead Hang</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Hang from bar, relaxed shoulders. Spinal decompression, grip, scapular stability. No recovery demand.</div></div>
@@ -1690,7 +1855,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq" style="color:var(--amber2);border-color:var(--amber2);background:var(--bg);">Days A &amp; B</span>
       <span class="eg-chev" style="color:var(--amber2);">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-kmicro">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Isometric</span><span class="ex-rx">5 × 20--30s / 45s rest</span></div><div class="ex-desc">60° knee flexion. Isometric cartilage load — Bellemans cyclic stimulus. Not a strength exercise. Dull ache acceptable; sharp or >4/10 = reduce angle.</div></div>
       <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO is the only quad head that corrects lateral patellar tracking — its mechanical advantage is in the final 20° of extension only. This range is not reached by wall sit, split squat, or step down. Both mandatory.</div></div>
     </div>
@@ -1704,7 +1869,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">pick 2 · Days A &amp; B</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-opt">
       <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Terminal Knee Extension ★</span><span class="ex-rx">10 reps each · 5s hold</span></div><div class="ex-desc">Recommended first pick. Band at knee height or foot against wall. Extend fully against resistance. Proprioception and dynamic neuromuscular re-education at terminal extension — teaches the knee to lock out correctly under load. Ski-specific: the functional extension pattern on flats and traverses. Distinct from SAQ which is VMO strength isolation.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Wall Sit</span><span class="ex-rx">5 × 20s / 45s rest</span></div><div class="ex-desc">Primary knee only. Start 45° flexion, build toward 60° over weeks. Greater demand than bilateral wall sit — progression when bilateral becomes easy.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Deep Squat Hold</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Heels elevated if needed. Full depth. Reduce heel elevation over weeks — elevation is not cheating.</div></div>
@@ -1719,7 +1884,7 @@ body { background: #fff; color: #000; }
       <span class="eg-freq">pick 1</span>
       <span class="eg-chev">▼</span>
     </div>
-    <div class="ex-body">
+    <div class="ex-body" id="src-gen">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Calf Raise</span><span class="ex-rx">1 × 20 each</span></div><div class="ex-desc">Single-leg. Deep stretch at bottom, full rise at top.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Standing Hip Flexion Hold</span><span class="ex-rx">10 each side · 3s hold</span></div><div class="ex-desc">Standing, lift one knee to 90°, hold 3 sec, lower controlled. Hip flexor strength is absent from the program in any loaded form. Weak hip flexors create anterior pelvic tilt under fatigue (skiing descents, long hikes), which directly increases PFPS load. No equipment — do at desk or kitchen counter.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Chin Tuck</span><span class="ex-rx">5 × 5s hold</span></div><div class="ex-desc">Seated or standing. Retract head straight back (double chin), hold 5 sec, release. Deep cervical flexors — universally weak in desk workers. Forward head posture adds significant moment arm load to cervical spine. No equipment. 60 seconds total.</div></div>
@@ -1843,9 +2008,12 @@ body { background: #fff; color: #000; }
 
 <!-- ══════════════════════════════════════════════════ -->
 
-<div id="phase1" class="page">
+<div id="phases" class="page">
 <div class="doc">
-  <div class="sh"><span class="sh-title">Phase 1 — Foundation</span><span class="sh-tag">Weeks 1--4</span></div>
+  <div class="sh"><span class="sh-title">Phases &amp; Progression</span></div>
+  <p class="body" style="margin-bottom:16px;">Three phases. Phase 1 is fully prescribed — do not advance until all exit criteria are met. Phase 2 and Phase 3 are outlined; full prescriptions are written on entry.</p>
+
+  <div class="sub-head">Phase 1 — Foundation · Weeks 1–4</div>
 
   <div class="phase" style="border-color:var(--amber2);">
     <div class="phase-head" style="background:var(--amber-bg);">
@@ -1887,7 +2055,7 @@ body { background: #fff; color: #000; }
     <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">Step 5</div></div><div class="cr-right"><div class="cr-val">Single-leg 5 × 20s</div><div class="cr-desc">Phase 2 entry — primary knee only. Begin at 45° and rebuild progression above on one leg.</div></div></div>
   </div>
 
-  <div class="sh"><span class="sh-title">Exit Criteria</span></div>
+  <div class="sh"><span class="sh-title">Phase 1 Exit Criteria</span></div>
   <p class="note" style="margin-bottom:12px;">All must be met before Phase 2.</p>
   <div class="card">
     <div class="card-row"><div class="cr-left"><div class="cr-key">Wall sit</div></div><div class="cr-right"><div class="cr-val">6 × 30 sec at 60° — dull ache only</div></div></div>
@@ -1911,6 +2079,51 @@ body { background: #fff; color: #000; }
     <div class="card-row"><div class="cr-left" style="width:60%;"><div class="cr-key" style="font-size:13px;">Post-commute soreness (AM)</div></div><div class="cr-right"><div class="cr-time">0--10</div></div></div>
   </div>
   <p class="note">No improvement by week 6 — get imaging before continuing.</p>
+
+  <!-- ── Phase 2 ── -->
+  <div class="sub-head" style="margin-top:32px;">Phase 2 — Load Development · Weeks 5–10</div>
+  <p class="note" style="margin-bottom:12px;">Entry requires all Phase 1 exit criteria met. Full prescription written on entry. Do not advance early — premature load increase is the primary cause of PFPS flare in rehab.</p>
+
+  <div class="phase" style="border-color:var(--border2);">
+    <div class="phase-head" style="background:var(--bg3);">
+      <span class="ph-title">Direction</span>
+      <span class="ph-weeks">Increased load, reduced isometric dependence</span>
+    </div>
+    <div class="phase-item">Wall sit isometric: transition to single-leg. Rebuild 45° → 60° progression on primary knee.</div>
+    <div class="phase-item">Step down: increase step height to 15–20cm. Remove hand support entirely.</div>
+    <div class="phase-item">Split squat: remove counterbalance. Introduce rear foot elevated (Bulgarian) in second half of phase.</div>
+    <div class="phase-item">Copenhagen plank replaces clamshell — higher hip adductor demand.</div>
+    <div class="phase-item">Short arc quad: progress to light resistance band or ankle weight.</div>
+    <div class="phase-item">Introduce step-up (bodyweight first).</div>
+    <div class="phase-item">Bike: extend to 15 min if tolerating. Introduce Zone 2 outdoor cycling if no soreness pattern.</div>
+    <div class="phase-item">Pull-up: advance from scapular pull to partial to full.</div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Entry gate</div></div><div class="cr-right"><div class="cr-val">All Phase 1 exit criteria</div><div class="cr-desc">No exceptions. Phase 2 load will cause a setback if Phase 1 tissue tolerance is not established.</div></div></div>
+  </div>
+
+  <!-- ── Phase 3 ── -->
+  <div class="sub-head">Phase 3 — Sport Prep · Weeks 11+</div>
+  <p class="note" style="margin-bottom:12px;">Entry requires Phase 2 exit criteria (defined on Phase 2 completion). Full prescription written on entry.</p>
+
+  <div class="phase" style="border-color:var(--border2);">
+    <div class="phase-head" style="background:var(--bg3);">
+      <span class="ph-title">Direction</span>
+      <span class="ph-weeks">Ski and activity load tolerance</span>
+    </div>
+    <div class="phase-item">Full single-leg wall sit isometric at 60° — primary knee.</div>
+    <div class="phase-item">Step down at 20–25cm, fully loaded, no compensation.</div>
+    <div class="phase-item">Bulgarian split squat with load (dumbbell or pack weight).</div>
+    <div class="phase-item">Plyometric progression: box step-up → step-down → controlled hop landing.</div>
+    <div class="phase-item">Skiing: structured reintroduction with collagen protocol. Green → blue → black over 3+ sessions.</div>
+    <div class="phase-item">Bike commute: Zone 2 fully unrestricted with collagen protocol.</div>
+    <div class="phase-item">Maintenance program defined — frequency and volume reduction from Phase 3 peak.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Goal</div></div><div class="cr-right"><div class="cr-val">Full ski season without PFPS flare</div><div class="cr-desc">Descending blue and black runs, sustained ski days, commuting without soreness onset.</div></div></div>
+  </div>
 
 </div>
 </div>
@@ -1952,7 +2165,7 @@ body { background: #fff; color: #000; }
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v5.3 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v5.4 — March 2026
     </div>
   </div>
 
@@ -1961,8 +2174,8 @@ body { background: #fff; color: #000; }
 
 <script>
 // ── Navigation ─────────────────────────────────────────
-const tabIds = ['cover','today','load','timer'];
-const tabBtnIds = ['tb-cover','tb-today','tb-load','tb-timer'];
+const tabIds = ['cover','today','exercises','timer'];
+const tabBtnIds = ['tb-cover','tb-today','tb-exercises','tb-timer'];
 
 function nav(pageId, msBtn) {
   // hide all pages
@@ -2006,6 +2219,38 @@ function schedTab(paneId, btn) {
   document.getElementById(paneId).classList.add('on');
   btn.classList.add('on');
 }
+
+// ── Exercises hub sub-tabs ─────────────────────────────
+function exTab(paneId, btn) {
+  document.querySelectorAll('#exercises .sched-pane').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('#exTabs .sched-tab').forEach(b => b.classList.remove('on'));
+  document.getElementById(paneId).classList.add('on');
+  btn.classList.add('on');
+}
+
+// ── Mirror exercise content into hub panes ─────────────
+(function initExHub() {
+  const map = [
+    ['src-mob',    'ex-base-mob'],
+    ['src-postA',  'ex-base-postA'],
+    ['src-postB',  'ex-base-postB'],
+    ['src-postC',  'ex-base-postC'],
+    ['src-core',   'ex-base-core'],
+    ['src-glute',  'ex-base-glute'],
+    ['src-pp',     'ex-load-pp'],
+    ['src-slgb',   'ex-load-glute'],
+    ['src-knee',   'ex-load-knee'],
+    ['src-opt',    'ex-load-opt'],
+    ['src-gen',    'ex-load-gen'],
+    ['src-daily',  'ex-micro-daily'],
+    ['src-kmicro', 'ex-micro-knee'],
+  ];
+  map.forEach(([srcId, destId]) => {
+    const src  = document.getElementById(srcId);
+    const dest = document.getElementById(destId);
+    if (src && dest) dest.innerHTML = src.innerHTML;
+  });
+})();
 
 // ── Exercise group collapse ────────────────────────────
 function togEx(head) {
