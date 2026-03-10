@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v5.2</title>
+<title>Knee Rehab v5.3</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1075,25 +1075,22 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v5.2</div>
+  <div class="ms-title">KNEE REHAB v5.3</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
-  <div class="ms-group">Program</div>
-  <button class="ms-btn" onclick="nav('cover',this)"><span class="ms-icon">◼</span><span class="ms-lbl">Cover</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('overview',this)"><span class="ms-icon">◈</span><span class="ms-lbl">Architecture</span><span class="ms-arr">›</span></button>
+  <div class="ms-group">Reference</div>
+  <button class="ms-btn" onclick="nav('overview',this)"><span class="ms-icon">◈</span><span class="ms-lbl">Program Overview</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('phase1',this)"><span class="ms-icon">▲</span><span class="ms-lbl">Phase 1</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('rules',this)"><span class="ms-icon">◉</span><span class="ms-lbl">Key Rules</span><span class="ms-arr">›</span></button>
-
-  <div class="ms-group">Daily Practice</div>
-  <button class="ms-btn" onclick="nav('today',this)"><span class="ms-icon">▣</span><span class="ms-lbl">Today</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('schedule',this)"><span class="ms-icon">≡</span><span class="ms-lbl">Schedule Reference</span><span class="ms-arr">›</span></button>
+
+  <div class="ms-group">Exercises</div>
   <button class="ms-btn" onclick="nav('base',this)"><span class="ms-icon">○</span><span class="ms-lbl">Base Exercises</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('load',this)"><span class="ms-icon">●</span><span class="ms-lbl">Day A &amp; B Exercises</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('micro',this)"><span class="ms-icon">·</span><span class="ms-lbl">Micro-Sessions</span><span class="ms-arr">›</span></button>
+  <button class="ms-btn" onclick="nav('micro',this)"><span class="ms-icon">◎</span><span class="ms-lbl">Micro-Sessions</span><span class="ms-arr">›</span></button>
 
-  <div class="ms-group">Tools</div>
+  <div class="ms-group">Info</div>
   <button class="ms-btn" onclick="nav('supps',this)"><span class="ms-icon">◐</span><span class="ms-lbl">Supplements</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('timer',this)"><span class="ms-icon">⧖</span><span class="ms-lbl">Timer &amp; Tracker</span><span class="ms-arr">›</span></button>
 </div>
 
 <!-- ══════════════════════════════════════════════════ -->
@@ -1191,7 +1188,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">5.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v5.2</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v5.3</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1233,19 +1230,20 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v5.1</div>
+    <div class="changes-title">Changes from v5.2</div>
     <ul class="changes-list">
-      <li>Short Arc Quad promoted from optional pick-2 pool to mandatory in the Knee &amp; Lower Body block (Days A &amp; B). VMO is the only quad head pulling the patella medially — its terminal extension window (0–20°) is not addressed by wall sit, split squat, or step down. SAQ was the only direct VMO exercise and was optional. Structurally incorrect for a PFPS protocol.</li>
-      <li>SAQ added to mandatory micro-session prescription (Days A &amp; B) alongside wall sit. Wall sit = isometric cartilage load (Bellemans mechanism). SAQ = VMO terminal extension strength. Mechanistically distinct — both must run.</li>
-      <li>Terminal Knee Extension elevated to recommended first pick in the optional knee pool. Rationale: dynamic neuromuscular re-education at terminal extension, distinct from SAQ (hypertrophy/strength), specifically relevant for ski-specific functional extension under load.</li>
+      <li>More menu restructured. Removed duplicates: Cover, Today, Timer, and Day A &amp; B Exercises were all accessible from both the tab bar and the More menu — redundant entries removed from More. Timer removed entirely from More (tab bar only).</li>
+      <li>Groups reorganised: "Program" and "Daily Practice" collapsed into "Reference" (Overview, Phase 1, Key Rules, Schedule). Exercise pages grouped under "Exercises" (Base, Day A &amp; B, Micro-Sessions). "Tools" renamed "Info" — Supplements is a reference document, not a tool.</li>
+      <li>"Architecture" renamed "Program Overview" — insider label, not user-facing language.</li>
+      <li>Micro-Sessions icon changed from middle dot (·) to (◎) — consistent visual weight with other menu icons.</li>
     </ul>
   </div>
   <div class="changes" style="margin-top:8px;border-color:var(--border);">
-    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.0 → v5.1</div>
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.1 → v5.2</div>
     <ul class="changes-list" style="color:var(--muted);">
-      <li>Gap block rotated across Day A and Day B — 9 exercises split into two 6-exercise subsets. All 9 run on Day C. ~10 min reduction.</li>
-      <li>Posture block differentiated by day. Bird Dog, WLYT, External Rotation on both days.</li>
-      <li>Thread the needle removed — not upstream of PFPS. Mobility block reduced from 6 to 5 exercises.</li>
+      <li>Short Arc Quad promoted to mandatory in Knee &amp; Lower Body block and micro-sessions. Wall Sit and SAQ both required on Days A &amp; B.</li>
+      <li>TKE elevated to recommended first pick in optional knee pool.</li>
+      <li>Exercise names standardised across tabs and Today JS. Google Fonts URL ampersands escaped — fixed GitHub Pages style rendering.</li>
     </ul>
   </div>
 
@@ -1644,7 +1642,7 @@ body { background: #fff; color: #000; }
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Lateral Side Step</span><span class="ex-rx">2 rounds × 15 steps</span></div><div class="ex-desc">Slight squat, hip tension throughout. Pause and reassert hip position after each step before the next — deliberate load check, not continuous momentum. Add resistance band if available.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Hamstring Slide</span><span class="ex-rx">3 × 8–10 · Day B only</span></div><div class="ex-desc">On back, heels on sliders or towel on smooth floor. Drive hips up into bridge, slide heels out slowly (3–5 sec), return. Eccentric-concentric hamstring load — lower peak force than alternatives, appropriate for current phase. Day A only — 48h eccentric recovery required. Significant assistance from arms in early weeks.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Calf Raise — Straight Knee</span><span class="ex-rx">2 × 15 each · 3s down</span></div><div class="ex-desc">Stand on one foot, full plantarflexion at top, full dorsiflexion at bottom. 3s eccentric. Targets gastrocnemius. Use wall for balance. Build to unassisted. Supports Achilles and ankle load tolerance for skiing and hiking.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Calf Raise — Bent Knee (Soleus)</span><span class="ex-rx">2 × 12–15 each · 3s down</span></div><div class="ex-desc">Knee bent ~30°, same single-leg raise. Bent knee removes gastrocnemius from the load — isolates soleus. Soleus is the primary plantarflexor under knee-flexed load: wall sit, step down, split squat, ski descent, cycling. Previously absent from the program entirely. This is the higher-priority of the two calf raises.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Single-Leg Calf Raise — Bent Knee (Soleus)</span><span class="ex-rx">2 × 12–15 each · 3s down</span></div><div class="ex-desc">Knee bent ~30°, same single-leg raise. Bent knee removes gastrocnemius from the load — isolates soleus. Soleus is the primary plantarflexor under knee-flexed load: wall sit, step down, split squat, ski descent, cycling. Previously absent from the program entirely. This is the higher-priority of the two calf raises.</div></div>
     </div>
   </div>
 
@@ -1693,7 +1691,7 @@ body { background: #fff; color: #000; }
       <span class="eg-chev" style="color:var(--amber2);">▼</span>
     </div>
     <div class="ex-body">
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit</span><span class="ex-rx">5 × 20--30s / 45s rest</span></div><div class="ex-desc">60° knee flexion. Isometric cartilage load — Bellemans cyclic stimulus. Not a strength exercise. Dull ache acceptable; sharp or >4/10 = reduce angle.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Isometric</span><span class="ex-rx">5 × 20--30s / 45s rest</span></div><div class="ex-desc">60° knee flexion. Isometric cartilage load — Bellemans cyclic stimulus. Not a strength exercise. Dull ache acceptable; sharp or >4/10 = reduce angle.</div></div>
       <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO is the only quad head that corrects lateral patellar tracking — its mechanical advantage is in the final 20° of extension only. This range is not reached by wall sit, split squat, or step down. Both mandatory.</div></div>
     </div>
   </div>
@@ -1954,7 +1952,7 @@ body { background: #fff; color: #000; }
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v5.2 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v5.3 — March 2026
     </div>
   </div>
 
@@ -2271,8 +2269,8 @@ const BLOCKS = {
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° knee flexion. Dull ache OK. Sharp or >4/10 = reduce angle immediately.',timer:30},
                {n:'Deep Split Squat',rx:'2 × 10 each side',d:'Counterbalance Ph1. Rear knee toward floor, 2–3s hold at bottom, drive up.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Slight squat. Pause and reassert hip position after each step.'},
-               {n:'Calf Raise — Straight Leg',rx:'2 × 15 each · 3s down',d:'Single-leg. Full plantarflexion top, full dorsiflexion bottom. 3s eccentric.'},
-               {n:'Calf Raise — Bent Knee (Soleus)',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Isolates soleus — primary plantarflexor in all knee-flexed positions. Higher priority of the two.'}]},
+               {n:'Single-Leg Calf Raise — Straight Knee',rx:'2 × 15 each · 3s down',d:'Single-leg. Full plantarflexion top, full dorsiflexion bottom. 3s eccentric.'},
+               {n:'Single-Leg Calf Raise — Bent Knee (Soleus)',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Isolates soleus — primary plantarflexor in all knee-flexed positions. Higher priority of the two.'}]},
       {id:'sA_bike', time:'T+57',   title:'Bellemans Bike',             sub:'10–12 min · HARD STOP 15 MIN', navPage:'load', timer:720,
        detail:[{n:'Bellemans Protocol',rx:'10–12 min · hard stop 15 min',d:'Stationary bike. Seat: knee at 15–20° flexion at bottom of stroke. Steady moderate resistance. Cyclic cartilage loading at collagen peak. Window closes at 15 min — stop.',timer:720}]},
     ],
@@ -2281,7 +2279,7 @@ const BLOCKS = {
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
-      {n:'Wall Sit',           rx:'5 × 20–30s · 45s rest', req:true},
+      {n:'Wall Sit Isometric',           rx:'5 × 20–30s · 45s rest', req:true},
       {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold', req:true},
     ],
     briefing:{
@@ -2338,15 +2336,15 @@ const BLOCKS = {
                {n:'Deep Split Squat',rx:'2 × 8 each · 3s hold bottom',d:'Counterbalance Ph1. 2–3s hold at bottom, drive up.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Pause and reassert hip position after each step.'},
                {n:'Hamstring Slide',rx:'2 × 10',d:'On back, heels on sliders or towel. Bridge up, slide heels out 3–5s, return. Hips stay elevated. Arm assist OK. Day B only — 48h separation from Day A bike session.'},
-               {n:'Calf Raise — Straight Leg',rx:'2 × 15 each · 3s down',d:'Single-leg. Full range. 3s eccentric.'},
-               {n:'Calf Raise — Bent Knee (Soleus)',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Soleus isolation. Higher priority than straight-leg version.'}]},
+               {n:'Single-Leg Calf Raise — Straight Knee',rx:'2 × 15 each · 3s down',d:'Single-leg. Full range. 3s eccentric.'},
+               {n:'Single-Leg Calf Raise — Bent Knee (Soleus)',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Soleus isolation. Higher priority than straight-leg version.'}]},
     ],
     micro:[
       {n:'Tibialis Raise',     rx:'1 × 20 · 1s hold top', req:true},
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
-      {n:'Wall Sit',           rx:'5 × 20–30s · 45s rest', req:true},
+      {n:'Wall Sit Isometric',           rx:'5 × 20–30s · 45s rest', req:true},
       {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold', req:true},
     ],
     briefing:{
@@ -2377,8 +2375,8 @@ const BLOCKS = {
       {id:'sC_gap',  time:'Morning', title:'Posture Block — Full', sub:'all 9 · ~14 min', navPage:'base',
        detail:[{n:'Bird Dog',rx:'2×5·8s',d:'',timer:8},
                {n:'Superman Hold',rx:'2×5·5s',d:'',timer:5},
-               {n:'Down Dog→Upward Dog',rx:'3×5',d:'2s hold each end.'},
-               {n:'L-Sit→Reverse Plank',rx:'2×5·2s',d:''},
+               {n:'Down Dog → Upward Dog',rx:'3×5',d:'2s hold each end.'},
+               {n:'L-Sit → Reverse Plank',rx:'2×5·2s',d:''},
                {n:'WLYT',rx:'2 × each · 2s hold',d:''},
                {n:'Floor Slide',rx:'2×10',d:''},
                {n:'Scap Push-Up',rx:'2×12',d:''},
@@ -2423,7 +2421,7 @@ const BLOCKS = {
                {n:"World's Greatest Stretch",rx:'5 each side · 2s hold',d:'Hip flexor + thoracic rotation. Reduces compensation patterns on ascent and descent.'},
                {n:'Wall Ankle Dorsiflexion',rx:'10 each side · 2s hold',d:'Critical before ski boots and hiking boots. Restricted dorsiflexion forces medial knee collapse under load.'},
                {n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Anterior shin activation. Reduces knee valgus tendency on first runs or descents when muscles are cold.'},
-               {n:'Clamshell',rx:'2 × 12 each · 2s hold top',d:'Glute med activation before quad-dominant descent loading. Side-lying, band optional.'},
+               {n:'Clamshell or Hip Abduction',rx:'2 × 12 each · 2s hold top',d:'Glute med activation before quad-dominant descent loading. Side-lying, band optional.'},
                {n:'Single-Leg Balance',rx:'30s each leg',d:'Proprioception priming. Eyes open → slight knee bend. Resets joint position sense before uneven terrain.'}]},
       {id:'sX_act', time:'T+45',       title:'Ski / Hike / Ride',              sub:'No protocol — go as planned', detail:[]},
       {id:'sX_nxt', time:'Next block', title:'If sore: Day C first',           sub:'Resume A or B when soreness resolves', detail:[]},
