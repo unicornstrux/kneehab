@@ -1240,9 +1240,17 @@ body { background: #fff; color: #000; }
   <div class="changes">
     <div class="changes-title">Changes from v5.1</div>
     <ul class="changes-list">
-      <li>Short Arc Quad (SAQ) moved from knee-specific pick-2 to mandatory daily micro-session. VMO weakness is the primary structural deficit in PFPS — SAQ is the only exercise in the program that loads VMO through range with an eccentric. Making it optional meant it could be skipped on any given day. Now runs daily alongside tibialis raise, backward walk, dead hang, and single-leg balance.</li>
-      <li>Terminal Knee Extension (TKE) moved from knee-specific pick-2 to General Optional. TKE is proprioceptive and neuromuscular, not a strength exercise — it does not belong in the same pool as SAQ. Foot-against-wall variation requires no equipment. Now available daily as the optional pick.</li>
-      <li>Knee-specific pick-2 pool now contains: Single-Leg Wall Sit, Deep Squat Hold, Hanging Knee Raise.</li>
+      <li>Short Arc Quad promoted from optional pick-2 pool to mandatory in the Knee &amp; Lower Body block (Days A &amp; B). VMO is the only quad head pulling the patella medially — its terminal extension window (0–20°) is not addressed by wall sit, split squat, or step down. SAQ was the only direct VMO exercise and was optional. Structurally incorrect for a PFPS protocol.</li>
+      <li>SAQ added to mandatory micro-session prescription (Days A &amp; B) alongside wall sit. Wall sit = isometric cartilage load (Bellemans mechanism). SAQ = VMO terminal extension strength. Mechanistically distinct — both must run.</li>
+      <li>Terminal Knee Extension elevated to recommended first pick in the optional knee pool. Rationale: dynamic neuromuscular re-education at terminal extension, distinct from SAQ (hypertrophy/strength), specifically relevant for ski-specific functional extension under load.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.0 → v5.1</div>
+    <ul class="changes-list" style="color:var(--muted);">
+      <li>Gap block rotated across Day A and Day B — 9 exercises split into two 6-exercise subsets. All 9 run on Day C. ~10 min reduction.</li>
+      <li>Posture block differentiated by day. Bird Dog, WLYT, External Rotation on both days.</li>
+      <li>Thread the needle removed — not upstream of PFPS. Mobility block reduced from 6 to 5 exercises.</li>
     </ul>
   </div>
 
@@ -1364,10 +1372,10 @@ body { background: #fff; color: #000; }
 
   <div class="day-selector" id="daySelector">
     <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
-      <span class="day-btn-num">A</span><span class="day-btn-type">Full +Bike</span>
+      <span class="day-btn-num">A</span><span class="day-btn-type">Full Bike</span>
     </button>
     <button class="day-btn" data-block="B" onclick="selectBlock('B',this)">
-      <span class="day-btn-num">B</span><span class="day-btn-type">Full Hamstring</span>
+      <span class="day-btn-num">B</span><span class="day-btn-type">Full Alt</span>
     </button>
     <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
       <span class="day-btn-num">C</span><span class="day-btn-type">Recovery</span>
@@ -1415,7 +1423,7 @@ body { background: #fff; color: #000; }
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+31</div></div><div class="cr-right"><div class="cr-val">Natural break <span style="color:var(--muted);font-size:12px;">~14 min</span></div><div class="cr-note">Morning tasks — collagen approaching peak</div></div></div>
       <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+45</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">12 min</span></div><div class="cr-note">Collagen rising into peak</div></div></div>
       <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+57</div></div><div class="cr-right"><div class="cr-val">Bellemans Bike</div><div class="cr-note">60--90 min collagen peak window ✓ · Hard stop 15 min</div></div></div>
-            <div class="card-row"><div class="cr-left"><div class="cr-time">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div><div class="cr-note">+ 2 knee micro-sessions (wall sit + short arc quad)</div></div></div>
+            <div class="card-row"><div class="cr-left"><div class="cr-time">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div><div class="cr-note">+ 2 knee micro-sessions (wall sit + short arc quad — both mandatory)</div></div></div>
     </div>
     <p class="note">Sequence order is fixed. Reordering breaks the collagen timing architecture.</p>
   </div>
@@ -1635,6 +1643,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="ex-body">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Slant Board Step Down</span><span class="ex-rx">3×10 pri / 3×8 sec</span></div><div class="ex-desc">10cm step (Phase 1). Lower opposite foot over 5 sec, 2s pause at bottom (foot hovering, not touching), return. Hand on wall — progress to unassisted. The 2s pause converts eccentric to eccentric-plus-isometric — directly mimics sustained ski loaded position. Primary skiing exercise.</div></div>
+      <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2 sec hold at top, 3 sec lower. VMO is the only quad head that pulls the patella medially — its mechanical advantage is highest in the final 20° of extension. Wall sit and split squat do not reach this range. Mandatory, not optional.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Isometric</span><span class="ex-rx">6 × 30 sec / 45 rest</span></div><div class="ex-desc">60° knee flexion. Dull ache acceptable. Sharp or >4/10 = reduce angle immediately. Start 45° in Weeks 1--2 if needed. Tissue stimulus — not strength training.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Deep Split Squat</span><span class="ex-rx">2 × 10 each side</span></div><div class="ex-desc">Significant counterbalance in Phase 1 — do not force depth. Rear knee toward floor, 2--3s hold at bottom, drive up. The hold at full depth is where VMO demand is highest — do not skip it.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Lateral Side Step</span><span class="ex-rx">2 rounds × 15 steps</span></div><div class="ex-desc">Slight squat, hip tension throughout. Pause and reassert hip position after each step before the next — deliberate load check, not continuous momentum. Add resistance band if available.</div></div>
@@ -1677,19 +1686,34 @@ body { background: #fff; color: #000; }
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Backward Walk</span><span class="ex-rx">2--3 rounds 30--60s</span></div><div class="ex-desc">Walk backward slowly. Resistance band optional. Trains knee in decompressed position. Daily is the point.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Dead Hang</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Hang from bar, relaxed shoulders. Spinal decompression, grip, scapular stability. No recovery demand.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Balance</span><span class="ex-rx">2 × 20–30s each leg</span></div><div class="ex-desc">Stand on one foot. Phase 1: eyes open. Phase 2: eyes closed. Phase 3: slight knee bend (10–15°). PFPS degrades patellofemoral proprioception — balance training addresses this directly. Also the primary missing ski prep element. No recovery demand. Do anywhere.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold top · 3s lower</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s eccentric lower. VMO is the only quadriceps head with a medial pull vector — it controls patellar tracking. This is the only exercise in the program that loads VMO through range with an eccentric. Mandatory daily because patellar tracking is the primary diagnosis. Chair required.</div></div>
     </div>
   </div>
 
-  <div class="sub-head">Knee-Specific — Pick 2 (Days A &amp; B Only)</div>
+  <div class="sub-head">Mandatory Knee Micro — Days A &amp; B Only</div>
+  <p class="note" style="margin-bottom:8px;">Both exercises mandatory on Days A &amp; B. Wall sit = cartilage cyclic load (Bellemans). SAQ = VMO terminal extension strength. Mechanistically distinct — neither substitutes for the other.</p>
+  <div class="ex-group open">
+    <div class="ex-group-head" onclick="togEx(this)" style="background:var(--amber-bg);border-bottom-color:var(--amber2);">
+      <span class="eg-title" style="color:var(--amber);">Knee Micro — Mandatory</span>
+      <span class="eg-freq" style="color:var(--amber2);border-color:var(--amber2);background:var(--bg);">Days A &amp; B</span>
+      <span class="eg-chev" style="color:var(--amber2);">▼</span>
+    </div>
+    <div class="ex-body">
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit</span><span class="ex-rx">5 × 20--30s / 45s rest</span></div><div class="ex-desc">60° knee flexion. Isometric cartilage load — Bellemans cyclic stimulus. Not a strength exercise. Dull ache acceptable; sharp or >4/10 = reduce angle.</div></div>
+      <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO is the only quad head that corrects lateral patellar tracking — its mechanical advantage is in the final 20° of extension only. This range is not reached by wall sit, split squat, or step down. Both mandatory.</div></div>
+    </div>
+  </div>
+
+  <div class="sub-head">Knee-Specific Optional — Pick 2 (Days A &amp; B Only)</div>
+  <p class="note" style="margin-bottom:8px;">SAQ is now mandatory (see above and Knee &amp; Lower Body block). These are supplementary. TKE is the recommended first pick — it addresses dynamic neuromuscular control at terminal extension, distinct from SAQ which is strength/hypertrophy.</p>
   <div class="ex-group open">
     <div class="ex-group-head" onclick="togEx(this)">
-      <span class="eg-title">Knee-Specific</span>
+      <span class="eg-title">Knee-Specific Optional</span>
       <span class="eg-freq">pick 2 · Days A &amp; B</span>
       <span class="eg-chev">▼</span>
     </div>
     <div class="ex-body">
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Wall Sit</span><span class="ex-rx">5 × 20s / 45s rest</span></div><div class="ex-desc">Primary knee only. Start 45° flexion, build toward 60° over weeks.</div></div>
+      <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Terminal Knee Extension ★</span><span class="ex-rx">10 reps each · 5s hold</span></div><div class="ex-desc">Recommended first pick. Band at knee height or foot against wall. Extend fully against resistance. Proprioception and dynamic neuromuscular re-education at terminal extension — teaches the knee to lock out correctly under load. Ski-specific: the functional extension pattern on flats and traverses. Distinct from SAQ which is VMO strength isolation.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Wall Sit</span><span class="ex-rx">5 × 20s / 45s rest</span></div><div class="ex-desc">Primary knee only. Start 45° flexion, build toward 60° over weeks. Greater demand than bilateral wall sit — progression when bilateral becomes easy.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Deep Squat Hold</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Heels elevated if needed. Full depth. Reduce heel elevation over weeks — elevation is not cheating.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Hanging Knee Raise</span><span class="ex-rx">1 × max controlled</span></div><div class="ex-desc">Dead hang. Raise knees to 90° or higher, lower controlled. Hip flexor strength.</div></div>
     </div>
@@ -1703,7 +1727,6 @@ body { background: #fff; color: #000; }
       <span class="eg-chev">▼</span>
     </div>
     <div class="ex-body">
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Terminal Knee Extension</span><span class="ex-rx">10 reps each · 5s hold</span></div><div class="ex-desc">Foot pressed against wall or band at knee height. From slight flexion (~20°), drive to full extension, hold 5s. Trains end-range proprioception and quad-hamstring co-contraction — different function from SAQ which is VMO strength. Foot-against-wall requires no equipment.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Calf Raise</span><span class="ex-rx">1 × 20 each</span></div><div class="ex-desc">Single-leg. Deep stretch at bottom, full rise at top.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Standing Hip Flexion Hold</span><span class="ex-rx">10 each side · 3s hold</span></div><div class="ex-desc">Standing, lift one knee to 90°, hold 3 sec, lower controlled. Hip flexor strength is absent from the program in any loaded form. Weak hip flexors create anterior pelvic tilt under fatigue (skiing descents, long hikes), which directly increases PFPS load. No equipment — do at desk or kitchen counter.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Chin Tuck</span><span class="ex-rx">5 × 5s hold</span></div><div class="ex-desc">Seated or standing. Retract head straight back (double chin), hold 5 sec, release. Deep cervical flexors — universally weak in desk workers. Forward head posture adds significant moment arm load to cervical spine. No equipment. 60 seconds total.</div></div>
@@ -2252,6 +2275,7 @@ const BLOCKS = {
       {id:'sA_brk',  time:'T+31',   title:'Natural Break',              sub:'~14 min · collagen approaching peak', detail:[]},
       {id:'sA_knee', time:'T+45',   title:'Knee & Lower Body',          sub:'12 min · collagen rising into peak', navPage:'load',
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step Ph1. Lower 5s, 2s pause at bottom (foot hovering), return. Hand on wall → unassisted.'},
+               {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory, not optional.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° knee flexion. Dull ache OK. Sharp or >4/10 = reduce angle immediately.',timer:30},
                {n:'Deep Split Squat',rx:'2 × 10 each side',d:'Counterbalance Ph1. Rear knee toward floor, 2–3s hold at bottom, drive up.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Slight squat. Pause and reassert hip position after each step.'},
@@ -2265,8 +2289,8 @@ const BLOCKS = {
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
-      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold · 3s lower', req:true},
-      {n:'Single-Leg Wall Sit',rx:'5 × 20s · 45s rest',    req:false},
+      {n:'Wall Sit',           rx:'5 × 20–30s · 45s rest', req:true},
+      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold', req:true},
     ],
     briefing:{
       warn:['Do not stack a Zone 2 ride after work — Bellemans bike is the cartilage stimulus for today. Window is spent.',
@@ -2317,6 +2341,7 @@ const BLOCKS = {
       {id:'sB_brk',  time:'T+31',  title:'Natural Break',        sub:'~14 min · collagen approaching peak', detail:[]},
       {id:'sB_knee', time:'T+45',  title:'Knee & Lower Body',    sub:'12 min · collagen rising into peak', navPage:'load',
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step. Lower 5s, 2s pause at bottom, return.'},
+               {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° target. Dull ache OK. >4/10 = reduce angle.',timer:30},
                {n:'Deep Split Squat',rx:'2 × 8 each · 3s hold bottom',d:'Counterbalance Ph1. 2–3s hold at bottom, drive up.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Pause and reassert hip position after each step.'},
@@ -2329,8 +2354,8 @@ const BLOCKS = {
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
-      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold · 3s lower', req:true},
-      {n:'Single-Leg Wall Sit',rx:'5 × 20s · 45s rest',    req:false},
+      {n:'Wall Sit',           rx:'5 × 20–30s · 45s rest', req:true},
+      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold', req:true},
     ],
     briefing:{
       warn:['No bike today — do not add a Bellemans session to compensate.',
@@ -2379,12 +2404,11 @@ const BLOCKS = {
       {n:'Backward Walk',  rx:'2–3 rounds',            req:true},
       {n:'Dead Hang',      rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg', req:true},
-      {n:'Short Arc Quad', rx:'3 × 15 each · 2s hold · 3s lower', req:true},
     ],
     briefing:{
       warn:['No collagen today — Day C has no loading event that warrants it.',
             'No Zone 2 riding today — unprimed connective tissue load with no collagen upstream.',
-            'No knee-specific micro-sessions today — mandatory only (tibialis raise, backward walk, dead hang, single-leg balance, SAQ).'],
+            'No knee-specific micro-sessions today — mandatory only.'],
       ok:['Zone 1 commute completely free — no ceiling, no protocol interaction.',
           'Easy walking, kayaking, swimming all fine.',
           'If before an activity day (ski/hike): rest only — skip this session entirely.'],
@@ -2417,7 +2441,6 @@ const BLOCKS = {
       {n:'Backward Walk',  rx:'2–3 rounds', req:true},
       {n:'Dead Hang',      rx:'2×30s', req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg', req:true},
-      {n:'Short Arc Quad', rx:'3 × 15 each · 2s hold · 3s lower', req:true},
     ],
     briefing:{
       warn:['No loading routine — do not run Day A or B before activity. The warm-up only.',
