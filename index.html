@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v5.1</title>
+<title>Knee Rehab v5.2</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Bebas+Neue&display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -31,13 +31,13 @@
   --white:    #F2F2F7;
 
 /* iPhone safe areas */
---safe-top:    env(safe-area-inset-top, 0px);
---safe-bottom: env(safe-area-inset-bottom, 0px);
---safe-left:   env(safe-area-inset-left, 0px);
---safe-right:  env(safe-area-inset-right, 0px);
+–safe-top:    env(safe-area-inset-top, 0px);
+–safe-bottom: env(safe-area-inset-bottom, 0px);
+–safe-left:   env(safe-area-inset-left, 0px);
+–safe-right:  env(safe-area-inset-right, 0px);
 
 /* Tab bar height */
---tab-h: calc(54px + var(--safe-bottom));
+–tab-h: calc(54px + var(–safe-bottom));
 }
 
 /* ── Reset ───────────────────────────────────────── */
@@ -45,13 +45,13 @@
 html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
 body {
 font-family: ‘IBM Plex Sans’, sans-serif;
-background: var(--bg);
-color: var(--text);
+background: var(–bg);
+color: var(–text);
 font-size: 16px;
 line-height: 1.65;
 overflow-x: hidden;
 /* Prevent content hiding behind notch */
-padding-top: var(--safe-top);
+padding-top: var(–safe-top);
 }
 
 /* ── Pages ───────────────────────────────────────── */
@@ -60,7 +60,7 @@ padding-top: var(--safe-top);
 
 /* ── Doc wrapper ─────────────────────────────────── */
 .doc {
-padding: 16px 16px calc(var(--tab-h) + 16px);
+padding: 16px 16px calc(var(–tab-h) + 16px);
 max-width: 600px;
 margin: 0 auto;
 }
@@ -75,9 +75,9 @@ z-index: 200;
 background: rgba(28,28,30,0.95);
 backdrop-filter: saturate(180%) blur(20px);
 -webkit-backdrop-filter: saturate(180%) blur(20px);
-border-top: 1px solid var(--border2);
+border-top: 1px solid var(–border2);
 display: flex;
-padding-bottom: var(--safe-bottom);
+padding-bottom: var(–safe-bottom);
 }
 
 .tab-btn {
@@ -92,25 +92,25 @@ background: none; border: none; cursor: pointer;
 position: relative;
 transition: background 0.1s;
 }
-.tab-btn:active { background: var(--bg3); }
+.tab-btn:active { background: var(–bg3); }
 
 .tab-icon {
-font-size: 18px; color: var(--muted2);
+font-size: 18px; color: var(–muted2);
 transition: color 0.15s;
 line-height: 1;
 }
 .tab-label {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px; letter-spacing: 0.05em;
-text-transform: uppercase; color: var(--muted);
+text-transform: uppercase; color: var(–muted);
 transition: color 0.15s;
 }
-.tab-btn.on .tab-icon { color: var(--amber); }
-.tab-btn.on .tab-label { color: var(--amber); }
+.tab-btn.on .tab-icon { color: var(–amber); }
+.tab-btn.on .tab-label { color: var(–amber); }
 .tab-btn.on::after {
 content: ‘’;
 position: absolute; top: 0; left: 20%; right: 20%;
-height: 2px; background: var(--amber);
+height: 2px; background: var(–amber);
 }
 
 /* ─────────────────────────────────────────────────── */
@@ -129,12 +129,12 @@ transition: opacity 0.22s;
 position: fixed;
 bottom: 0; left: 0; right: 0;
 z-index: 310;
-background: var(--bg2);
-border-top: 1px solid var(--border2);
+background: var(–bg2);
+border-top: 1px solid var(–border2);
 border-radius: 16px 16px 0 0;
 transform: translateY(100%);
 transition: transform 0.28s cubic-bezier(0.32,0.72,0,1);
-padding-bottom: var(--safe-bottom);
+padding-bottom: var(–safe-bottom);
 max-height: 80vh;
 overflow-y: auto;
 -webkit-overflow-scrolling: touch;
@@ -143,7 +143,7 @@ overflow-y: auto;
 
 .ms-handle {
 width: 36px; height: 4px;
-background: var(--border2);
+background: var(–border2);
 border-radius: 2px;
 margin: 12px auto 16px;
 }
@@ -151,22 +151,22 @@ margin: 12px auto 16px;
 .ms-title {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 22px; letter-spacing: 0.06em;
-color: var(--white);
+color: var(–white);
 padding: 0 20px 4px;
 }
 .ms-sub {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 9px; color: var(--amber);
+font-size: 9px; color: var(–amber);
 letter-spacing: 0.15em;
 padding: 0 20px 16px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 }
 
 .ms-group {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 8px; font-weight: 600;
 letter-spacing: 0.2em; text-transform: uppercase;
-color: var(--muted);
+color: var(–muted);
 padding: 14px 20px 6px;
 }
 
@@ -176,17 +176,17 @@ width: 100%; background: none; border: none;
 cursor: pointer; padding: 14px 20px;
 text-align: left;
 min-height: 52px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 transition: background 0.1s;
 }
 .ms-btn:last-child { border-bottom: none; }
-.ms-btn:active { background: var(--bg3); }
-.ms-btn.on { background: var(--amber-bg); }
-.ms-icon { font-size: 16px; color: var(--muted); width: 20px; text-align: center; flex-shrink: 0; }
-.ms-btn.on .ms-icon { color: var(--amber); }
-.ms-lbl { font-size: 16px; color: var(--text2); font-weight: 400; }
-.ms-btn.on .ms-lbl { color: var(--text); font-weight: 500; }
-.ms-arr { margin-left: auto; font-size: 12px; color: var(--muted); }
+.ms-btn:active { background: var(–bg3); }
+.ms-btn.on { background: var(–amber-bg); }
+.ms-icon { font-size: 16px; color: var(–muted); width: 20px; text-align: center; flex-shrink: 0; }
+.ms-btn.on .ms-icon { color: var(–amber); }
+.ms-lbl { font-size: 16px; color: var(–text2); font-weight: 400; }
+.ms-btn.on .ms-lbl { color: var(–text); font-weight: 500; }
+.ms-arr { margin-left: auto; font-size: 12px; color: var(–muted); }
 
 /* ─────────────────────────────────────────────────── */
 /*  SECTION HEADERS                                    */
@@ -195,23 +195,23 @@ transition: background 0.1s;
 display: flex; align-items: center; gap: 10px;
 margin: 28px 0 14px;
 padding-bottom: 10px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 }
 .sh:first-child { margin-top: 8px; }
 .sh-num {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 10px; color: var(--muted);
+font-size: 10px; color: var(–muted);
 letter-spacing: 0.1em; flex-shrink: 0;
 }
 .sh-title {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 20px; letter-spacing: 0.06em;
-color: var(--white);
+color: var(–white);
 }
 .sh-tag {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 9px; color: var(--amber);
-background: var(--amber-bg);
+font-size: 9px; color: var(–amber);
+background: var(–amber-bg);
 padding: 2px 7px; margin-left: auto;
 white-space: nowrap;
 }
@@ -220,7 +220,7 @@ white-space: nowrap;
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 10px; font-weight: 600;
 letter-spacing: 0.15em; text-transform: uppercase;
-color: var(--amber);
+color: var(–amber);
 margin: 22px 0 10px;
 }
 
@@ -229,32 +229,32 @@ margin: 22px 0 10px;
 /* ─────────────────────────────────────────────────── */
 .cover-page {
 min-height: 100svh;
-background: var(--bg);
+background: var(–bg);
 display: flex; flex-direction: column;
 justify-content: flex-end;
-padding: 24px 20px calc(var(--tab-h) + 20px);
+padding: 24px 20px calc(var(–tab-h) + 20px);
 position: relative; overflow: hidden;
 }
 .cover-grid {
 position: absolute; inset: 0;
 background-image:
-linear-gradient(var(--border) 1px, transparent 1px),
-linear-gradient(90deg, var(--border) 1px, transparent 1px);
+linear-gradient(var(–border) 1px, transparent 1px),
+linear-gradient(90deg, var(–border) 1px, transparent 1px);
 background-size: 36px 36px;
 opacity: 0.3;
 }
 .cover-stripe {
 position: absolute; top: 0; right: 0;
 width: 3px; height: 100%;
-background: linear-gradient(180deg, transparent 10%, var(--amber) 45%, transparent 90%);
+background: linear-gradient(180deg, transparent 10%, var(–amber) 45%, transparent 90%);
 }
 .cover-big-num {
 position: absolute;
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: min(45vw, 180px);
-color: var(--bg2);
+color: var(–bg2);
 line-height: 0.85;
-bottom: calc(var(--tab-h) + 16px);
+bottom: calc(var(–tab-h) + 16px);
 right: 10px;
 letter-spacing: -0.02em;
 user-select: none;
@@ -262,19 +262,19 @@ user-select: none;
 .cover-eyebrow {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 10px; letter-spacing: 0.2em;
-color: var(--amber); text-transform: uppercase;
+color: var(–amber); text-transform: uppercase;
 margin-bottom: 16px;
 position: relative; z-index: 1;
 }
 .cover-h1 {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: min(22vw, 88px);
-color: var(--white); line-height: 0.9;
+color: var(–white); line-height: 0.9;
 letter-spacing: 0.04em;
 margin-bottom: 24px;
 position: relative; z-index: 1;
 }
-.cover-h1 em { color: var(--amber); font-style: normal; }
+.cover-h1 em { color: var(–amber); font-style: normal; }
 
 .cover-chips {
 display: flex; flex-wrap: wrap; gap: 8px;
@@ -284,14 +284,14 @@ position: relative; z-index: 1;
 .cover-chip {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px; letter-spacing: 0.1em;
-color: var(--muted2);
-background: var(--bg2);
-border: 1px solid var(--border2);
+color: var(–muted2);
+background: var(–bg2);
+border: 1px solid var(–border2);
 padding: 4px 10px;
 }
 
 .cover-divider {
-height: 1px; background: var(--border2);
+height: 1px; background: var(–border2);
 margin-bottom: 20px;
 position: relative; z-index: 1;
 }
@@ -303,79 +303,79 @@ position: relative; z-index: 1;
 .cs-name {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 11px; font-weight: 500;
-color: var(--amber); margin-bottom: 1px;
+color: var(–amber); margin-bottom: 1px;
 }
-.cs-desc { font-size: 12px; color: var(--muted2); }
+.cs-desc { font-size: 12px; color: var(–muted2); }
 
 /* ─────────────────────────────────────────────────── */
 /*  CARDS — mobile-native list style                   */
 /* ─────────────────────────────────────────────────── */
 .card {
-background: var(--bg2);
-border: 1px solid var(--border);
+background: var(–bg2);
+border: 1px solid var(–border);
 margin-bottom: 8px;
 overflow: hidden;
 }
 .card-row {
 display: flex; align-items: flex-start;
 padding: 13px 14px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 min-height: 52px;
 gap: 12px;
 }
 .card-row:last-child { border-bottom: none; }
-.card-row:nth-child(odd) { background: var(--bg3); }
-.card-row:nth-child(even) { background: var(--bg2); }
-.card-row:active { background: var(--bg4); }
+.card-row:nth-child(odd) { background: var(–bg3); }
+.card-row:nth-child(even) { background: var(–bg2); }
+.card-row:active { background: var(–bg4); }
 
 .cr-left { flex: 0 0 auto; min-width: 56px; }
 .cr-time {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 12px; color: var(--amber);
+font-size: 12px; color: var(–amber);
 white-space: nowrap;
 }
 .cr-key {
-font-size: 14px; font-weight: 500; color: var(--text);
+font-size: 14px; font-weight: 500; color: var(–text);
 white-space: nowrap;
 }
 .cr-right { flex: 1; }
-.cr-val { font-size: 14px; color: var(--text); }
-.cr-desc { font-size: 13px; color: var(--muted2); line-height: 1.5; }
-.cr-note { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 2px; }
+.cr-val { font-size: 14px; color: var(–text); }
+.cr-desc { font-size: 13px; color: var(–muted2); line-height: 1.5; }
+.cr-note { font-size: 12px; color: var(–muted); font-style: italic; margin-top: 2px; }
 
 .card-head {
 padding: 10px 14px;
-background: var(--bg3);
-border-bottom: 1px solid var(--border2);
+background: var(–bg3);
+border-bottom: 1px solid var(–border2);
 display: flex; align-items: center; justify-content: space-between;
 }
 .ch-title {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px; font-weight: 600;
 letter-spacing: 0.15em; text-transform: uppercase;
-color: var(--muted2);
+color: var(–muted2);
 }
-.card-highlight { background: var(--amber-bg) !important; }
-.card-highlight .cr-key, .card-highlight .cr-val { color: var(--white); }
-.card-highlight .cr-time { color: var(--amber); }
-.card-warn { background: var(--red-bg) !important; }
+.card-highlight { background: var(–amber-bg) !important; }
+.card-highlight .cr-key, .card-highlight .cr-val { color: var(–white); }
+.card-highlight .cr-time { color: var(–amber); }
+.card-warn { background: var(–red-bg) !important; }
 .card-warn .cr-key, .card-warn .cr-val { color: #C09090; }
-.card-green { background: var(--green-bg) !important; }
+.card-green { background: var(–green-bg) !important; }
 .card-green .cr-val { color: #80C0A0; }
 
 /* ─────────────────────────────────────────────────── */
 /*  LAYER CARDS (3-col → stacked on phone)             */
 /* ─────────────────────────────────────────────────── */
-.layer-stack { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-bottom: 16px; }
+.layer-stack { display: flex; flex-direction: column; gap: 1px; background: var(–border); border: 1px solid var(–border); margin-bottom: 16px; }
 .layer-card {
-background: var(--bg2);
+background: var(–bg2);
 padding: 16px;
 display: flex; gap: 14px; align-items: flex-start;
 }
 .lc-num-col {
 flex-shrink: 0;
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 9px; color: var(--muted);
+font-size: 9px; color: var(–muted);
 letter-spacing: 0.1em;
 padding-top: 4px;
 width: 56px;
@@ -384,20 +384,20 @@ width: 56px;
 .lc-title {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 24px; letter-spacing: 0.06em;
-color: var(--white); line-height: 1;
+color: var(–white); line-height: 1;
 margin-bottom: 6px;
 }
-.lc-title.amber { color: var(--amber); }
+.lc-title.amber { color: var(–amber); }
 .lc-body {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 11px; color: var(--muted2);
+font-size: 11px; color: var(–muted2);
 line-height: 1.7;
 }
 .lc-rule {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 10px; color: var(--muted);
+font-size: 10px; color: var(–muted);
 margin-top: 8px; padding-top: 8px;
-border-top: 1px solid var(--border);
+border-top: 1px solid var(–border);
 line-height: 1.6;
 }
 
@@ -405,51 +405,51 @@ line-height: 1.6;
 /*  EXERCISE GROUPS — collapsible                      */
 /* ─────────────────────────────────────────────────── */
 .ex-group {
-border: 1px solid var(--border);
+border: 1px solid var(–border);
 margin-bottom: 8px;
 overflow: hidden;
 }
 .ex-group-head {
 display: flex; align-items: center;
 padding: 14px 14px;
-background: var(--bg3);
+background: var(–bg3);
 cursor: pointer; user-select: none;
 min-height: 52px;
 gap: 10px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 -webkit-tap-highlight-color: transparent;
 }
-.ex-group-head:active { background: var(--bg4); }
-.ex-group.open .ex-group-head { border-bottom-color: var(--border2); }
-.eg-title { font-size: 16px; font-weight: 500; color: var(--text); flex: 1; }
+.ex-group-head:active { background: var(–bg4); }
+.ex-group.open .ex-group-head { border-bottom-color: var(–border2); }
+.eg-title { font-size: 16px; font-weight: 500; color: var(–text); flex: 1; }
 .eg-freq {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 9px; color: var(--muted);
-background: var(--bg2);
-padding: 2px 7px; border: 1px solid var(--border2);
+font-size: 9px; color: var(–muted);
+background: var(–bg2);
+padding: 2px 7px; border: 1px solid var(–border2);
 flex-shrink: 0;
 }
-.eg-chev { font-size: 10px; color: var(--muted); flex-shrink: 0; transition: transform 0.18s; }
-.ex-group.open .eg-chev { transform: rotate(180deg); color: var(--amber); }
+.eg-chev { font-size: 10px; color: var(–muted); flex-shrink: 0; transition: transform 0.18s; }
+.ex-group.open .eg-chev { transform: rotate(180deg); color: var(–amber); }
 .ex-body { display: none; }
 .ex-group.open .ex-body { display: block; }
 
 /* Exercise rows — stacked for mobile */
 .ex-card {
-border-bottom: 1px solid var(--border);
-background: var(--bg2);
+border-bottom: 1px solid var(–border);
+background: var(–bg2);
 }
 .ex-card:last-child { border-bottom: none; }
-.ex-card:nth-child(odd) { background: var(--bg); }
-.ex-card:active { background: var(--bg4); }
+.ex-card:nth-child(odd) { background: var(–bg); }
+.ex-card:active { background: var(–bg4); }
 .ex-top {
 padding: 12px 14px 6px;
 display: flex; align-items: flex-start; gap: 10px;
 }
-.ex-name { font-size: 16px; font-weight: 500; color: var(--text); flex: 1; }
+.ex-name { font-size: 16px; font-weight: 500; color: var(–text); flex: 1; }
 .ex-rx {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 12px; color: var(--amber);
+font-size: 12px; color: var(–amber);
 flex-shrink: 0;
 text-align: right;
 white-space: pre-line;
@@ -457,12 +457,12 @@ line-height: 1.5;
 }
 .ex-desc {
 padding: 4px 14px 12px;
-font-size: 13px; color: var(--muted2);
+font-size: 13px; color: var(–muted2);
 line-height: 1.55;
 }
-.ex-card.warn { background: var(--red-bg) !important; }
+.ex-card.warn { background: var(–red-bg) !important; }
 .ex-card.warn .ex-name { color: #C09090; }
-.ex-card.warn .ex-rx { color: var(--red); }
+.ex-card.warn .ex-rx { color: var(–red); }
 .ex-card.warn .ex-desc { color: #806060; }
 
 /* ─────────────────────────────────────────────────── */
@@ -474,7 +474,7 @@ overflow-x: auto;
 -webkit-overflow-scrolling: touch;
 scrollbar-width: none;
 gap: 0;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 margin-bottom: 16px;
 }
 .sched-tabs::-webkit-scrollbar { display: none; }
@@ -484,45 +484,45 @@ font-size: 10px; font-weight: 500;
 letter-spacing: 0.08em; text-transform: uppercase;
 padding: 12px 14px;
 background: none; border: none; cursor: pointer;
-color: var(--muted2);
+color: var(–muted2);
 border-bottom: 2px solid transparent;
 margin-bottom: -1px;
 white-space: nowrap; flex-shrink: 0;
 min-height: 48px;
 -webkit-tap-highlight-color: transparent;
 }
-.sched-tab.on { color: var(--amber); border-bottom-color: var(--amber); }
+.sched-tab.on { color: var(–amber); border-bottom-color: var(–amber); }
 .sched-pane { display: none; }
 .sched-pane.on { display: block; }
 
 /* ─────────────────────────────────────────────────── */
 /*  RULES                                              */
 /* ─────────────────────────────────────────────────── */
-.rules { border: 1px solid var(--border); }
+.rules { border: 1px solid var(–border); }
 .rule-row {
 display: flex; align-items: flex-start; gap: 0;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 }
 .rule-row:last-child { border-bottom: none; }
-.rule-row:nth-child(even) { background: var(--bg2); }
-.rule-row:nth-child(odd) { background: var(--bg); }
+.rule-row:nth-child(even) { background: var(–bg2); }
+.rule-row:nth-child(odd) { background: var(–bg); }
 .rule-n {
 font-family: ‘Bebas Neue’, sans-serif;
-font-size: 24px; color: var(--amber);
+font-size: 24px; color: var(–amber);
 display: flex; align-items: center; justify-content: center;
-border-right: 1px solid var(--border);
+border-right: 1px solid var(–border);
 padding: 14px 0;
 width: 50px; flex-shrink: 0;
 opacity: 0.7;
 }
 .rule-c { padding: 13px 14px; flex: 1; }
-.rule-t { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 3px; }
-.rule-d { font-size: 13px; color: var(--muted2); line-height: 1.5; }
+.rule-t { font-size: 15px; font-weight: 500; color: var(–text); margin-bottom: 3px; }
+.rule-d { font-size: 13px; color: var(–muted2); line-height: 1.5; }
 
 /* ─────────────────────────────────────────────────── */
 /*  PHASE BLOCKS                                       */
 /* ─────────────────────────────────────────────────── */
-.phase { border: 1px solid var(--border); margin-bottom: 10px; overflow: hidden; }
+.phase { border: 1px solid var(–border); margin-bottom: 10px; overflow: hidden; }
 .phase-head {
 padding: 14px;
 display: flex; align-items: center; justify-content: space-between;
@@ -530,52 +530,52 @@ min-height: 52px;
 }
 .ph-title {
 font-family: ‘Bebas Neue’, sans-serif;
-font-size: 18px; letter-spacing: 0.06em; color: var(--white);
+font-size: 18px; letter-spacing: 0.06em; color: var(–white);
 }
 .ph-weeks {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 9px; color: var(--muted); letter-spacing: 0.1em;
+font-size: 9px; color: var(–muted); letter-spacing: 0.1em;
 }
 .phase-item {
 display: flex; gap: 10px;
 padding: 12px 14px;
-border-top: 1px solid var(--border);
-font-size: 15px; color: var(--text2); line-height: 1.6;
+border-top: 1px solid var(–border);
+font-size: 15px; color: var(–text2); line-height: 1.6;
 }
 .phase-item::before {
 content: ‘→’;
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 11px; color: var(--muted);
+font-size: 11px; color: var(–muted);
 flex-shrink: 0; margin-top: 2px;
 }
-.phase-item:nth-child(even) { background: var(--bg2); }
+.phase-item:nth-child(even) { background: var(–bg2); }
 
 /* ─────────────────────────────────────────────────── */
 /*  TIMER                                              */
 /* ─────────────────────────────────────────────────── */
 .timer-box {
-background: var(--bg2);
-border: 1px solid var(--border2);
+background: var(–bg2);
+border: 1px solid var(–border2);
 padding: 20px 16px;
 margin-bottom: 16px;
 }
 .timer-lbl {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px; letter-spacing: 0.2em;
-text-transform: uppercase; color: var(--muted);
+text-transform: uppercase; color: var(–muted);
 margin-bottom: 10px;
 }
 .timer-face {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 96px; letter-spacing: 0.02em;
-color: var(--white); line-height: 1;
+color: var(–white); line-height: 1;
 margin-bottom: 16px;
 transition: color 0.3s;
 }
-.timer-face.run { color: var(--amber); }
+.timer-face.run { color: var(–amber); }
 .timer-face.warn { color: #C87820; }
-.timer-face.danger { color: var(--red); }
-.timer-face.done { color: var(--green); }
+.timer-face.danger { color: var(–red); }
+.timer-face.done { color: var(–green); }
 
 .timer-btns { display: flex; gap: 10px; }
 .tbtn {
@@ -589,16 +589,16 @@ background: none; flex: 1;
 -webkit-tap-highlight-color: transparent;
 }
 .tbtn:active { opacity: 0.7; }
-.tbtn-go { color: var(--amber); border-color: var(--amber2); }
+.tbtn-go { color: var(–amber); border-color: var(–amber2); }
 .tbtn-pause { color: #C08030; border-color: #604010; }
-.tbtn-rst { color: var(--muted2); border-color: var(--border2); }
+.tbtn-rst { color: var(–muted2); border-color: var(–border2); }
 
 .preset-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
 gap: 8px;
 margin-top: 14px; padding-top: 14px;
-border-top: 1px solid var(--border);
+border-top: 1px solid var(–border);
 }
 .tpre {
 font-family: ‘IBM Plex Mono’, monospace;
@@ -606,18 +606,18 @@ font-size: 11px; font-weight: 500;
 letter-spacing: 0.05em;
 padding: 0 12px;
 height: 44px;
-background: var(--bg3); border: 1px solid var(--border2);
-color: var(--muted2); cursor: pointer;
+background: var(–bg3); border: 1px solid var(–border2);
+color: var(–muted2); cursor: pointer;
 text-align: center;
 -webkit-tap-highlight-color: transparent;
 transition: all 0.1s;
 }
-.tpre:active { background: var(--amber-bg); border-color: var(--amber); color: var(--amber); }
-.tpre.selected { background: var(--amber-bg); border-color: var(--amber); color: var(--amber); }
+.tpre:active { background: var(–amber-bg); border-color: var(–amber); color: var(–amber); }
+.tpre.selected { background: var(–amber-bg); border-color: var(–amber); color: var(–amber); }
 
 .timer-note {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 11px; color: var(--muted);
+font-size: 11px; color: var(–muted);
 margin-top: 12px; font-style: italic;
 }
 
@@ -626,14 +626,14 @@ margin-top: 12px; font-style: italic;
 .ws-dot {
 flex: 1;
 height: 44px;
-border: 1px solid var(--border2);
+border: 1px solid var(–border2);
 display: flex; align-items: center; justify-content: center;
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 13px; color: var(--muted);
+font-size: 13px; color: var(–muted);
 transition: all 0.2s;
 }
-.ws-dot.done { border-color: var(--green); color: var(--green); background: var(--green-bg); }
-.ws-dot.active { border-color: var(--amber); color: var(--amber); background: var(--amber-bg); }
+.ws-dot.done { border-color: var(–green); color: var(–green); background: var(–green-bg); }
+.ws-dot.active { border-color: var(–amber); color: var(–amber); background: var(–amber-bg); }
 
 #wsFace { font-size: 72px !important; }
 
@@ -641,22 +641,22 @@ transition: all 0.2s;
 /*  MISC ELEMENTS                                      */
 /* ─────────────────────────────────────────────────── */
 .note {
-font-size: 13px; color: var(--muted2);
-border-left: 2px solid var(--border2);
+font-size: 13px; color: var(–muted2);
+border-left: 2px solid var(–border2);
 padding-left: 12px; margin: 10px 0;
 font-style: italic; line-height: 1.55;
 }
-.body { font-size: 16px; color: var(--text2); line-height: 1.7; margin-bottom: 10px; }
+.body { font-size: 16px; color: var(–text2); line-height: 1.7; margin-bottom: 10px; }
 
 .changes {
-border: 1px solid var(--amber2);
-background: var(--amber-bg);
+border: 1px solid var(–amber2);
+background: var(–amber-bg);
 padding: 14px 16px; margin-bottom: 20px;
 }
 .changes-title {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px; letter-spacing: 0.2em;
-text-transform: uppercase; color: var(--amber);
+text-transform: uppercase; color: var(–amber);
 margin-bottom: 10px;
 }
 .changes-list { list-style: none; }
@@ -668,149 +668,148 @@ position: relative; line-height: 1.55;
 .changes-list li::before {
 content: ‘+’;
 position: absolute; left: 0;
-color: var(--amber); font-weight: 600;
+color: var(–amber); font-weight: 600;
 font-family: ‘IBM Plex Mono’, monospace;
 }
 
 .colophon {
 margin-top: 40px; padding: 14px;
-border: 1px solid var(--border);
+border: 1px solid var(–border);
 display: flex; gap: 12px;
 }
-.col-bar { width: 2px; background: var(--amber); flex-shrink: 0; }
+.col-bar { width: 2px; background: var(–amber); flex-shrink: 0; }
 .col-text {
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 10px; color: var(--muted2);
+font-size: 10px; color: var(–muted2);
 line-height: 1.7;
 }
-.col-text strong { color: var(--text2); }
+.col-text strong { color: var(–text2); }
 
 /* Info pill */
 .pill {
 display: inline-flex; align-items: center; gap: 6px;
 font-family: ‘IBM Plex Mono’, monospace;
-font-size: 10px; color: var(--amber);
-background: var(--amber-bg);
-border: 1px solid var(--amber2);
+font-size: 10px; color: var(–amber);
+background: var(–amber-bg);
+border: 1px solid var(–amber2);
 padding: 4px 10px;
 margin: 4px 4px 4px 0;
 }
 
 /* Danger pill */
 .pill-r {
-color: var(--red); background: var(--red-bg);
-border-color: var(--red);
+color: var(–red); background: var(–red-bg);
+border-color: var(–red);
 }
 
 /* ─────────────────────────────────────────────────── */
 /*  TIMER MODAL                                         */
 /* ─────────────────────────────────────────────────── */
 .tmodal-overlay {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,0.82);
-  z-index: 500;
-  display: flex; align-items: flex-end; justify-content: center;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.2s;
+position: fixed; inset: 0;
+background: rgba(0,0,0,0.82);
+z-index: 500;
+display: flex; align-items: flex-end; justify-content: center;
+opacity: 0; pointer-events: none;
+transition: opacity 0.2s;
 }
 .tmodal-overlay.open { opacity: 1; pointer-events: all; }
 
 .tmodal {
-  background: var(--bg2);
-  border: 1px solid var(--border2);
-  border-bottom: none;
-  border-radius: 16px 16px 0 0;
-  padding: 20px 20px calc(var(--safe-bottom) + 20px);
-  width: 100%; max-width: 480px;
-  transform: translateY(100%);
-  transition: transform 0.28s cubic-bezier(0.32,0.72,0,1);
+background: var(–bg2);
+border: 1px solid var(–border2);
+border-bottom: none;
+border-radius: 16px 16px 0 0;
+padding: 20px 20px calc(var(–safe-bottom) + 20px);
+width: 100%; max-width: 480px;
+transform: translateY(100%);
+transition: transform 0.28s cubic-bezier(0.32,0.72,0,1);
 }
 .tmodal-overlay.open .tmodal { transform: translateY(0); }
 
 .tmodal-handle {
-  width: 36px; height: 4px;
-  background: var(--border2); border-radius: 2px;
-  margin: 0 auto 16px;
+width: 36px; height: 4px;
+background: var(–border2); border-radius: 2px;
+margin: 0 auto 16px;
 }
 .tmodal-label {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--amber);
-  margin-bottom: 4px; text-align: center;
+font-family: ‘IBM Plex Mono’, monospace;
+font-size: 10px; letter-spacing: 0.2em;
+text-transform: uppercase; color: var(–amber);
+margin-bottom: 4px; text-align: center;
 }
 .tmodal-face {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 88px; letter-spacing: 0.02em;
-  color: var(--white); line-height: 1;
-  text-align: center; margin-bottom: 16px;
-  transition: color 0.3s;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 88px; letter-spacing: 0.02em;
+color: var(–white); line-height: 1;
+text-align: center; margin-bottom: 16px;
+transition: color 0.3s;
 }
-.tmodal-face.run    { color: var(--amber); }
+.tmodal-face.run    { color: var(–amber); }
 .tmodal-face.warn   { color: #C87820; }
-.tmodal-face.danger { color: var(--red); }
-.tmodal-face.done   { color: var(--green); }
+.tmodal-face.danger { color: var(–red); }
+.tmodal-face.done   { color: var(–green); }
 .tmodal-btns { display: flex; gap: 10px; margin-bottom: 12px; }
 .tmodal-close {
-  width: 100%;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 0; height: 40px;
-  background: none; border: 1px solid var(--border2);
-  color: var(--muted2); cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
+width: 100%;
+font-family: ‘IBM Plex Mono’, monospace;
+font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+padding: 0; height: 40px;
+background: none; border: 1px solid var(–border2);
+color: var(–muted2); cursor: pointer;
+-webkit-tap-highlight-color: transparent;
 }
-.tmodal-close:active { background: var(--bg3); }
-
+.tmodal-close:active { background: var(–bg3); }
 
 /* ─────────────────────────────────────────────────── */
 /*  METRONOME OVERLAY                                   */
 /* ─────────────────────────────────────────────────── */
 .metro {
-  position: fixed;
-  bottom: calc(var(--tab-h) + 10px);
-  left: 12px;
-  z-index: 400;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
+position: fixed;
+bottom: calc(var(–tab-h) + 10px);
+left: 12px;
+z-index: 400;
+-webkit-tap-highlight-color: transparent;
+user-select: none;
 }
 .metro-pill {
-  display: flex; align-items: center; gap: 8px;
-  background: var(--bg3);
-  border: 1px solid var(--border2);
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
-  min-height: 40px;
+display: flex; align-items: center; gap: 8px;
+background: var(–bg3);
+border: 1px solid var(–border2);
+padding: 8px 12px;
+cursor: pointer;
+transition: border-color 0.15s, background 0.15s;
+min-height: 40px;
 }
-.metro-pill:active { background: var(--bg4); }
-.metro-pill.running { border-color: var(--amber); background: var(--amber-bg); }
-.metro-icon { font-size: 14px; color: var(--muted2); transition: color 0.15s; flex-shrink: 0; line-height: 1; }
-.metro-pill.running .metro-icon { color: var(--amber); }
-.metro-icon.flash { color: var(--white) !important; }
-.metro-bpm-display { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--text2); line-height: 1; letter-spacing: 0.04em; transition: color 0.15s; }
-.metro-pill.running .metro-bpm-display { color: var(--amber); }
-.metro-bpm-label { font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1; }
-.metro-panel { background: var(--bg2); border: 1px solid var(--border2); border-bottom: none; padding: 14px 14px 10px; margin-bottom: -1px; display: none; }
+.metro-pill:active { background: var(–bg4); }
+.metro-pill.running { border-color: var(–amber); background: var(–amber-bg); }
+.metro-icon { font-size: 14px; color: var(–muted2); transition: color 0.15s; flex-shrink: 0; line-height: 1; }
+.metro-pill.running .metro-icon { color: var(–amber); }
+.metro-icon.flash { color: var(–white) !important; }
+.metro-bpm-display { font-family: ‘Bebas Neue’, sans-serif; font-size: 22px; color: var(–text2); line-height: 1; letter-spacing: 0.04em; transition: color 0.15s; }
+.metro-pill.running .metro-bpm-display { color: var(–amber); }
+.metro-bpm-label { font-family: ‘IBM Plex Mono’, monospace; font-size: 8px; color: var(–muted); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1; }
+.metro-panel { background: var(–bg2); border: 1px solid var(–border2); border-bottom: none; padding: 14px 14px 10px; margin-bottom: -1px; display: none; }
 .metro-panel.open { display: block; }
 .metro-panel-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-.metro-adj { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; width: 36px; height: 36px; background: var(--bg3); border: 1px solid var(--border2); color: var(--text2); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
-.metro-adj:active { background: var(--amber-bg); border-color: var(--amber); color: var(--amber); }
-.metro-bpm-big { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--white); line-height: 1; letter-spacing: 0.04em; flex: 1; text-align: center; }
+.metro-adj { font-family: ‘IBM Plex Mono’, monospace; font-size: 15px; font-weight: 600; width: 36px; height: 36px; background: var(–bg3); border: 1px solid var(–border2); color: var(–text2); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
+.metro-adj:active { background: var(–amber-bg); border-color: var(–amber); color: var(–amber); }
+.metro-bpm-big { font-family: ‘Bebas Neue’, sans-serif; font-size: 48px; color: var(–white); line-height: 1; letter-spacing: 0.04em; flex: 1; text-align: center; }
 .metro-presets { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
-.metro-pre { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.07em; padding: 5px 8px; background: var(--bg3); border: 1px solid var(--border2); color: var(--muted2); cursor: pointer; -webkit-tap-highlight-color: transparent; white-space: nowrap; }
-.metro-pre:active, .metro-pre.on { background: var(--amber-bg); border-color: var(--amber); color: var(--amber); }
+.metro-pre { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; letter-spacing: 0.07em; padding: 5px 8px; background: var(–bg3); border: 1px solid var(–border2); color: var(–muted2); cursor: pointer; -webkit-tap-highlight-color: transparent; white-space: nowrap; }
+.metro-pre:active, .metro-pre.on { background: var(–amber-bg); border-color: var(–amber); color: var(–amber); }
 .metro-beats-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
-.metro-beats-label { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
-.metro-beat-btn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; width: 30px; height: 28px; background: var(--bg3); border: 1px solid var(--border2); color: var(--muted2); cursor: pointer; -webkit-tap-highlight-color: transparent; }
-.metro-beat-btn.on { background: var(--amber-bg); border-color: var(--amber); color: var(--amber); }
+.metro-beats-label { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; color: var(–muted); letter-spacing: 0.1em; text-transform: uppercase; flex-shrink: 0; }
+.metro-beat-btn { font-family: ‘IBM Plex Mono’, monospace; font-size: 10px; width: 30px; height: 28px; background: var(–bg3); border: 1px solid var(–border2); color: var(–muted2); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.metro-beat-btn.on { background: var(–amber-bg); border-color: var(–amber); color: var(–amber); }
 .metro-beat-dots { display: flex; gap: 5px; align-items: center; margin-left: auto; }
-.metro-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border2); transition: background 0.06s; }
-.metro-dot.accent { background: var(--amber); }
-.metro-dot.tick   { background: var(--muted2); }
-.metro-dismiss { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); background: none; border: none; cursor: pointer; padding: 2px 0 0; -webkit-tap-highlight-color: transparent; display: block; width: 100%; text-align: right; }
+.metro-dot { width: 8px; height: 8px; border-radius: 50%; background: var(–border2); transition: background 0.06s; }
+.metro-dot.accent { background: var(–amber); }
+.metro-dot.tick   { background: var(–muted2); }
+.metro-dismiss { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(–muted); background: none; border: none; cursor: pointer; padding: 2px 0 0; -webkit-tap-highlight-color: transparent; display: block; width: 100%; text-align: right; }
 
 @media (min-width: 601px) {
-.doc { padding: 24px 32px calc(var(--tab-h) + 24px); }
+.doc { padding: 24px 32px calc(var(–tab-h) + 24px); }
 .layer-stack { flex-direction: row; }
 .layer-card { flex-direction: column; gap: 0; }
 .lc-num-col { width: auto; padding-top: 0; margin-bottom: 4px; }
@@ -843,51 +842,51 @@ align-items: center;
 gap: 3px;
 padding: 10px 12px;
 min-width: 56px;
-background: var(--bg3);
-border: 1px solid var(--border2);
+background: var(–bg3);
+border: 1px solid var(–border2);
 cursor: pointer;
 -webkit-tap-highlight-color: transparent;
 transition: all 0.12s;
 }
 .day-btn:active { opacity: 0.7; }
-.day-btn.active { background: var(--amber-bg); border-color: var(--amber); }
+.day-btn.active { background: var(–amber-bg); border-color: var(–amber); }
 .day-btn-num {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 28px;
-color: var(--muted2);
+color: var(–muted2);
 line-height: 1;
 transition: color 0.12s;
 }
-.day-btn.active .day-btn-num { color: var(--amber); }
-.day-btn.type-a .day-btn-num { color: var(--amber); }
+.day-btn.active .day-btn-num { color: var(–amber); }
+.day-btn.type-a .day-btn-num { color: var(–amber); }
 .day-btn-type {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: var(--muted);
+color: var(–muted);
 }
-.day-btn.active .day-btn-type { color: var(--amber2); }
+.day-btn.active .day-btn-type { color: var(–amber2); }
 
-.today-card { border: 1px solid var(--border2); margin-bottom: 16px; }
-.today-card-head { padding: 16px 16px 14px; border-bottom: 1px solid var(--border2); }
+.today-card { border: 1px solid var(–border2); margin-bottom: 16px; }
+.today-card-head { padding: 16px 16px 14px; border-bottom: 1px solid var(–border2); }
 .today-day-label {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(--muted);
+color: var(–muted);
 margin-bottom: 6px;
 }
 .today-day-title {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 32px;
 letter-spacing: 0.04em;
-color: var(--white);
+color: var(–white);
 line-height: 1;
 margin-bottom: 8px;
 }
-.today-day-title.amber { color: var(--amber); }
+.today-day-title.amber { color: var(–amber); }
 .today-pills { display: flex; flex-wrap: wrap; gap: 6px; }
 .today-pill {
 font-family: ‘IBM Plex Mono’, monospace;
@@ -895,16 +894,16 @@ font-size: 10px;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 padding: 4px 9px;
-border: 1px solid var(--border2);
-color: var(--muted2);
+border: 1px solid var(–border2);
+color: var(–muted2);
 }
-.today-pill.amber { border-color: var(--amber2); color: var(--amber); background: var(--amber-bg); }
-.today-pill.green { border-color: var(--green); color: var(--green); background: var(--green-bg); }
+.today-pill.amber { border-color: var(–amber2); color: var(–amber); background: var(–amber-bg); }
+.today-pill.green { border-color: var(–green); color: var(–green); background: var(–green-bg); }
 
 /* Step rows — expand/collapse only, no checkboxes */
 .step-list { list-style: none; }
 .step {
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 -webkit-tap-highlight-color: transparent;
 }
 .step:last-child { border-bottom: none; }
@@ -918,56 +917,56 @@ min-height: 64px;
 cursor: pointer;
 transition: background 0.1s;
 }
-.step-row:active { background: var(--bg3); }
+.step-row:active { background: var(–bg3); }
 
 .step-main { flex: 1; }
 .step-time {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 11px;
-color: var(--muted);
+color: var(–muted);
 margin-bottom: 3px;
 letter-spacing: 0.04em;
 }
 .step-title {
 font-size: 17px;
 font-weight: 500;
-color: var(--white);
+color: var(–white);
 line-height: 1.25;
 margin-bottom: 3px;
 }
 .step-sub {
 font-size: 13px;
-color: var(--muted2);
+color: var(–muted2);
 line-height: 1.4;
 }
 
 .step-arrow {
 font-size: 18px;
-color: var(--muted);
+color: var(–muted);
 flex-shrink: 0;
 transition: transform 0.2s, color 0.2s;
 width: 24px;
 text-align: center;
 }
-.step.open .step-arrow { color: var(--amber); transform: rotate(90deg); }
-.step-arrow.navlink { color: var(--amber2) !important; }
+.step.open .step-arrow { color: var(–amber); transform: rotate(90deg); }
+.step-arrow.navlink { color: var(–amber2) !important; }
 
 .step-detail {
 display: none;
-background: var(--bg2);
-border-top: 1px solid var(--border);
+background: var(–bg2);
+border-top: 1px solid var(–border);
 padding: 14px 16px;
 }
 .step-detail.open { display: block; }
 .step-detail-ex {
 margin-bottom: 14px;
 padding-bottom: 14px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 }
 .step-detail-ex:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-.sde-name { font-size: 15px; font-weight: 500; color: var(--amber); margin-bottom: 3px; }
-.sde-rx { font-family: ‘IBM Plex Mono’, monospace; font-size: 12px; color: var(--muted2); margin-bottom: 6px; }
-.sde-desc { font-size: 14px; color: var(--text2); line-height: 1.6; }
+.sde-name { font-size: 15px; font-weight: 500; color: var(–amber); margin-bottom: 3px; }
+.sde-rx { font-family: ‘IBM Plex Mono’, monospace; font-size: 12px; color: var(–muted2); margin-bottom: 6px; }
+.sde-desc { font-size: 14px; color: var(–text2); line-height: 1.6; }
 .sde-timer-btn {
 margin-top: 10px;
 font-family: ‘IBM Plex Mono’, monospace;
@@ -977,25 +976,25 @@ letter-spacing: 0.08em;
 text-transform: uppercase;
 padding: 10px 16px;
 background: none;
-border: 1px solid var(--amber2);
-color: var(--amber);
+border: 1px solid var(–amber2);
+color: var(–amber);
 cursor: pointer;
 -webkit-tap-highlight-color: transparent;
 width: 100%;
 }
-.sde-timer-btn:active { background: var(--amber-bg); }
+.sde-timer-btn:active { background: var(–amber-bg); }
 .sde-navlink {
 display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 10px 0 0;
 margin-top: 10px;
-border-top: 1px solid var(--border);
+border-top: 1px solid var(–border);
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 11px;
 letter-spacing: 0.06em;
 text-transform: uppercase;
-color: var(--amber2);
+color: var(–amber2);
 cursor: pointer;
 -webkit-tap-highlight-color: transparent;
 }
@@ -1006,7 +1005,7 @@ font-family: ‘IBM Plex Mono’, monospace;
 font-size: 10px;
 letter-spacing: 0.2em;
 text-transform: uppercase;
-color: var(--muted);
+color: var(–muted);
 padding: 14px 0 8px;
 }
 
@@ -1016,25 +1015,25 @@ display: flex;
 align-items: center;
 gap: 12px;
 padding: 14px 16px;
-border-bottom: 1px solid var(--border);
+border-bottom: 1px solid var(–border);
 }
 .micro-item:last-child { border-bottom: none; }
-.micro-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); flex-shrink: 0; }
-.micro-dot.req { background: var(--green); }
+.micro-dot { width: 7px; height: 7px; border-radius: 50%; background: var(–muted); flex-shrink: 0; }
+.micro-dot.req { background: var(–green); }
 .micro-main { flex: 1; }
-.micro-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
-.micro-rx { font-family: ‘IBM Plex Mono’, monospace; font-size: 12px; color: var(--muted2); }
+.micro-name { font-size: 15px; font-weight: 500; color: var(–text); margin-bottom: 2px; }
+.micro-rx { font-family: ‘IBM Plex Mono’, monospace; font-size: 12px; color: var(–muted2); }
 .micro-tag {
 font-family: ‘IBM Plex Mono’, monospace;
 font-size: 9px;
 letter-spacing: 0.06em;
 text-transform: uppercase;
 padding: 3px 7px;
-border: 1px solid var(--border2);
-color: var(--muted);
+border: 1px solid var(–border2);
+color: var(–muted);
 flex-shrink: 0;
 }
-.micro-tag.req { border-color: var(--green); color: var(--green); }
+.micro-tag.req { border-color: var(–green); color: var(–green); }
 
 @media print {
 .tab-bar, .overlay, .menu-sheet { display: none !important; }
@@ -1043,22 +1042,22 @@ body { background: #fff; color: #000; }
 }
 
 /* – Day Briefing –––––––––––––––––––– */
-.briefing { border: 1px solid var(--border2); border-top: none; margin-bottom: 16px; overflow: hidden; }
-.briefing-head { display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; background: var(--bg3); cursor: pointer; -webkit-tap-highlight-color: transparent; border-bottom: 1px solid var(--border); }
-.briefing-head:active { background: var(--bg4); }
-.briefing-label { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted2); }
-.briefing-chev { font-size: 10px; color: var(--muted); transition: transform 0.18s; }
-.briefing.open .briefing-chev { transform: rotate(180deg); color: var(--amber); }
+.briefing { border: 1px solid var(–border2); border-top: none; margin-bottom: 16px; overflow: hidden; }
+.briefing-head { display: flex; align-items: center; justify-content: space-between; padding: 11px 16px; background: var(–bg3); cursor: pointer; -webkit-tap-highlight-color: transparent; border-bottom: 1px solid var(–border); }
+.briefing-head:active { background: var(–bg4); }
+.briefing-label { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(–muted2); }
+.briefing-chev { font-size: 10px; color: var(–muted); transition: transform 0.18s; }
+.briefing.open .briefing-chev { transform: rotate(180deg); color: var(–amber); }
 .briefing-body { display: none; }
 .briefing.open .briefing-body { display: block; }
-.briefing-section { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.briefing-section { padding: 12px 16px; border-bottom: 1px solid var(–border); }
 .briefing-section:last-child { border-bottom: none; }
 .briefing-section-title { font-family: ‘IBM Plex Mono’, monospace; font-size: 9px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 7px; }
-.briefing-section-title.warn { color: var(--red); }
-.briefing-section-title.ok { color: var(--green); }
-.briefing-section-title.caution { color: var(--amber); }
-.briefing-item { font-size: 13px; color: var(--text2); line-height: 1.6; padding: 3px 0 3px 12px; position: relative; }
-.briefing-item::before { content: ‘\2014’; position: absolute; left: 0; font-family: ‘IBM Plex Mono’, monospace; font-size: 10px; color: var(--muted); }
+.briefing-section-title.warn { color: var(–red); }
+.briefing-section-title.ok { color: var(–green); }
+.briefing-section-title.caution { color: var(–amber); }
+.briefing-item { font-size: 13px; color: var(–text2); line-height: 1.6; padding: 3px 0 3px 12px; position: relative; }
+.briefing-item::before { content: ‘\2014’; position: absolute; left: 0; font-family: ‘IBM Plex Mono’, monospace; font-size: 10px; color: var(–muted); }
 /* —————————————————–– */
 </style>
 
@@ -1075,7 +1074,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v5.1</div>
+  <div class="ms-title">KNEE REHAB v5.2</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Program</div>
@@ -1103,8 +1102,11 @@ body { background: #fff; color: #000; }
 <!-- ══════════════════════════════════════════════════ -->
 
 <!-- ══════════════════════════════════════════════════ -->
+
 <!--  METRONOME OVERLAY                                 -->
+
 <!-- ══════════════════════════════════════════════════ -->
+
 <div class="metro" id="metro">
   <div class="metro-panel" id="metroPanel">
     <div class="metro-panel-row">
@@ -1145,8 +1147,11 @@ body { background: #fff; color: #000; }
 </div>
 
 <!-- ══════════════════════════════════════════════════ -->
+
 <!--  TIMER MODAL                                       -->
+
 <!-- ══════════════════════════════════════════════════ -->
+
 <div class="tmodal-overlay" id="tModalOverlay" onclick="tModalBgClick(event)">
   <div class="tmodal">
     <div class="tmodal-handle"></div>
@@ -1191,7 +1196,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">5.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v5.1</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v5.2</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1233,14 +1238,11 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v5.0</div>
+    <div class="changes-title">Changes from v5.1</div>
     <ul class="changes-list">
-      <li>Gap block rotated across Day A and Day B — 9 exercises split into two 6-exercise subsets to reduce session time. All 9 exercises run on Day C where there is no collagen timing pressure. Total time to break reduced ~10 min.</li>
-      <li>Day A posture block: Bird Dog, Superman Hold, L-Sit → Reverse Plank, WLYT, Scap Push-Up, External Shoulder Rotation. Emphasis: posterior chain isometrics + scapular stability.</li>
-      <li>Day B posture block: Bird Dog, Down Dog → Upward Dog, Floor Slide, WLYT, Shoulder Tap, External Shoulder Rotation. Emphasis: full chain mobility + anti-rotation in push-up position.</li>
-      <li>Bird Dog, WLYT, and External Shoulder Rotation retained on both days — highest-priority corrective exercises for desk worker; warrant 3×/week frequency.</li>
-      <li>Thread the needle removed from mobility block — thoracic rotation is useful but not mechanically upstream of PFPS; dropped to recover time. Wall ankle dorsiflexion retained.</li>
-      <li>Mobility block reduced from 6 to 5 exercises. Estimated session time to break: ~34 min (was ~44 min in v5.0).</li>
+      <li>Short Arc Quad (SAQ) moved from knee-specific pick-2 to mandatory daily micro-session. VMO weakness is the primary structural deficit in PFPS — SAQ is the only exercise in the program that loads VMO through range with an eccentric. Making it optional meant it could be skipped on any given day. Now runs daily alongside tibialis raise, backward walk, dead hang, and single-leg balance.</li>
+      <li>Terminal Knee Extension (TKE) moved from knee-specific pick-2 to General Optional. TKE is proprioceptive and neuromuscular, not a strength exercise — it does not belong in the same pool as SAQ. Foot-against-wall variation requires no equipment. Now available daily as the optional pick.</li>
+      <li>Knee-specific pick-2 pool now contains: Single-Leg Wall Sit, Deep Squat Hold, Hanging Knee Raise.</li>
     </ul>
   </div>
 
@@ -1362,10 +1364,10 @@ body { background: #fff; color: #000; }
 
   <div class="day-selector" id="daySelector">
     <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
-      <span class="day-btn-num">A</span><span class="day-btn-type">Full Bike</span>
+      <span class="day-btn-num">A</span><span class="day-btn-type">Full +Bike</span>
     </button>
     <button class="day-btn" data-block="B" onclick="selectBlock('B',this)">
-      <span class="day-btn-num">B</span><span class="day-btn-type">Full Alt</span>
+      <span class="day-btn-num">B</span><span class="day-btn-type">Full Hamstring</span>
     </button>
     <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
       <span class="day-btn-num">C</span><span class="day-btn-type">Recovery</span>
@@ -1675,6 +1677,7 @@ body { background: #fff; color: #000; }
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Backward Walk</span><span class="ex-rx">2--3 rounds 30--60s</span></div><div class="ex-desc">Walk backward slowly. Resistance band optional. Trains knee in decompressed position. Daily is the point.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Dead Hang</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Hang from bar, relaxed shoulders. Spinal decompression, grip, scapular stability. No recovery demand.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Balance</span><span class="ex-rx">2 × 20–30s each leg</span></div><div class="ex-desc">Stand on one foot. Phase 1: eyes open. Phase 2: eyes closed. Phase 3: slight knee bend (10–15°). PFPS degrades patellofemoral proprioception — balance training addresses this directly. Also the primary missing ski prep element. No recovery demand. Do anywhere.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold top · 3s lower</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s eccentric lower. VMO is the only quadriceps head with a medial pull vector — it controls patellar tracking. This is the only exercise in the program that loads VMO through range with an eccentric. Mandatory daily because patellar tracking is the primary diagnosis. Chair required.</div></div>
     </div>
   </div>
 
@@ -1687,8 +1690,6 @@ body { background: #fff; color: #000; }
     </div>
     <div class="ex-body">
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Wall Sit</span><span class="ex-rx">5 × 20s / 45s rest</span></div><div class="ex-desc">Primary knee only. Start 45° flexion, build toward 60° over weeks.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2 sec hold, 3 sec lower. VMO strength at terminal extension — targets patellar tracking directly.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Terminal Knee Extension</span><span class="ex-rx">10 reps each · 5s hold</span></div><div class="ex-desc">Band at knee height or foot against wall. Extend fully against resistance. Proprioception and stability — different from SAQ which is VMO strength.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Deep Squat Hold</span><span class="ex-rx">3 × 20--30 sec</span></div><div class="ex-desc">Heels elevated if needed. Full depth. Reduce heel elevation over weeks — elevation is not cheating.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Hanging Knee Raise</span><span class="ex-rx">1 × max controlled</span></div><div class="ex-desc">Dead hang. Raise knees to 90° or higher, lower controlled. Hip flexor strength.</div></div>
     </div>
@@ -1702,6 +1703,7 @@ body { background: #fff; color: #000; }
       <span class="eg-chev">▼</span>
     </div>
     <div class="ex-body">
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Terminal Knee Extension</span><span class="ex-rx">10 reps each · 5s hold</span></div><div class="ex-desc">Foot pressed against wall or band at knee height. From slight flexion (~20°), drive to full extension, hold 5s. Trains end-range proprioception and quad-hamstring co-contraction — different function from SAQ which is VMO strength. Foot-against-wall requires no equipment.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Calf Raise</span><span class="ex-rx">1 × 20 each</span></div><div class="ex-desc">Single-leg. Deep stretch at bottom, full rise at top.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Standing Hip Flexion Hold</span><span class="ex-rx">10 each side · 3s hold</span></div><div class="ex-desc">Standing, lift one knee to 90°, hold 3 sec, lower controlled. Hip flexor strength is absent from the program in any loaded form. Weak hip flexors create anterior pelvic tilt under fatigue (skiing descents, long hikes), which directly increases PFPS load. No equipment — do at desk or kitchen counter.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Chin Tuck</span><span class="ex-rx">5 × 5s hold</span></div><div class="ex-desc">Seated or standing. Retract head straight back (double chin), hold 5 sec, release. Deep cervical flexors — universally weak in desk workers. Forward head posture adds significant moment arm load to cervical spine. No equipment. 60 seconds total.</div></div>
@@ -1913,28 +1915,31 @@ body { background: #fff; color: #000; }
     <div class="rule-row"><div class="rule-n">03</div><div class="rule-c"><div class="rule-t">All collagen: 2+ hours after any protein meal</div><div class="rule-d">Leucine blunts connective tissue synthesis response.</div></div></div>
     <div class="rule-row"><div class="rule-n">04</div><div class="rule-c"><div class="rule-t">Load day morning sequence is fixed</div><div class="rule-d">Reordering disrupts the collagen timing architecture.</div></div></div>
     <div class="rule-row"><div class="rule-n">05</div><div class="rule-c"><div class="rule-t">Bellemans Bike is the collagen target</div><div class="rule-d">Everything before it lands the bike at T+57, inside the 60--90 min peak window. Zone 2 commute counts as the Bellemans session — do not stack both.</div></div></div>
-    
-    <div class="rule-row"><div class="rule-n">07</div><div class="rule-c"><div class="rule-t">Skin-sourced collagen only</div><div class="rule-d">Type I. Bone broth and gelatin are not equivalent.</div></div></div>
-    <div class="rule-row"><div class="rule-n">08</div><div class="rule-c"><div class="rule-t">Hamstring slides on Day B only</div><div class="rule-d">48h eccentric recovery from Day A. Separation from bike session reduces posterior chain stacking.</div></div></div>
-    <div class="rule-row"><div class="rule-n">09</div><div class="rule-c"><div class="rule-t">Knee micro-sessions on Days A &amp; B only</div><div class="rule-d">Loaded stimuli — not habits. Excluded from Day C.</div></div></div>
-    <div class="rule-row"><div class="rule-n">10</div><div class="rule-c"><div class="rule-t">Tibialis raise, backward walk, dead hang daily</div><div class="rule-d">No recovery demand — corrective and decompressive without exception.</div></div></div>
-    <div class="rule-row"><div class="rule-n">11</div><div class="rule-c"><div class="rule-t">Buffer rule — base only if tomorrow is activity</div><div class="rule-d">Regardless of where it falls in the load schedule.</div></div></div>
-    <div class="rule-row"><div class="rule-n">12</div><div class="rule-c"><div class="rule-t">Activity days replace a Day A or B</div><div class="rule-d">Do not stack structured knee work on top.</div></div></div>
-    <div class="rule-row"><div class="rule-n">13</div><div class="rule-c"><div class="rule-t">Zone 2: swimming or elliptical only — Phase 1</div><div class="rule-d">No outdoor cycling as Zone 2. Phase 2+.</div></div></div>
-    <div class="rule-row"><div class="rule-n">14</div><div class="rule-c"><div class="rule-t">Zone 1 on Day C is unrestricted</div><div class="rule-d">Backward walk, easy bike commute, kayaking, casual swim. Zone 1 commutes do not require collagen and do not displace the Bellemans session.</div></div></div>
-    <div class="rule-row"><div class="rule-n">15</div><div class="rule-c"><div class="rule-t">Zone 2 commute replaces Bellemans Bike — not adds to it</div><div class="rule-d">Take collagen 45 min before. Run morning routine. Skip T+57 Bellemans session. Monitor next-morning soreness every commute in Phase 1.</div></div></div>
-    <div class="rule-row"><div class="rule-n">16</div><div class="rule-c"><div class="rule-t">Bellemans Bike: 10--15 min maximum</div><div class="rule-d">Cartilage adaptation window closes at 15 min. This applies to the stationary bike only — commutes are not capped.</div></div></div>
-    <div class="rule-row"><div class="rule-n">16</div><div class="rule-c"><div class="rule-t">Pain guide</div><div class="rule-d">Dull ache acceptable. Sharp or >4/10 = reduce load or angle immediately.</div></div></div>
-    <div class="rule-row"><div class="rule-n">17</div><div class="rule-c"><div class="rule-t">Do not skip mobility</div><div class="rule-d">Daily including Day C. Hip and ankle stiffness are upstream causes of knee load.</div></div></div>
-    <div class="rule-row"><div class="rule-n">18</div><div class="rule-c"><div class="rule-t">Glute work is not optional</div><div class="rule-d">VMO alone will not fix patellar tracking without glute medius.</div></div></div>
-    <div class="rule-row"><div class="rule-n">19</div><div class="rule-c"><div class="rule-t">Deep range is the goal</div><div class="rule-d">Use whatever assistance needed to reach depth — reduce over time.</div></div></div>
+
+```
+<div class="rule-row"><div class="rule-n">07</div><div class="rule-c"><div class="rule-t">Skin-sourced collagen only</div><div class="rule-d">Type I. Bone broth and gelatin are not equivalent.</div></div></div>
+<div class="rule-row"><div class="rule-n">08</div><div class="rule-c"><div class="rule-t">Hamstring slides on Day B only</div><div class="rule-d">48h eccentric recovery from Day A. Separation from bike session reduces posterior chain stacking.</div></div></div>
+<div class="rule-row"><div class="rule-n">09</div><div class="rule-c"><div class="rule-t">Knee micro-sessions on Days A &amp; B only</div><div class="rule-d">Loaded stimuli — not habits. Excluded from Day C.</div></div></div>
+<div class="rule-row"><div class="rule-n">10</div><div class="rule-c"><div class="rule-t">Tibialis raise, backward walk, dead hang daily</div><div class="rule-d">No recovery demand — corrective and decompressive without exception.</div></div></div>
+<div class="rule-row"><div class="rule-n">11</div><div class="rule-c"><div class="rule-t">Buffer rule — base only if tomorrow is activity</div><div class="rule-d">Regardless of where it falls in the load schedule.</div></div></div>
+<div class="rule-row"><div class="rule-n">12</div><div class="rule-c"><div class="rule-t">Activity days replace a Day A or B</div><div class="rule-d">Do not stack structured knee work on top.</div></div></div>
+<div class="rule-row"><div class="rule-n">13</div><div class="rule-c"><div class="rule-t">Zone 2: swimming or elliptical only — Phase 1</div><div class="rule-d">No outdoor cycling as Zone 2. Phase 2+.</div></div></div>
+<div class="rule-row"><div class="rule-n">14</div><div class="rule-c"><div class="rule-t">Zone 1 on Day C is unrestricted</div><div class="rule-d">Backward walk, easy bike commute, kayaking, casual swim. Zone 1 commutes do not require collagen and do not displace the Bellemans session.</div></div></div>
+<div class="rule-row"><div class="rule-n">15</div><div class="rule-c"><div class="rule-t">Zone 2 commute replaces Bellemans Bike — not adds to it</div><div class="rule-d">Take collagen 45 min before. Run morning routine. Skip T+57 Bellemans session. Monitor next-morning soreness every commute in Phase 1.</div></div></div>
+<div class="rule-row"><div class="rule-n">16</div><div class="rule-c"><div class="rule-t">Bellemans Bike: 10--15 min maximum</div><div class="rule-d">Cartilage adaptation window closes at 15 min. This applies to the stationary bike only — commutes are not capped.</div></div></div>
+<div class="rule-row"><div class="rule-n">16</div><div class="rule-c"><div class="rule-t">Pain guide</div><div class="rule-d">Dull ache acceptable. Sharp or >4/10 = reduce load or angle immediately.</div></div></div>
+<div class="rule-row"><div class="rule-n">17</div><div class="rule-c"><div class="rule-t">Do not skip mobility</div><div class="rule-d">Daily including Day C. Hip and ankle stiffness are upstream causes of knee load.</div></div></div>
+<div class="rule-row"><div class="rule-n">18</div><div class="rule-c"><div class="rule-t">Glute work is not optional</div><div class="rule-d">VMO alone will not fix patellar tracking without glute medius.</div></div></div>
+<div class="rule-row"><div class="rule-n">19</div><div class="rule-c"><div class="rule-t">Deep range is the goal</div><div class="rule-d">Use whatever assistance needed to reach depth — reduce over time.</div></div></div>
+```
+
   </div>
 
   <div class="colophon">
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v5.1 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v5.2 — March 2026
     </div>
   </div>
 
@@ -2260,8 +2265,8 @@ const BLOCKS = {
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
+      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold · 3s lower', req:true},
       {n:'Single-Leg Wall Sit',rx:'5 × 20s · 45s rest',    req:false},
-      {n:'Short Arc Quad',     rx:'2 × 15 each · 2s hold',           req:false},
     ],
     briefing:{
       warn:['Do not stack a Zone 2 ride after work — Bellemans bike is the cartilage stimulus for today. Window is spent.',
@@ -2324,8 +2329,8 @@ const BLOCKS = {
       {n:'Backward Walk',      rx:'2–3 rounds 30–60s',     req:true},
       {n:'Dead Hang',          rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg',   req:true},
+      {n:'Short Arc Quad',     rx:'3 × 15 each · 2s hold · 3s lower', req:true},
       {n:'Single-Leg Wall Sit',rx:'5 × 20s · 45s rest',    req:false},
-      {n:'Short Arc Quad',     rx:'2 × 15 each · 2s hold',           req:false},
     ],
     briefing:{
       warn:['No bike today — do not add a Bellemans session to compensate.',
@@ -2374,11 +2379,12 @@ const BLOCKS = {
       {n:'Backward Walk',  rx:'2–3 rounds',            req:true},
       {n:'Dead Hang',      rx:'2 × 30s',            req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg', req:true},
+      {n:'Short Arc Quad', rx:'3 × 15 each · 2s hold · 3s lower', req:true},
     ],
     briefing:{
       warn:['No collagen today — Day C has no loading event that warrants it.',
             'No Zone 2 riding today — unprimed connective tissue load with no collagen upstream.',
-            'No knee-specific micro-sessions today — mandatory only.'],
+            'No knee-specific micro-sessions today — mandatory only (tibialis raise, backward walk, dead hang, single-leg balance, SAQ).'],
       ok:['Zone 1 commute completely free — no ceiling, no protocol interaction.',
           'Easy walking, kayaking, swimming all fine.',
           'If before an activity day (ski/hike): rest only — skip this session entirely.'],
@@ -2411,6 +2417,7 @@ const BLOCKS = {
       {n:'Backward Walk',  rx:'2–3 rounds', req:true},
       {n:'Dead Hang',      rx:'2×30s', req:true},
       {n:'Single-Leg Balance', rx:'2 × 20–30s each leg', req:true},
+      {n:'Short Arc Quad', rx:'3 × 15 each · 2s hold · 3s lower', req:true},
     ],
     briefing:{
       warn:['No loading routine — do not run Day A or B before activity. The warm-up only.',
