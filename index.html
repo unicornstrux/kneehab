@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v5.4</title>
+<title>Knee Rehab v5.5</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1074,7 +1074,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v5.4</div>
+  <div class="ms-title">KNEE REHAB v5.5</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
@@ -1188,7 +1188,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">5.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v5.4</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v5.5</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1230,13 +1230,18 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v5.3</div>
+    <div class="changes-title">Changes from v5.4</div>
     <ul class="changes-list">
-      <li>Exercises tab now opens a hub page with three sub-tabs: Base · Daily, Day A &amp; B, and Micro-Sessions. Previously the Exercises tab went directly to Day A &amp; B only — Base Exercises and Micro-Sessions were buried in More. All exercise content is now in one place.</li>
-      <li>Exercise content in hub is mirrored from the source pages (base, load, micro) — no duplication in the HTML, single source of truth.</li>
-      <li>More menu exercises group removed — now redundant. More is down to 5 items across 2 groups.</li>
-      <li>Phase 1 page expanded to Phases &amp; Progression. Phase 2 (Weeks 5–10) and Phase 3 (Weeks 11+) outlined with direction and entry gates. Full prescriptions written on entry to each phase.</li>
-      <li>More menu "Phase 1" renamed "Phases &amp; Progression".</li>
+      <li>Isometric and transition exercises converted from rep/set prescription to single block time (30/60/90s). Time under tension is the actual stimulus — reps were a noisy proxy when hold duration varied session to session.</li>
+      <li>L-Sit → Reverse Plank bug fixed — was present in Day A and Day C posture blocks but missing from Day B. Now consistent across all three days.</li>
+      <li>Deep Split Squat replaced with Split Squat Progression. Rear leg extended throughout all phases (stretches rectus femoris under load — direct PFPS driver). Four-rung ladder: front foot elevated + counterbalance (Ph1 Wk1–2) → both feet flat + counterbalance (Ph1 Wk3–4) → both feet flat, no counterbalance (Ph2) → Bulgarian with load (Ph3).</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.3 → v5.4</div>
+    <ul class="changes-list" style="color:var(--muted);">
+      <li>Exercises tab now opens a hub page with three sub-tabs: Base · Daily, Day A &amp; B, and Micro-Sessions.</li>
+      <li>Phase 1 page expanded to Phases &amp; Progression with Phase 2 and Phase 3 outlined.</li>
     </ul>
   </div>
   <div class="changes" style="margin-top:8px;border-color:var(--border);">
@@ -1821,7 +1826,7 @@ body { background: #fff; color: #000; }
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Slant Board Step Down</span><span class="ex-rx">3×10 pri / 3×8 sec</span></div><div class="ex-desc">10cm step (Phase 1). Lower opposite foot over 5 sec, 2s pause at bottom (foot hovering, not touching), return. Hand on wall — progress to unassisted. The 2s pause converts eccentric to eccentric-plus-isometric — directly mimics sustained ski loaded position. Primary skiing exercise.</div></div>
       <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Arc Quad</span><span class="ex-rx">3 × 15 each leg · 2s hold</span></div><div class="ex-desc">Seated, leg at ~45° flexion. Extend to full extension, 2 sec hold at top, 3 sec lower. VMO is the only quad head that pulls the patella medially — its mechanical advantage is highest in the final 20° of extension. Wall sit and split squat do not reach this range. Mandatory, not optional.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Isometric</span><span class="ex-rx">6 × 30 sec / 45 rest</span></div><div class="ex-desc">60° knee flexion. Dull ache acceptable. Sharp or >4/10 = reduce angle immediately. Start 45° in Weeks 1--2 if needed. Tissue stimulus — not strength training.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Deep Split Squat</span><span class="ex-rx">2 × 10 each side</span></div><div class="ex-desc">Significant counterbalance in Phase 1 — do not force depth. Rear knee toward floor, 2--3s hold at bottom, drive up. The hold at full depth is where VMO demand is highest — do not skip it.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Split Squat Progression</span><span class="ex-rx">2 × 8–10 each side</span></div><div class="ex-desc">Rear leg extended throughout all phases — not bent to 90°. Extended rear leg stretches rectus femoris under load, directly addressing a primary PFPS driver. 2–3s hold at bottom. Progress through ladder: Ph1 Wk1–2: front foot elevated 10–15cm (same step as step-down), rear leg extended on floor, counterbalance. Ph1 Wk3–4: both feet flat, rear leg extended, counterbalance — reduce elevation gradually. Ph2 entry: both feet flat, rear leg extended, no counterbalance. Ph3: rear foot elevated (Bulgarian) with load.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Lateral Side Step</span><span class="ex-rx">2 rounds × 15 steps</span></div><div class="ex-desc">Slight squat, hip tension throughout. Pause and reassert hip position after each step before the next — deliberate load check, not continuous momentum. Add resistance band if available.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Hamstring Slide</span><span class="ex-rx">3 × 8–10 · Day B only</span></div><div class="ex-desc">On back, heels on sliders or towel on smooth floor. Drive hips up into bridge, slide heels out slowly (3–5 sec), return. Eccentric-concentric hamstring load — lower peak force than alternatives, appropriate for current phase. Day A only — 48h eccentric recovery required. Significant assistance from arms in early weeks.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Single-Leg Calf Raise — Straight Knee</span><span class="ex-rx">2 × 15 each · 3s down</span></div><div class="ex-desc">Stand on one foot, full plantarflexion at top, full dorsiflexion at bottom. 3s eccentric. Targets gastrocnemius. Use wall for balance. Build to unassisted. Supports Achilles and ankle load tolerance for skiing and hiking.</div></div>
@@ -2038,7 +2043,7 @@ body { background: #fff; color: #000; }
       <span class="ph-title" style="color:var(--amber);">Weeks 1--2</span>
       <span class="ph-weeks">Early foundation</span>
     </div>
-    <div class="phase-item">Deep split squat: significant counterbalance — do not force depth.</div>
+    <div class="phase-item">Split squat: front foot elevated 10–15cm, rear leg extended on floor, significant counterbalance. Do not force depth.</div>
     <div class="phase-item">Step down: hand support on wall, 10cm step.</div>
     <div class="phase-item">Scap push-up on knees.</div>
     <div class="phase-item">Wall sit: start at 45° if 60° produces >4/10 pain.</div>
@@ -2055,7 +2060,7 @@ body { background: #fff; color: #000; }
       <span class="ph-weeks">Building tolerance</span>
     </div>
     <div class="phase-item">Hamstring slides: progress to single-leg. Increase range of motion — start with partial slide, build toward full extension.</div>
-    <div class="phase-item">Reduce counterbalance on split squat gradually.</div>
+    <div class="phase-item">Split squat: lower front foot elevation gradually toward both feet flat. Reduce counterbalance. Rear leg stays extended.</div>
     <div class="phase-item">Step down: attempt 2--3 reps unassisted if hand-supported form is solid.</div>
     <div class="phase-item">Elliptical OK for Zone 2 if no post-session knee soreness.</div>
     <div class="phase-item">Wall sit: progress toward 60° if tolerating 45° without pain.</div>
@@ -2134,7 +2139,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="phase-item">Full single-leg wall sit isometric at 60° — primary knee.</div>
     <div class="phase-item">Step down at 20–25cm, fully loaded, no compensation.</div>
-    <div class="phase-item">Bulgarian split squat with load (dumbbell or pack weight).</div>
+    <div class="phase-item">Split squat: Bulgarian (rear foot elevated), rear leg extended, with load (dumbbell or pack weight).</div>
     <div class="phase-item">Plyometric progression: box step-up → step-down → controlled hop landing.</div>
     <div class="phase-item">Skiing: structured reintroduction with collagen protocol. Green → blue → black over 3+ sessions.</div>
     <div class="phase-item">Bike commute: Zone 2 fully unrestricted with collagen protocol.</div>
@@ -2188,7 +2193,7 @@ body { background: #fff; color: #000; }
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v5.4 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v5.5 — March 2026
     </div>
   </div>
 
@@ -2425,7 +2430,7 @@ const DAY_BRIEFINGS = {
     ok: [
       'Zone 1 commute is fine but unnecessary on a Day A — you already have the Bellemans session.',
       'Dull ache during wall sit is acceptable and expected. It is not a stop signal.',
-      'Counterbalance on split squat is correct form in Phase 1, not a workaround.'
+      'Counterbalance on split squat is correct Phase 1 form — so is front foot elevation. Both are regressions, not workarounds.'
     ],
     sub: [
       'No bike available: substitute 10 min easy elliptical at T+57. Not equivalent but preserves cyclic loading.',
@@ -2535,7 +2540,7 @@ const BLOCKS = {
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step Ph1. Lower 5s, 2s pause at bottom (foot hovering), return. Hand on wall → unassisted.'},
                {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory, not optional.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° knee flexion. Dull ache OK. Sharp or >4/10 = reduce angle immediately.',timer:30},
-               {n:'Deep Split Squat',rx:'2 × 10 each side',d:'Counterbalance Ph1. Rear knee toward floor, 2–3s hold at bottom, drive up.'},
+               {n:'Split Squat Progression',rx:'2 × 8–10 each side',d:'Rear leg extended. Ph1 Wk1–2: front foot elevated, counterbalance. Ph1 Wk3–4: both feet flat, counterbalance. See load page for full ladder.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Slight squat. Pause and reassert hip position after each step.'},
                {n:'Single-Leg Calf Raise — Straight Knee',rx:'2 × 15 each · 3s down',d:'Single-leg. Full plantarflexion top, full dorsiflexion bottom. 3s eccentric.'},
                {n:'Single-Leg Calf Raise — Bent Knee (Soleus)',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Isolates soleus — primary plantarflexor in all knee-flexed positions. Higher priority of the two.'}]},
@@ -2556,7 +2561,7 @@ const BLOCKS = {
             'Pain >4/10 on wall sit or step down: reduce angle or step height immediately.',
             'Zone 1 commute does not replace the Bellemans session. The session is cartilage nutrition, not cardio — it requires a stationary bike at a controlled seat height (15–20° knee flexion at bottom of stroke), steady-state loading, and a hard stop at 15 min. A commute has none of these. Zone 1 commute on a Day A is free movement only — the Bellemans session still runs.'],
       ok:['Dull ache during wall sit is acceptable and expected. It is not a stop signal.',
-          'Counterbalance on split squat is correct Phase 1 form, not a workaround.',
+          'Counterbalance on split squat is correct Phase 1 form — so is front foot elevation. Both are regressions, not workarounds.',
           'Zone 1 commute is fine but has no protocol interaction — the Bellemans session still runs.'],
       sub:['No stationary bike: substitute 10 min easy elliptical at T+57. Not equivalent but preserves cyclic loading.',
            'Wall sit too painful even at 45°: substitute leg press isometric at low load.',
@@ -2602,7 +2607,7 @@ const BLOCKS = {
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step. Lower 5s, 2s pause at bottom, return.'},
                {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° target. Dull ache OK. >4/10 = reduce angle.',timer:30},
-               {n:'Deep Split Squat',rx:'2 × 8 each · 3s hold bottom',d:'Counterbalance Ph1. 2–3s hold at bottom, drive up.'},
+               {n:'Split Squat Progression',rx:'2 × 8–10 each side',d:'Rear leg extended. Ph1 Wk1–2: front foot elevated, counterbalance. Ph1 Wk3–4: both feet flat, counterbalance. See load page for full ladder.'},
                {n:'Lateral Side Step',rx:'2 rounds × 15 steps',d:'Pause and reassert hip position after each step.'},
                {n:'Hamstring Slide',rx:'2 × 10',d:'On back, heels on sliders or towel. Bridge up, slide heels out 3–5s, return. Hips stay elevated. Arm assist OK. Day B only — 48h separation from Day A bike session.'},
                {n:'Single-Leg Calf Raise — Straight Knee',rx:'2 × 15 each · 3s down',d:'Single-leg. Full range. 3s eccentric.'},
