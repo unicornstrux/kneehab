@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v5.9</title>
+<title>Knee Rehab v6.2</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1075,7 +1075,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v5.9</div>
+  <div class="ms-title">KNEE REHAB v6.2</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
@@ -1083,6 +1083,7 @@ body { background: #fff; color: #000; }
   <button class="ms-btn" onclick="nav('phases',this)"><span class="ms-icon">▲</span><span class="ms-lbl">Phases &amp; Progression</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('rules',this)"><span class="ms-icon">◉</span><span class="ms-lbl">Key Rules</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('schedule',this)"><span class="ms-icon">≡</span><span class="ms-lbl">Schedule Reference</span><span class="ms-arr">›</span></button>
+  <button class="ms-btn" onclick="nav('upperbody',this)"><span class="ms-icon">△</span><span class="ms-lbl">Upper Body — Day R</span><span class="ms-arr">›</span></button>
 
   <div class="ms-group">Info</div>
   <button class="ms-btn" onclick="nav('supps',this)"><span class="ms-icon">◐</span><span class="ms-lbl">Supplements</span><span class="ms-arr">›</span></button>
@@ -1180,10 +1181,10 @@ body { background: #fff; color: #000; }
   <div class="cover-page">
     <div class="cover-grid"></div>
     <div class="cover-stripe"></div>
-    <div class="cover-big-num">5.1</div>
+    <div class="cover-big-num">6.0</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v5.9</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v6.2</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1192,7 +1193,7 @@ body { background: #fff; color: #000; }
   <span class="cover-chip">SKIING PREP</span>
   <span class="cover-chip">BIKE COMMUTE</span>
   <span class="cover-chip">SOLEUS LOAD</span>
-  <span class="cover-chip">PROPRIOCEPTION</span>
+  <span class="cover-chip">UPPER BODY · DAY R</span>
 </div>
 
 <div class="cover-divider"></div>
@@ -1225,9 +1226,38 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v5.8</div>
+    <div class="changes-title">Changes from v6.1</div>
     <ul class="changes-list">
-      <li>Short Foot Isometric added to General Optional micro-sessions (★ recommended first pick). 1 × 30s each side, barefoot on hard floor. Targets intrinsic foot muscles (flexor digitorum brevis, abductor hallucis) for arch stabilisation during ground contact. Relevant for running and hiking — where no rigid sole bridges the load path and the arch must self-stabilise across hundreds of footstrikes. Not a cycling fix: the cycling lateral load problem is geometric (cleat position, forefoot varus wedge, insole) and requires equipment intervention, not muscle training. Classified as a motor pattern drill, not a strength exercise — drop once the arch domes automatically without conscious cuing (typically 3–4 weeks).</li>
+      <li>Upper Body session added as optional block to Day C — Recovery. No collagen required, no knee loading. Does not interfere with Day C recovery purpose. Run after the base blocks or as a standalone session. Skip if fatigued — recovery purpose takes precedence.</li>
+      <li>Day C duration updated: ~18 min base · ~55 min with optional upper body.</li>
+      <li>Day C layer card, 7-day cycle descriptions, and schedule pane all updated to reflect optional upper body.</li>
+      <li>Day R (dedicated rest day upper body) remains unchanged — Day C optional upper body is an alternative slot, not a replacement.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v6.0 → v6.1</div>
+    <ul class="changes-list">
+      <li>Clamshell replaced by Hip Abduction in Glute Activation block (all days). Clamshell and hip abduction target the same muscle (gluteus medius) but hip abduction uses a longer lever arm and produces higher EMG activation. Clamshell is not a distinct stimulus — it is an inferior version of the same exercise. The "or" framing is removed; Hip Abduction is now the prescription.</li>
+      <li>Glute Activation block now has three mechanistically distinct targets: Hip Abduction (glute medius, abduction), Supine Hip ER with Block (deep external rotators — piriformis, obturators, gemelli), Single-Leg Glute Bridge (glute max, hip extension). No overlap between the three.</li>
+      <li>Phase 2 note updated: Copenhagen Plank replaces Hip Abduction (not clamshell) as the higher-demand Phase 2 progression.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.9 → v6.0</div>
+    <ul class="changes-list">
+      <li>Upper Body session added as Day R — rest day only, flexible 1–2× per week, no collagen, no knee loading. ~35–40 min. Fills the whole-body strength gap identified in the evidence review.</li>
+      <li>Day R session: Scap pull-up + Shoulder CARs warmup. Eccentric pull-up 4×3–5 negatives (5s down) as primary pull-up development. Ring row 3×10 (horizontal pull, 4-rung progression). Push-up with tempo 3×8 (3s eccentric, 1s pause). Bottom-up KB press 3×8 each side (15lbs). Face pull / band pull-apart 2×15. Pull volume asymmetric (7 pull sets vs 3 push sets) until pull-ups reach 3×5 — then rebalance.</li>
+      <li>Pull-up progression clarified: eccentric-only phase → band-assisted → full. Ring row 4-rung ladder: feet flat 45° → more horizontal → feet elevated → feet elevated + 2s pause at chest.</li>
+      <li>Bottom-up KB press → pike push-up transition defined. Transition signal: 3×10 stable and symmetric at 15lbs. Pike push-up is vertical press strength; bottom-up press is shoulder stability — not interchangeable. At transition: retain 1 warmup set bottom-up, add pike push-up working sets.</li>
+      <li>Day structure table updated: Day R added. Morning sequence corrected — T+33 natural break removed (preceding blocks fill to that point in practice). Collagen table updated to include Day R (none).</li>
+      <li>Phase criteria updated: each phase now includes upper body benchmarks alongside knee criteria.</li>
+      <li>Rule 15 added: Upper body Day R, 1–2× per week, flexible. Pull asymmetric until 3×5 pull-ups.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v5.8 → v5.9</div>
+    <ul class="changes-list">
+      <li>Short Foot Isometric added to General Optional micro-sessions (★ recommended first pick). Targets intrinsic foot muscles (flexor digitorum brevis, abductor hallucis). Three-phase progression: seated unloaded with navicular thumb feedback (Wk 1–2) → standing bilateral (Wk 3–4) → standing single-leg (Wk 5+). Confirmed load-dependent collapse — revised timeline 6–8 weeks to reliable single-leg hold.</li>
     </ul>
   </div>
   <div class="changes" style="margin-top:8px;border-color:var(--border);">
@@ -1305,8 +1335,16 @@ body { background: #fff; color: #000; }
       <div class="lc-num-col">DAY C</div>
       <div class="lc-main">
         <div class="lc-title">LIGHT</div>
-        <div class="lc-body">Mobility · Spinal &amp; Shoulder · Core<br>RKC Plank · Clamshell<br>Mandatory micro-sessions only</div>
+        <div class="lc-body">Mobility · Spinal &amp; Shoulder · Core<br>RKC Plank · Hip Abduction<br>Mandatory micro-sessions only<br><span style="color:var(--muted2);font-size:12px;">+ Upper Body optional</span></div>
         <div class="lc-rule">Days 2, 4, 6<br>No collagen<br>Zone 1 unrestricted</div>
+      </div>
+    </div>
+    <div class="layer-card">
+      <div class="lc-num-col">DAY R</div>
+      <div class="lc-main">
+        <div class="lc-title" style="color:var(--blue,#0A84FF);">UPPER BODY</div>
+        <div class="lc-body">Rest day only · flexible day<br>Pull + push strength<br>~35–40 min</div>
+        <div class="lc-rule">1–2× per week<br>No collagen · No knee loading<br>See Upper Body page</div>
       </div>
     </div>
   </div>
@@ -1320,15 +1358,12 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Day 2</div></div>
-      <div class="cr-right"><div class="cr-val">Day C — Recovery</div><div class="cr-desc">Mobility + posture block + core + clamshell. Zone 1 unrestricted.</div></div>
-    </div>
-    <div class="card-row card-highlight">
-      <div class="cr-left"><div class="cr-time">Day 3</div></div>
+      <div class="cr-right"><div class="cr-val">Day C — Recovery</div><div class="cr-desc">Mobility + posture block + core + hip abduction. Zone 1 unrestricted. Upper body optional.</div></div>
       <div class="cr-right"><div class="cr-val">Day B — Full Hamstring</div><div class="cr-desc">Full routine, no bike. Collagen T=0.</div></div>
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Day 4</div></div>
-      <div class="cr-right"><div class="cr-val">Day C — Recovery</div><div class="cr-desc">Mobility + posture block + core + clamshell. Zone 1 unrestricted.</div></div>
+      <div class="cr-right"><div class="cr-val">Day C — Recovery</div><div class="cr-desc">Mobility + posture block + core + hip abduction. Zone 1 unrestricted. Upper body optional.</div></div>
     </div>
     <div class="card-row card-highlight">
       <div class="cr-left"><div class="cr-time">Day 5</div></div>
@@ -1340,7 +1375,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Day 7</div></div>
-      <div class="cr-right"><div class="cr-val">Active / Endurance / Rest</div><div class="cr-desc">Ski/hike: collagen 45 min before. Endurance: swim or elliptical. Rest: dead hang + backward walk only.</div></div>
+      <div class="cr-right"><div class="cr-val">Active / Endurance / Rest / Day R</div><div class="cr-desc">Ski/hike: collagen 45 min before. Endurance: swim or elliptical. Rest: dead hang + backward walk only. Day R (upper body) if energy allows.</div></div>
     </div>
   </div>
 
@@ -1407,6 +1442,9 @@ body { background: #fff; color: #000; }
     <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
       <span class="day-btn-num">C</span><span class="day-btn-type">Recovery</span>
     </button>
+    <button class="day-btn" data-block="R" onclick="selectBlock('R',this)">
+      <span class="day-btn-num">R</span><span class="day-btn-type">Upper Body</span>
+    </button>
     <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
       <span class="day-btn-num">X</span><span class="day-btn-type">Activity</span>
     </button>
@@ -1441,14 +1479,14 @@ body { background: #fff; color: #000; }
   <div id="s-bike" class="sched-pane on">
     <p class="note" style="margin-bottom:12px;">Days 1 &amp; 5 of cycle. Collagen T=0. Bellemans bike at T+57.</p>
     <div class="card">
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Collagen + vitamin C</div><div class="cr-note">2+ hours after any protein meal</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Collagen + vitamin C</div><div class="cr-note">2+ hours after any protein meal</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+5</div></div><div class="cr-right"><div class="cr-val">Mobility <span style="color:var(--muted);font-size:12px;">5 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+10</div></div><div class="cr-right"><div class="cr-val">Spinal &amp; Shoulder <span style="color:var(--muted);font-size:12px;">8--10 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+20</div></div><div class="cr-right"><div class="cr-val">Push &amp; Pull <span style="color:var(--muted);font-size:12px;">4 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+24</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~4 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+31</div></div><div class="cr-right"><div class="cr-val">Glute <span style="color:var(--muted);font-size:12px;">~2 min</span></div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+33</div></div><div class="cr-right"><div class="cr-val">Natural break <span style="color:var(--muted);font-size:12px;">~12 min</span></div><div class="cr-note">Morning tasks — collagen approaching peak</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+45</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">12 min</span></div><div class="cr-note">Collagen rising into peak</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+33</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">12 min</span></div><div class="cr-note">Collagen rising into peak</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+45+</div></div><div class="cr-right"><div class="cr-val">Buffer / transition</div><div class="cr-note">Approach T+57 for bike</div></div></div>
       <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+57</div></div><div class="cr-right"><div class="cr-val">Bellemans Bike</div><div class="cr-note">60--90 min collagen peak window ✓ · Hard stop 15 min</div></div></div>
             <div class="card-row"><div class="cr-left"><div class="cr-time">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div><div class="cr-note">+ 2 knee micro-sessions (wall sit + short arc quad — both mandatory)</div></div></div>
     </div>
@@ -1466,8 +1504,7 @@ body { background: #fff; color: #000; }
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+20</div></div><div class="cr-right"><div class="cr-val">Push &amp; Pull <span style="color:var(--muted);font-size:12px;">4 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+24</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~4 min</span></div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">T+31</div></div><div class="cr-right"><div class="cr-val">Glute <span style="color:var(--muted);font-size:12px;">~2 min</span></div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+33</div></div><div class="cr-right"><div class="cr-val">Natural break <span style="color:var(--muted);font-size:12px;">~12 min</span></div><div class="cr-note">Collagen approaching peak</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+45</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">12 min</span></div><div class="cr-note">Collagen rising into peak</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+33</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">12 min</span></div><div class="cr-note">Collagen rising into peak</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div><div class="cr-note">+ 2 knee micro-sessions</div></div></div>
     </div>
     <p class="note">No bike. Knee block still lands inside the collagen peak window at T+45.</p>
@@ -1476,7 +1513,7 @@ body { background: #fff; color: #000; }
   <!-- Day C — Recovery -->
 
   <div id="s-base" class="sched-pane">
-    <p class="note" style="margin-bottom:12px;">Days 2, 4, 6 of cycle. No collagen. ~18 min total.</p>
+    <p class="note" style="margin-bottom:12px;">Days 2, 4, 6 of cycle. No collagen. ~18 min base · ~55 min with optional upper body.</p>
     <div class="card">
       <div class="card-row"><div class="cr-left"><div class="cr-key">Morning</div></div><div class="cr-right"><div class="cr-val">Mobility 5 min</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Morning</div></div><div class="cr-right"><div class="cr-val">Spinal &amp; Shoulder 8--10 min</div></div></div>
@@ -1484,8 +1521,9 @@ body { background: #fff; color: #000; }
       <div class="card-row"><div class="cr-left"><div class="cr-key">Morning</div></div><div class="cr-right"><div class="cr-val">Glute ~2 min</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Anytime</div></div><div class="cr-right"><div class="cr-val">Zone 1 — unrestricted</div></div></div>
+      <div class="card-row" style="border-top:1px solid var(--border2);opacity:0.75;"><div class="cr-left"><div class="cr-key" style="color:var(--muted2);">Optional</div></div><div class="cr-right"><div class="cr-val" style="color:var(--muted2);">Upper Body — ~35–40 min</div><div class="cr-desc">No collagen required. No knee loading. Run after the base blocks or as a standalone session. See Upper Body page. Skip if fatigued — Day C recovery purpose takes precedence.</div></div></div>
     </div>
-    <p class="note">No collagen. No knee loading. Easy commute cycling, kayaking, backward walking all fine — no ceiling.</p>
+    <p class="note">No collagen. No knee loading. Upper body is the only optional addition — it does not interact with the recovery purpose of Day C. Easy commute cycling, kayaking, backward walking all fine — no ceiling.</p>
   </div>
 
   <!-- Activity Day -->
@@ -1782,8 +1820,8 @@ body { background: #fff; color: #000; }
       <span class="eg-chev">▼</span>
     </div>
     <div class="ex-body" id="src-glute">
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Clamshell or Hip Abduction</span><span class="ex-rx">2 × 12 each · 2s hold top</span></div><div class="ex-desc">Clamshell: lying on side, knees bent, lift top knee. Hip abduction: top leg straight, lift to 45°. Targets gluteus medius. Add band when easy. Copenhagen Plank replaces in Phase 2.</div></div>
-      <div class="ex-card"><div class="ex-top"><span class="ex-name">Supine Hip External Rotation with Block</span><span class="ex-rx">3 × 30–45s each side</span></div><div class="ex-desc">On back, knees bent, feet flat. Block between knees — anchors opposite hip so it cannot compensate. Let one knee drop outward to comfortable end-range external rotation; hold 30–45s. Targets deep rotators (piriformis, obturator group, gemelli) via end-range isometric — not loaded by clamshell. Zero knee compression. Progress: light band around thigh pulling into IR to resist against.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Hip Abduction</span><span class="ex-rx">2 × 12 each · 2s hold top</span></div><div class="ex-desc">Side-lying, top leg straight, lift to 45°. Targets gluteus medius. Add band when easy. Copenhagen Plank replaces in Phase 2. Superior to clamshell — longer lever arm, higher EMG activation, same muscle.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Supine Hip External Rotation with Block</span><span class="ex-rx">3 × 30–45s each side</span></div><div class="ex-desc">On back, knees bent, feet flat. Block between knees — anchors opposite hip so it cannot compensate. Let one knee drop outward to comfortable end-range external rotation; hold 30–45s. Targets deep rotators (piriformis, obturator group, gemelli) via end-range isometric — not loaded by hip abduction. Zero knee compression. Progress: light band around thigh pulling into IR to resist against.</div></div>
     </div>
   </div>
 
@@ -1920,7 +1958,7 @@ body { background: #fff; color: #000; }
       <span class="eg-chev">▼</span>
     </div>
     <div class="ex-body" id="src-gen">
-      <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Foot Isometric ★</span><span class="ex-rx">1 × 30s each side · barefoot</span></div><div class="ex-desc">Barefoot on hard floor. Spread toes wide, press ball of foot down, dome the arch — without curling toes. If toes curl, the wrong muscles are working. Targets intrinsic foot muscles (flexor digitorum brevis, abductor hallucis) that stabilise the arch during ground contact. Relevant for running and hiking where no rigid sole bridges the load path. Motor pattern drill — not a strength exercise. Drop once the pattern is automatic without conscious cuing (typically 3–4 weeks). Not required on bike days where cleat/wedge geometry fixes the load path instead.</div></div>
+      <div class="ex-card card-highlight"><div class="ex-top"><span class="ex-name">Short Foot Isometric ★</span><span class="ex-rx">1 × 30s each side · barefoot · see progression</span></div><div class="ex-desc">Targets intrinsic foot muscles (flexor digitorum brevis, abductor hallucis) for arch stabilisation during ground contact. Relevant for running and hiking — no rigid sole bridges the load path, arch must self-stabilise each footstrike. Not a cycling fix (cycling lateral load is geometric — cleat, wedge, insole). Motor pattern drill, not a strength exercise.<br><br><strong>Progression — do not skip phases:</strong><br>Wk 1–2 · Seated unloaded: sit, foot flat on floor, place thumb under navicular (inner mid-foot bony bump). Spread toes, press ball of foot and heel into floor simultaneously, dome arch without curling toes. Thumb gives biofeedback — feel the small lift. Hold 30s each side. If no lift is felt, the wrong muscles are working.<br>Wk 3–4 · Standing bilateral: both feet, bodyweight, same dome cue. Harder — gravity now works against the arch. Hold 30s each side.<br>Wk 5+ · Standing single-leg: one foot, full bodyweight. Approximates mid-stance load during walking and hiking. Hold 30s each side.<br><br>Drop when arch holds automatically during step-downs and single-leg balance without conscious cuing. With confirmed load-dependent collapse (arch holds unloaded but drops under bodyweight), expect 6–8 weeks to reliable single-leg hold — not 3–4.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Calf Raise</span><span class="ex-rx">1 × 20 each</span></div><div class="ex-desc">Single-leg. Deep stretch at bottom, full rise at top.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Standing Hip Flexion Hold</span><span class="ex-rx">10 each side · 3s hold</span></div><div class="ex-desc">Standing, lift one knee to 90°, hold 3 sec, lower controlled. Hip flexor strength is absent from the program in any loaded form. Weak hip flexors create anterior pelvic tilt under fatigue (skiing descents, long hikes), which directly increases PFPS load. No equipment — do at desk or kitchen counter.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Chin Tuck</span><span class="ex-rx">5 × 5s hold</span></div><div class="ex-desc">Seated or standing. Retract head straight back (double chin), hold 5 sec, release. Deep cervical flexors — universally weak in desk workers. Forward head posture adds significant moment arm load to cervical spine. No equipment. 60 seconds total.</div></div>
@@ -2128,7 +2166,7 @@ body { background: #fff; color: #000; }
     <div class="phase-item">Wall sit isometric: transition to single-leg. Rebuild 45° → 60° progression on primary knee.</div>
     <div class="phase-item">Step down: increase step height to 15–20cm. Remove hand support entirely.</div>
     <div class="phase-item">Split squat: remove counterbalance. Introduce rear foot elevated (Bulgarian) in second half of phase.</div>
-    <div class="phase-item">Copenhagen plank replaces clamshell — higher hip adductor demand.</div>
+    <div class="phase-item">Copenhagen plank replaces hip abduction — higher hip adductor demand.</div>
     <div class="phase-item">Short arc quad: progress to light resistance band or ankle weight.</div>
     <div class="phase-item">Introduce step-up (bodyweight first).</div>
     <div class="phase-item">Bike: extend to 15 min if tolerating. Introduce Zone 2 outdoor cycling if no soreness pattern.</div>
@@ -2195,13 +2233,94 @@ body { background: #fff; color: #000; }
     <div class="rule-row"><div class="rule-n">17</div><div class="rule-c"><div class="rule-t">Do not skip mobility</div><div class="rule-d">Daily including Day C. Hip and ankle stiffness are upstream causes of knee load.</div></div></div>
     <div class="rule-row"><div class="rule-n">18</div><div class="rule-c"><div class="rule-t">Glute work is not optional</div><div class="rule-d">VMO alone will not fix patellar tracking without glute medius.</div></div></div>
     <div class="rule-row"><div class="rule-n">19</div><div class="rule-c"><div class="rule-t">Deep range is the goal</div><div class="rule-d">Use whatever assistance needed to reach depth — reduce over time.</div></div></div>
+    <div class="rule-row"><div class="rule-n">20</div><div class="rule-c"><div class="rule-t">Day R — upper body on rest days only</div><div class="rule-d">1–2× per week, flexible day. No collagen. No knee loading. Pull volume asymmetric (more sets than push) until pull-ups reach 3×5, then rebalance. See Upper Body page.</div></div></div>
   </div>
 
   <div class="colophon">
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v5.9 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v6.2 — March 2026
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+
+<!--  UPPER BODY — DAY R                                -->
+
+<!-- ══════════════════════════════════════════════════ -->
+
+<div id="upperbody" class="page">
+<div class="doc">
+  <div class="sh"><span class="sh-title">Upper Body — Day R</span><span class="sh-tag">v6.2</span></div>
+  <p class="body">Rest days only. Flexible 1–2× per week. No collagen. No knee loading. ~35–40 min.</p>
+
+  <div class="changes">
+    <div class="changes-title">Current Baseline</div>
+    <ul class="changes-list">
+      <li>Push-up: 3 × 8 with good form. Mid-range on progression ladder — functional, not a beginner.</li>
+      <li>Pull-up: 1–3 reps. Scapular pull-up warmup already in practice. This is the primary limiting pattern — pull volume is asymmetric by design until pull-ups reach 3×5.</li>
+      <li>Bottom-up KB press: 15 lbs, 3 × 10 each side. Shoulder stability functional. Near transition threshold.</li>
+    </ul>
+  </div>
+
+  <div class="sub-head">Session — ~35–40 min</div>
+  <div class="card">
+    <div class="card-head"><span class="ch-title">Block · Exercise · Sets × Reps · Notes</span></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Scap Pull-Up</div><div class="cr-desc">2 × 8. Depress and retract scapulae from dead hang without bending elbows. 1s hold at top.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Shoulder CARs</div><div class="cr-desc">1 × 5 each side. Full controlled articular rotation — slow, full range, deliberate.</div></div></div>
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull A</div></div><div class="cr-right"><div class="cr-val">Eccentric Pull-Up</div><div class="cr-desc">4 × 3–5 negatives. Jump to top, lower over 5s, full hang at bottom. 90s rest between sets. Primary pull-up builder.</div></div></div>
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull B</div></div><div class="cr-right"><div class="cr-val">Ring Row</div><div class="cr-desc">3 × 10. Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull pattern — mid trap, rhomboids, rear delt.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Push A</div></div><div class="cr-right"><div class="cr-val">Push-Up with Tempo</div><div class="cr-desc">3 × 8. 3s eccentric, 1s pause at bottom. Hollow body position — glutes and abs engaged throughout.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Push B</div></div><div class="cr-right"><div class="cr-val">Bottom-Up KB Press</div><div class="cr-desc">3 × 8 each side · 15 lbs. Vertical push, unilateral, stability-dominant. Progress bell weight, not reps.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Acc</div></div><div class="cr-right"><div class="cr-val">Face Pull / Pull-Apart</div><div class="cr-desc">2 × 15. Posterior shoulder balance. Face pull: band at face height, elbows flared, external rotation at end range.</div></div></div>
+  </div>
+  <p class="note">Pull: 7 sets total. Push: 3 sets. Intentionally asymmetric until pull-ups reach 3×5 — corrects current imbalance.</p>
+
+  <div class="sub-head">Pull-Up Progression</div>
+  <div class="card">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">Eccentric only — 4 × 3–5 negatives</div><div class="cr-desc">5s down, full hang at bottom. Jump to top each rep. Fastest evidence-based path for sub-5 pull-up count.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">Band-assisted + eccentrics mixed</div><div class="cr-desc">When 3 full pull-ups achievable. Add 2–3 band-assisted full reps per set alongside eccentrics.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Trigger</div></div><div class="cr-right"><div class="cr-val">3 × 5 full pull-ups</div><div class="cr-desc">Rebalance: drop eccentrics to 2 sets, add one push set. Equal pull/push volume from here.</div></div></div>
+  </div>
+
+  <div class="sub-head">Ring Row Progression — 4 Rungs</div>
+  <div class="card">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Rung 1</div></div><div class="cr-right"><div class="cr-val">Feet flat · body ~45°</div><div class="cr-desc">Entry point. Current prescription. Move to rung 2 when 3×12 with 2s pause at chest is clean.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 2</div></div><div class="cr-right"><div class="cr-val">Feet flat · more horizontal</div><div class="cr-desc">Lower rings to increase load. Body approaches horizontal.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 3</div></div><div class="cr-right"><div class="cr-val">Feet elevated on box</div><div class="cr-desc">Shifts load closer to bodyweight. Requires strict body tension.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 4</div></div><div class="cr-right"><div class="cr-val">Feet elevated + 2s pause</div><div class="cr-desc">Pre-requisite for advanced progressions. Move up when rung 3 is 3×12.</div></div></div>
+  </div>
+
+  <div class="sub-head">Push-Up Progression</div>
+  <div class="card">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">3 × 8 · 3s eccentric · 1s pause</div><div class="cr-desc">Adding eccentric tempo to current 3×8 — builds tissue quality before volume increase.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">3 × 12 → 3 × 15 with tempo</div><div class="cr-desc">Volume progression at same tempo before moving to harder variation.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Archer push-up</div><div class="cr-desc">One arm takes progressively more load. Significant increase in horizontal pressing demand.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Weighted push-up</div><div class="cr-desc">Plate on back. Load the pattern without changing geometry.</div></div></div>
+  </div>
+
+  <div class="sub-head">Bottom-Up KB Press → Pike Push-Up</div>
+  <p class="note" style="margin-bottom:8px;">These are not interchangeable. Bottom-up press = vertical push, unilateral, stability-dominant. Pike push-up = vertical push, bilateral, anterior deltoid and upper trap, scalable via foot elevation. Transition when bottom-up has done its job.</p>
+  <div class="card">
+    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Signal</div></div><div class="cr-right"><div class="cr-val">3 × 10 stable · both sides · no hitch</div><div class="cr-desc">3×10 at 15 lbs. Both sides symmetric, no wrist collapse, no shoulder hitch at top. This is the transition trigger.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">After</div></div><div class="cr-right"><div class="cr-val">1 warmup set bottom-up · pike push-up working sets</div><div class="cr-desc">Retain 1 set of bottom-up as shoulder activation. Add pike push-up 3×8 as the overhead strength vehicle.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Pike path</div></div><div class="cr-right"><div class="cr-val">Flat → feet elevated → wall handstand</div><div class="cr-desc">Elevating feet shifts load toward overhead pressing. Progress when 3×12 clean at current elevation.</div></div></div>
+  </div>
+
+  <div class="sub-head">Two Rest Days Available</div>
+  <div class="card">
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Day R1</div></div><div class="cr-right"><div class="cr-val">Pull-dominant</div><div class="cr-desc">Eccentric pull-ups (4 sets) + ring row (3 sets) + 1 push set. Focus on pull quality.</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Day R2</div></div><div class="cr-right"><div class="cr-val">Push-dominant</div><div class="cr-desc">Push-up with tempo (3 sets) + KB press (3 sets) + 1 pull set. Total sets unchanged across the week.</div></div></div>
+  </div>
+
+  <div class="colophon" style="margin-top:32px;">
+    <div class="col-bar"></div>
+    <div class="col-text">
+      Upper body addition v6.0. Clamshell → Hip Abduction v6.1. Upper body added to Day C as optional v6.2. <strong>Pull asymmetry is intentional</strong> — 7 pull sets vs 3 push sets until 3×5 pull-ups, then rebalance to equal. No collagen on Day R or Day C. Not a substitute for clinical diagnosis or physiotherapy. · v6.2 — March 2026
     </div>
   </div>
 
@@ -2541,11 +2660,10 @@ const BLOCKS = {
                {n:'Side Plank',rx:'90s total · both sides',d:'Forearm and side of foot. Hips high.',timer:90},
                {n:'RKC Plank',rx:'2 × 30s',d:'Forearm plank. Squeeze glutes, quads, fists, brace abs simultaneously. Drive elbows toward toes without moving. 30s rest between sets.',timer:30}]},
       {id:'sA_glut', time:'T+31',   title:'Glute',                      sub:'~2 min', navPage:'load',
-       detail:[{n:'Clamshell or Hip Abduction',rx:'2 × 12 each · 2s hold top',d:'Add band when easy.'},
+       detail:[{n:'Hip Abduction',rx:'2 × 12 each · 2s hold top',d:'Add band when easy.'},
                {n:'Supine Hip External Rotation with Block',rx:'3 × 30–45s each side',d:''},
                {n:'Single-Leg Glute Bridge',rx:'2 × 10 each · 2s hold top',d:'Drive through heel, squeeze at top. Pelvis level.'}]},
-      {id:'sA_brk',  time:'T+33',   title:'Natural Break',              sub:'~12 min · collagen approaching peak', detail:[]},
-      {id:'sA_knee', time:'T+45',   title:'Knee & Lower Body',          sub:'12 min · collagen rising into peak', navPage:'load',
+      {id:'sA_knee', time:'T+33',   title:'Knee & Lower Body',          sub:'12 min · collagen rising into peak', navPage:'load',
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step Ph1. Lower 5s, 2s pause at bottom (foot hovering), return. Hand on wall → unassisted.'},
                {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory, not optional.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° knee flexion. Dull ache OK. Sharp or >4/10 = reduce angle immediately.',timer:30},
@@ -2609,11 +2727,10 @@ const BLOCKS = {
                {n:'Side Plank',rx:'90s total · both sides',d:'',timer:90},
                {n:'RKC Plank',rx:'2 × 30s',d:'Squeeze glutes, quads, fists, abs simultaneously. Drive elbows toward toes.',timer:30}]},
       {id:'sB_glut', time:'T+31',  title:'Glute',                sub:'~2 min', navPage:'load',
-       detail:[{n:'Clamshell or Hip Abduction',rx:'2 × 12 each · 2s hold top',d:''},
+       detail:[{n:'Hip Abduction',rx:'2 × 12 each · 2s hold top',d:''},
                {n:'Supine Hip External Rotation with Block',rx:'3 × 30–45s each side',d:''},
                {n:'Single-Leg Glute Bridge',rx:'2 × 10 each · 2s hold top',d:'Pelvis level.'}]},
-      {id:'sB_brk',  time:'T+33',  title:'Natural Break',        sub:'~12 min · collagen approaching peak', detail:[]},
-      {id:'sB_knee', time:'T+45',  title:'Knee & Lower Body',    sub:'12 min · collagen rising into peak', navPage:'load',
+      {id:'sB_knee', time:'T+33',  title:'Knee & Lower Body',    sub:'12 min · collagen rising into peak', navPage:'load',
        detail:[{n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'10cm step. Lower 5s, 2s pause at bottom, return.'},
                {n:'Short Arc Quad',rx:'3 × 15 each · 2s hold',d:'Seated, leg at ~45° flexion. Extend to full extension, 2s hold, 3s lower. VMO terminal extension — mandatory.'},
                {n:'Wall Sit Isometric',rx:'6 × 30s · 45s rest',d:'60° target. Dull ache OK. >4/10 = reduce angle.',timer:30},
@@ -2647,8 +2764,8 @@ const BLOCKS = {
 
   'C': {
     type:'C', title:'DAY C — RECOVERY', titleClass:'',
-    pills:[{t:'No collagen',c:''},{t:'~18 min',c:''},{t:'Zone 1 unrestricted',c:'green'}],
-    note:'Recovery and maintenance. Run between any two loading days (A or B), or before an activity day. No knee loading.',
+    pills:[{t:'No collagen',c:''},{t:'~18 min base',c:''},{t:'Zone 1 unrestricted',c:'green'},{t:'Upper body optional',c:''}],
+    note:'Recovery and maintenance. Run between any two loading days (A or B), or before an activity day. No knee loading. Upper body strength is the only optional addition — no collagen required, no knee load, does not interfere with recovery purpose.',
     steps:[
       {id:'sC_mob',  time:'Morning', title:'Mobility',             sub:'5 min', navPage:'base',
        detail:[{n:'90/90 Hip Rotations',rx:'10 × each',d:'Hold 3 sec.'},
@@ -2671,8 +2788,16 @@ const BLOCKS = {
                {n:'Side Plank',rx:'90s total · both sides',d:'',timer:90},
                {n:'RKC Plank',rx:'2×30s',d:'Squeeze glutes, quads, fists, abs. Drive elbows toward toes.',timer:30}]},
       {id:'sC_glut', time:'Morning', title:'Glute', sub:'~2 min', navPage:'base',
-       detail:[{n:'Clamshell or Hip Abduction',rx:'2×12 each · 2s hold top',d:''},
+       detail:[{n:'Hip Abduction',rx:'2×12 each · 2s hold top',d:''},
                {n:'Supine Hip External Rotation with Block',rx:'3 × 30–45s each side',d:''}]},
+      {id:'sC_ub',   time:'Optional', title:'Upper Body', sub:'~35–40 min · optional · see Upper Body page', navPage:'upperbody',
+       detail:[{n:'Scap Pull-Up',rx:'2 × 8 warmup',d:'Depress and retract from dead hang. No elbow bend.'},
+               {n:'Shoulder CARs',rx:'1 × 5 each warmup',d:'Full controlled articular rotation.'},
+               {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder.'},
+               {n:'Ring Row',rx:'3 × 10',d:'Feet flat, ~45° body angle. 2s pause at chest.'},
+               {n:'Push-Up with Tempo',rx:'3 × 8',d:'3s eccentric, 1s pause at bottom.'},
+               {n:'Bottom-Up KB Press',rx:'3 × 8 each · 15 lbs',d:'Vertical push, stability-dominant. Progress bell weight.'},
+               {n:'Face Pull / Pull-Apart',rx:'2 × 15',d:'Posterior shoulder balance.'}]},
     ],
     micro:[
       {n:'Tibialis Raise', rx:'1 × 20 · 1s hold top', req:true},
@@ -2686,6 +2811,7 @@ const BLOCKS = {
             'No knee-specific micro-sessions today — mandatory only.'],
       ok:['Zone 1 commute completely free — no ceiling, no protocol interaction.',
           'Easy walking, kayaking, swimming all fine.',
+          'Upper body session is the one valid addition — no collagen, no knee load, does not conflict with Day C recovery purpose. Skip if fatigued.',
           'If before an activity day (ski/hike): rest only — skip this session entirely.'],
       sub:['Short on time: mobility + dead hang is the minimum viable Day C.',
            'Significant fatigue: reduce posture block to bird dog + WLYT only.'],
@@ -2706,7 +2832,7 @@ const BLOCKS = {
                {n:"World's Greatest Stretch",rx:'5 each side · 2s hold',d:'Hip flexor + thoracic rotation. Reduces compensation patterns on ascent and descent.'},
                {n:'Wall Ankle Dorsiflexion',rx:'10 each side · 2s hold',d:'Critical before ski boots and hiking boots. Restricted dorsiflexion forces medial knee collapse under load.'},
                {n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Anterior shin activation. Reduces knee valgus tendency on first runs or descents when muscles are cold.'},
-               {n:'Clamshell or Hip Abduction',rx:'2 × 12 each · 2s hold top',d:'Glute med activation before quad-dominant descent loading. Side-lying, band optional.'},
+               {n:'Hip Abduction',rx:'2 × 12 each · 2s hold top',d:'Glute med activation before quad-dominant descent loading. Side-lying, band optional.'},
                {n:'Single-Leg Balance',rx:'30s each leg',d:'Proprioception priming. Eyes open → slight knee bend. Resets joint position sense before uneven terrain.'}]},
       {id:'sX_act', time:'T+45',       title:'Ski / Hike / Ride',              sub:'No protocol — go as planned', detail:[]},
       {id:'sX_nxt', time:'Next block', title:'If sore: Day C first',           sub:'Resume A or B when soreness resolves', detail:[]},
@@ -2728,6 +2854,45 @@ const BLOCKS = {
            'Low-demand activity (easy flat hike): warm-up still applies. Collagen optional if short duration.'],
       caution:['Next morning: if knee soreness present, run Day C only. Resume A or B when it resolves.',
                'Ski day specifically: eccentric quad demand is high on descents. Expect DOMS in 24–48h window.'],
+    }
+  },
+
+  'R': {
+    type:'R', title:'DAY R — UPPER BODY', titleClass:'',
+    pills:[{t:'Rest day only',c:''},{t:'No collagen',c:''},{t:'~35–40 min',c:'green'}],
+    note:'Upper body strength. Flexible day — 1–2× per week on available rest days. No knee loading. Pull volume asymmetric until pull-ups reach 3×5.',
+    steps:[
+      {id:'sR_wu',  time:'Warmup', title:'Scap Pull-Up + Shoulder CARs', sub:'~5 min',
+       detail:[{n:'Scap Pull-Up',rx:'2 × 8',d:'Dead hang. Depress and retract scapulae without bending elbows. Hold 1s at top.'},
+               {n:'Shoulder CARs',rx:'1 × 5 each side',d:'Controlled articular rotation. Full shoulder circle, slow and deliberate. Maintains range before loading.'}]},
+      {id:'sR_pA',  time:'Pull A', title:'Eccentric Pull-Up', sub:'4 × 3–5 negatives · 5s down',
+       detail:[{n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives · 5s down · 90s rest',d:'Jump or step to top position (chin over bar). Lower over exactly 5 seconds. Full dead hang at bottom — do not release tension early. Rest 90s between sets. Fastest path from 1–3 reps to 5+ full pull-ups. Same eccentric principle as step-downs and hamstring slides.',timer:5}]},
+      {id:'sR_pB',  time:'Pull B', title:'Ring Row', sub:'3 × 10 · horizontal pull',
+       detail:[{n:'Ring Row',rx:'3 × 10 · 2s pause at chest',d:'Rings at height giving ~45° body angle to floor (entry rung). Pull rings to chest, 2s hold, lower controlled. Body rigid head to heel. Rung progression: (1) feet flat 45° → (2) feet flat more horizontal → (3) feet elevated on box → (4) feet elevated + 2s pause. Move to next rung when 3×12 is clean.'}]},
+      {id:'sR_pu',  time:'Push A', title:'Push-Up with Tempo', sub:'3 × 8 · 3s eccentric · 1s pause',
+       detail:[{n:'Push-Up',rx:'3 × 8 · 3s eccentric · 1s pause at bottom',d:'3s down. 1s pause at chest. Press up controlled. Hollow body throughout — glutes and abs engaged, no hip sag. Technical failure only. Progression: 3×8 → 3×12 → 3×15 → archer push-up → weighted push-up.'}]},
+      {id:'sR_kb',  time:'Push B', title:'Bottom-Up KB Press', sub:'3 × 8 each · 15 lbs',
+       detail:[{n:'Bottom-Up KB Press',rx:'3 × 8 each side · 15 lbs',d:'Kettlebell inverted, bottom up. Press overhead. High rotator cuff and wrist co-activation required. Trains shoulder to self-organise under load. Transition signal: 3×10 stable and symmetric both sides, no wrist collapse or shoulder hitch → retain as 1 warmup set, add pike push-up working sets for overhead strength.'}]},
+      {id:'sR_acc', time:'Acc',    title:'Face Pull / Band Pull-Apart', sub:'2 × 15',
+       detail:[{n:'Face Pull or Band Pull-Apart',rx:'2 × 15',d:'Face pull: band at face height, pull to forehead, elbows flared, external rotation at end range. Pull-apart: band at chest height, pull to T, 1s hold. Posterior shoulder balance.'}]},
+    ],
+    micro:[
+      {n:'Tibialis Raise',     rx:'1 × 20 · 1s hold top', req:true},
+      {n:'Backward Walk',      rx:'2–3 rounds',            req:true},
+      {n:'Dead Hang',          rx:'90s total',             req:true},
+      {n:'Single-Leg Balance', rx:'60s total · both legs', req:true},
+    ],
+    briefing:{
+      warn:['No knee loading today — no wall sit, step-down, or split squat.',
+            'No collagen — no connective tissue loading event today.',
+            'Rest day only — do not run on a Day A or B.'],
+      ok:['Pull volume (7 sets) intentionally higher than push (3 sets) — corrects current imbalance. Normal.',
+          'Eccentric pull-up DOMS in lats/biceps for 24–48h is expected — not a signal to stop.',
+          'If 2 rest days available: split pull-dominant day 1, push-dominant day 2. Total sets unchanged.'],
+      sub:['No rings: substitute towel row from door handle or table edge.',
+           'No kettlebell: substitute pike push-up 3×8 for overhead work.'],
+      caution:['Rebalance trigger: when 3×5 full pull-ups consistent, drop eccentrics to 2 sets, add one push set.',
+               'KB press transition: when 3×10 stable and symmetric, add pike push-up working sets alongside 1 warmup set of bottom-up.'],
     }
   }
 };
