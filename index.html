@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v6.2</title>
+<title>Knee Rehab v6.3</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1075,7 +1075,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v6.2</div>
+  <div class="ms-title">KNEE REHAB v6.3</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
@@ -1083,7 +1083,6 @@ body { background: #fff; color: #000; }
   <button class="ms-btn" onclick="nav('phases',this)"><span class="ms-icon">▲</span><span class="ms-lbl">Phases &amp; Progression</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('rules',this)"><span class="ms-icon">◉</span><span class="ms-lbl">Key Rules</span><span class="ms-arr">›</span></button>
   <button class="ms-btn" onclick="nav('schedule',this)"><span class="ms-icon">≡</span><span class="ms-lbl">Schedule Reference</span><span class="ms-arr">›</span></button>
-  <button class="ms-btn" onclick="nav('upperbody',this)"><span class="ms-icon">△</span><span class="ms-lbl">Upper Body — Day R</span><span class="ms-arr">›</span></button>
 
   <div class="ms-group">Info</div>
   <button class="ms-btn" onclick="nav('supps',this)"><span class="ms-icon">◐</span><span class="ms-lbl">Supplements</span><span class="ms-arr">›</span></button>
@@ -1184,7 +1183,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">6.0</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v6.2</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v6.3</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1193,7 +1192,7 @@ body { background: #fff; color: #000; }
   <span class="cover-chip">SKIING PREP</span>
   <span class="cover-chip">BIKE COMMUTE</span>
   <span class="cover-chip">SOLEUS LOAD</span>
-  <span class="cover-chip">UPPER BODY · DAY R</span>
+  <span class="cover-chip">UPPER BODY · DAY C</span>
 </div>
 
 <div class="cover-divider"></div>
@@ -1226,7 +1225,17 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v6.1</div>
+    <div class="changes-title">Changes from v6.2</div>
+    <ul class="changes-list">
+      <li>Upper Body page (Day R) removed as a separate page. All upper body content — session structure, pull-up progression, ring row ladder, push-up ladder, KB press → pike push-up transition, two-day split — moved into the Day C — Recovery schedule tab and the Day C Today block.</li>
+      <li>Day R removed from Today tab selector. Upper body is accessed from within Day C as an optional addition, not a standalone day type.</li>
+      <li>Upper Body nav menu entry removed from More menu.</li>
+      <li>Day C schedule tab now contains the full upper body session detail inline, replacing the single-line pointer to the old Upper Body page.</li>
+      <li>Rule 20 updated: Day R framing replaced with Day C optional framing.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">v6.1 → v6.2</div>
     <ul class="changes-list">
       <li>Upper Body session added as optional block to Day C — Recovery. No collagen required, no knee loading. Does not interfere with Day C recovery purpose. Run after the base blocks or as a standalone session. Skip if fatigued — recovery purpose takes precedence.</li>
       <li>Day C duration updated: ~18 min base · ~55 min with optional upper body.</li>
@@ -1335,16 +1344,8 @@ body { background: #fff; color: #000; }
       <div class="lc-num-col">DAY C</div>
       <div class="lc-main">
         <div class="lc-title">LIGHT</div>
-        <div class="lc-body">Mobility · Spinal &amp; Shoulder · Core<br>RKC Plank · Hip Abduction<br>Mandatory micro-sessions only<br><span style="color:var(--muted2);font-size:12px;">+ Upper Body optional</span></div>
+        <div class="lc-body">Mobility · Spinal &amp; Shoulder · Core<br>RKC Plank · Hip Abduction<br>Mandatory micro-sessions only<br><span style="color:var(--muted2);font-size:12px;">+ Upper Body optional (see Day C schedule tab)</span></div>
         <div class="lc-rule">Days 2, 4, 6<br>No collagen<br>Zone 1 unrestricted</div>
-      </div>
-    </div>
-    <div class="layer-card">
-      <div class="lc-num-col">DAY R</div>
-      <div class="lc-main">
-        <div class="lc-title" style="color:var(--blue,#0A84FF);">UPPER BODY</div>
-        <div class="lc-body">Rest day only · flexible day<br>Pull + push strength<br>~35–40 min</div>
-        <div class="lc-rule">1–2× per week<br>No collagen · No knee loading<br>See Upper Body page</div>
       </div>
     </div>
   </div>
@@ -1375,7 +1376,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Day 7</div></div>
-      <div class="cr-right"><div class="cr-val">Active / Endurance / Rest / Day R</div><div class="cr-desc">Ski/hike: collagen 45 min before. Endurance: swim or elliptical. Rest: dead hang + backward walk only. Day R (upper body) if energy allows.</div></div>
+      <div class="cr-right"><div class="cr-val">Active / Endurance / Rest</div><div class="cr-desc">Ski/hike: collagen 45 min before. Endurance: swim or elliptical. Rest: dead hang + backward walk only. Upper body (optional) runs on Day C, not Day 7.</div></div>
     </div>
   </div>
 
@@ -1441,9 +1442,6 @@ body { background: #fff; color: #000; }
     </button>
     <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
       <span class="day-btn-num">C</span><span class="day-btn-type">Recovery</span>
-    </button>
-    <button class="day-btn" data-block="R" onclick="selectBlock('R',this)">
-      <span class="day-btn-num">R</span><span class="day-btn-type">Upper Body</span>
     </button>
     <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
       <span class="day-btn-num">X</span><span class="day-btn-type">Activity</span>
@@ -1521,9 +1519,67 @@ body { background: #fff; color: #000; }
       <div class="card-row"><div class="cr-left"><div class="cr-key">Morning</div></div><div class="cr-right"><div class="cr-val">Glute ~2 min</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">All day</div></div><div class="cr-right"><div class="cr-val">Tibialis raise + backward walk + dead hang</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Anytime</div></div><div class="cr-right"><div class="cr-val">Zone 1 — unrestricted</div></div></div>
-      <div class="card-row" style="border-top:1px solid var(--border2);opacity:0.75;"><div class="cr-left"><div class="cr-key" style="color:var(--muted2);">Optional</div></div><div class="cr-right"><div class="cr-val" style="color:var(--muted2);">Upper Body — ~35–40 min</div><div class="cr-desc">No collagen required. No knee loading. Run after the base blocks or as a standalone session. See Upper Body page. Skip if fatigued — Day C recovery purpose takes precedence.</div></div></div>
+      <div class="card-row" style="border-top:1px solid var(--border2);opacity:0.75;"><div class="cr-left"><div class="cr-key" style="color:var(--muted2);">Optional</div></div><div class="cr-right"><div class="cr-val" style="color:var(--muted2);">Upper Body — ~35–40 min</div><div class="cr-desc">No collagen. No knee loading. Run after the base blocks or as a standalone session. Skip if fatigued — recovery purpose takes precedence.</div></div></div>
     </div>
-    <p class="note">No collagen. No knee loading. Upper body is the only optional addition — it does not interact with the recovery purpose of Day C. Easy commute cycling, kayaking, backward walking all fine — no ceiling.</p>
+    <p class="note">No collagen. No knee loading. Upper body is the only optional addition — does not interact with Day C recovery purpose. Zone 1 commute, kayaking, backward walking all fine — no ceiling.</p>
+
+    <div class="sub-head">Upper Body — Session (~35–40 min)</div>
+    <p class="note" style="margin-bottom:10px;">Pull: 7 sets total. Push: 3 sets. Intentionally asymmetric until pull-ups reach 3×5 — corrects current imbalance. No collagen on any Day C upper body session.</p>
+    <div class="changes" style="margin-bottom:14px;">
+      <div class="changes-title">Current Baseline</div>
+      <ul class="changes-list">
+        <li>Push-up: 3 × 8 with good form. Mid-range on progression ladder.</li>
+        <li>Pull-up: 1–3 reps. Scapular pull-up warmup already in practice. Primary limiting pattern — pull volume asymmetric by design until 3×5.</li>
+        <li>Bottom-up KB press: 15 lbs, 3 × 10 each side. Near transition threshold.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><span class="ch-title">Block · Exercise · Sets × Reps · Notes</span></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Scap Pull-Up</div><div class="cr-desc">2 × 8. Depress and retract scapulae from dead hang without bending elbows. 1s hold at top.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Shoulder CARs</div><div class="cr-desc">1 × 5 each side. Full controlled articular rotation — slow, full range, deliberate.</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull A</div></div><div class="cr-right"><div class="cr-val">Eccentric Pull-Up</div><div class="cr-desc">4 × 3–5 negatives. Jump to top, lower over 5s, full hang at bottom. 90s rest between sets. Primary pull-up builder.</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull B</div></div><div class="cr-right"><div class="cr-val">Ring Row</div><div class="cr-desc">3 × 10. Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull — mid trap, rhomboids, rear delt.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Push A</div></div><div class="cr-right"><div class="cr-val">Push-Up with Tempo</div><div class="cr-desc">3 × 8. 3s eccentric, 1s pause at bottom. Hollow body — glutes and abs engaged throughout.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Push B</div></div><div class="cr-right"><div class="cr-val">Bottom-Up KB Press</div><div class="cr-desc">3 × 8 each side · 15 lbs. Vertical push, unilateral, stability-dominant. Progress bell weight, not reps.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Acc</div></div><div class="cr-right"><div class="cr-val">Face Pull / Pull-Apart</div><div class="cr-desc">2 × 15. Posterior shoulder balance. Face pull: band at face height, elbows flared, external rotation at end range.</div></div></div>
+    </div>
+
+    <div class="sub-head">Two-Day Split (if 2 recovery days available)</div>
+    <div class="card">
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Day C1</div></div><div class="cr-right"><div class="cr-val">Pull-dominant</div><div class="cr-desc">Eccentric pull-ups (4 sets) + ring row (3 sets) + 1 push set. Focus on pull quality.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Day C2</div></div><div class="cr-right"><div class="cr-val">Push-dominant</div><div class="cr-desc">Push-up with tempo (3 sets) + KB press (3 sets) + 1 pull set. Total sets unchanged across the week.</div></div></div>
+    </div>
+
+    <div class="sub-head">Pull-Up Progression</div>
+    <div class="card">
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">Eccentric only — 4 × 3–5 negatives</div><div class="cr-desc">5s down, full hang at bottom. Jump to top each rep. Fastest evidence-based path for sub-5 pull-up count.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">Band-assisted + eccentrics mixed</div><div class="cr-desc">When 3 full pull-ups achievable. Add 2–3 band-assisted full reps per set alongside eccentrics.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Trigger</div></div><div class="cr-right"><div class="cr-val">3 × 5 full pull-ups</div><div class="cr-desc">Rebalance: drop eccentrics to 2 sets, add one push set. Equal pull/push volume from here.</div></div></div>
+    </div>
+
+    <div class="sub-head">Ring Row Progression — 4 Rungs</div>
+    <div class="card">
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Rung 1</div></div><div class="cr-right"><div class="cr-val">Feet flat · body ~45°</div><div class="cr-desc">Current prescription. Move to rung 2 when 3×12 with 2s pause at chest is clean.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 2</div></div><div class="cr-right"><div class="cr-val">Feet flat · more horizontal</div><div class="cr-desc">Lower rings to increase load. Body approaches horizontal.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 3</div></div><div class="cr-right"><div class="cr-val">Feet elevated on box</div><div class="cr-desc">Shifts load closer to bodyweight. Requires strict body tension.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 4</div></div><div class="cr-right"><div class="cr-val">Feet elevated + 2s pause</div><div class="cr-desc">Pre-requisite for advanced progressions. Move up when rung 3 is 3×12.</div></div></div>
+    </div>
+
+    <div class="sub-head">Push-Up Progression</div>
+    <div class="card">
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">3 × 8 · 3s eccentric · 1s pause</div><div class="cr-desc">Adding eccentric tempo to current 3×8 — builds tissue quality before volume increase.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">3 × 12 → 3 × 15 with tempo</div><div class="cr-desc">Volume progression at same tempo before moving to harder variation.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Archer push-up</div><div class="cr-desc">One arm takes progressively more load.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Weighted push-up</div><div class="cr-desc">Plate on back. Load the pattern without changing geometry.</div></div></div>
+    </div>
+
+    <div class="sub-head">Bottom-Up KB Press → Pike Push-Up</div>
+    <p class="note" style="margin-bottom:8px;">Not interchangeable. Bottom-up press = vertical push, unilateral, stability-dominant. Pike push-up = vertical push, bilateral, anterior deltoid and upper trap, scalable via foot elevation. Transition when bottom-up has done its job.</p>
+    <div class="card">
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Signal</div></div><div class="cr-right"><div class="cr-val">3 × 10 stable · both sides · no hitch</div><div class="cr-desc">3×10 at 15 lbs both sides symmetric, no wrist collapse, no shoulder hitch at top. This is the transition trigger.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">After</div></div><div class="cr-right"><div class="cr-val">1 warmup set bottom-up · pike push-up working sets</div><div class="cr-desc">Retain 1 set of bottom-up as shoulder activation. Add pike push-up 3×8 as the overhead strength vehicle.</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Pike path</div></div><div class="cr-right"><div class="cr-val">Flat → feet elevated → wall handstand</div><div class="cr-desc">Elevating feet shifts load toward overhead pressing. Progress when 3×12 clean at current elevation.</div></div></div>
+    </div>
   </div>
 
   <!-- Activity Day -->
@@ -2233,14 +2289,14 @@ body { background: #fff; color: #000; }
     <div class="rule-row"><div class="rule-n">17</div><div class="rule-c"><div class="rule-t">Do not skip mobility</div><div class="rule-d">Daily including Day C. Hip and ankle stiffness are upstream causes of knee load.</div></div></div>
     <div class="rule-row"><div class="rule-n">18</div><div class="rule-c"><div class="rule-t">Glute work is not optional</div><div class="rule-d">VMO alone will not fix patellar tracking without glute medius.</div></div></div>
     <div class="rule-row"><div class="rule-n">19</div><div class="rule-c"><div class="rule-t">Deep range is the goal</div><div class="rule-d">Use whatever assistance needed to reach depth — reduce over time.</div></div></div>
-    <div class="rule-row"><div class="rule-n">20</div><div class="rule-c"><div class="rule-t">Day R — upper body on rest days only</div><div class="rule-d">1–2× per week, flexible day. No collagen. No knee loading. Pull volume asymmetric (more sets than push) until pull-ups reach 3×5, then rebalance. See Upper Body page.</div></div></div>
+    <div class="rule-row"><div class="rule-n">20</div><div class="rule-c"><div class="rule-t">Upper body on Day C — optional addition only</div><div class="rule-d">Run after the Day C base blocks or as a standalone session on recovery days. No collagen. No knee loading. Pull volume asymmetric (more sets than push) until pull-ups reach 3×5, then rebalance. Skip if fatigued — Day C recovery purpose takes precedence.</div></div></div>
   </div>
 
   <div class="colophon">
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v6.2 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v6.3 — March 2026
     </div>
   </div>
 
@@ -2249,83 +2305,6 @@ body { background: #fff; color: #000; }
 
 <!-- ══════════════════════════════════════════════════ -->
 
-<!--  UPPER BODY — DAY R                                -->
-
-<!-- ══════════════════════════════════════════════════ -->
-
-<div id="upperbody" class="page">
-<div class="doc">
-  <div class="sh"><span class="sh-title">Upper Body — Day R</span><span class="sh-tag">v6.2</span></div>
-  <p class="body">Rest days only. Flexible 1–2× per week. No collagen. No knee loading. ~35–40 min.</p>
-
-  <div class="changes">
-    <div class="changes-title">Current Baseline</div>
-    <ul class="changes-list">
-      <li>Push-up: 3 × 8 with good form. Mid-range on progression ladder — functional, not a beginner.</li>
-      <li>Pull-up: 1–3 reps. Scapular pull-up warmup already in practice. This is the primary limiting pattern — pull volume is asymmetric by design until pull-ups reach 3×5.</li>
-      <li>Bottom-up KB press: 15 lbs, 3 × 10 each side. Shoulder stability functional. Near transition threshold.</li>
-    </ul>
-  </div>
-
-  <div class="sub-head">Session — ~35–40 min</div>
-  <div class="card">
-    <div class="card-head"><span class="ch-title">Block · Exercise · Sets × Reps · Notes</span></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Scap Pull-Up</div><div class="cr-desc">2 × 8. Depress and retract scapulae from dead hang without bending elbows. 1s hold at top.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Warmup</div></div><div class="cr-right"><div class="cr-val">Shoulder CARs</div><div class="cr-desc">1 × 5 each side. Full controlled articular rotation — slow, full range, deliberate.</div></div></div>
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull A</div></div><div class="cr-right"><div class="cr-val">Eccentric Pull-Up</div><div class="cr-desc">4 × 3–5 negatives. Jump to top, lower over 5s, full hang at bottom. 90s rest between sets. Primary pull-up builder.</div></div></div>
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Pull B</div></div><div class="cr-right"><div class="cr-val">Ring Row</div><div class="cr-desc">3 × 10. Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull pattern — mid trap, rhomboids, rear delt.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Push A</div></div><div class="cr-right"><div class="cr-val">Push-Up with Tempo</div><div class="cr-desc">3 × 8. 3s eccentric, 1s pause at bottom. Hollow body position — glutes and abs engaged throughout.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Push B</div></div><div class="cr-right"><div class="cr-val">Bottom-Up KB Press</div><div class="cr-desc">3 × 8 each side · 15 lbs. Vertical push, unilateral, stability-dominant. Progress bell weight, not reps.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Acc</div></div><div class="cr-right"><div class="cr-val">Face Pull / Pull-Apart</div><div class="cr-desc">2 × 15. Posterior shoulder balance. Face pull: band at face height, elbows flared, external rotation at end range.</div></div></div>
-  </div>
-  <p class="note">Pull: 7 sets total. Push: 3 sets. Intentionally asymmetric until pull-ups reach 3×5 — corrects current imbalance.</p>
-
-  <div class="sub-head">Pull-Up Progression</div>
-  <div class="card">
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">Eccentric only — 4 × 3–5 negatives</div><div class="cr-desc">5s down, full hang at bottom. Jump to top each rep. Fastest evidence-based path for sub-5 pull-up count.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">Band-assisted + eccentrics mixed</div><div class="cr-desc">When 3 full pull-ups achievable. Add 2–3 band-assisted full reps per set alongside eccentrics.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Trigger</div></div><div class="cr-right"><div class="cr-val">3 × 5 full pull-ups</div><div class="cr-desc">Rebalance: drop eccentrics to 2 sets, add one push set. Equal pull/push volume from here.</div></div></div>
-  </div>
-
-  <div class="sub-head">Ring Row Progression — 4 Rungs</div>
-  <div class="card">
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Rung 1</div></div><div class="cr-right"><div class="cr-val">Feet flat · body ~45°</div><div class="cr-desc">Entry point. Current prescription. Move to rung 2 when 3×12 with 2s pause at chest is clean.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 2</div></div><div class="cr-right"><div class="cr-val">Feet flat · more horizontal</div><div class="cr-desc">Lower rings to increase load. Body approaches horizontal.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 3</div></div><div class="cr-right"><div class="cr-val">Feet elevated on box</div><div class="cr-desc">Shifts load closer to bodyweight. Requires strict body tension.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Rung 4</div></div><div class="cr-right"><div class="cr-val">Feet elevated + 2s pause</div><div class="cr-desc">Pre-requisite for advanced progressions. Move up when rung 3 is 3×12.</div></div></div>
-  </div>
-
-  <div class="sub-head">Push-Up Progression</div>
-  <div class="card">
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Now</div></div><div class="cr-right"><div class="cr-val">3 × 8 · 3s eccentric · 1s pause</div><div class="cr-desc">Adding eccentric tempo to current 3×8 — builds tissue quality before volume increase.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Next</div></div><div class="cr-right"><div class="cr-val">3 × 12 → 3 × 15 with tempo</div><div class="cr-desc">Volume progression at same tempo before moving to harder variation.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Archer push-up</div><div class="cr-desc">One arm takes progressively more load. Significant increase in horizontal pressing demand.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Then</div></div><div class="cr-right"><div class="cr-val">Weighted push-up</div><div class="cr-desc">Plate on back. Load the pattern without changing geometry.</div></div></div>
-  </div>
-
-  <div class="sub-head">Bottom-Up KB Press → Pike Push-Up</div>
-  <p class="note" style="margin-bottom:8px;">These are not interchangeable. Bottom-up press = vertical push, unilateral, stability-dominant. Pike push-up = vertical push, bilateral, anterior deltoid and upper trap, scalable via foot elevation. Transition when bottom-up has done its job.</p>
-  <div class="card">
-    <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Signal</div></div><div class="cr-right"><div class="cr-val">3 × 10 stable · both sides · no hitch</div><div class="cr-desc">3×10 at 15 lbs. Both sides symmetric, no wrist collapse, no shoulder hitch at top. This is the transition trigger.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">After</div></div><div class="cr-right"><div class="cr-val">1 warmup set bottom-up · pike push-up working sets</div><div class="cr-desc">Retain 1 set of bottom-up as shoulder activation. Add pike push-up 3×8 as the overhead strength vehicle.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Pike path</div></div><div class="cr-right"><div class="cr-val">Flat → feet elevated → wall handstand</div><div class="cr-desc">Elevating feet shifts load toward overhead pressing. Progress when 3×12 clean at current elevation.</div></div></div>
-  </div>
-
-  <div class="sub-head">Two Rest Days Available</div>
-  <div class="card">
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Day R1</div></div><div class="cr-right"><div class="cr-val">Pull-dominant</div><div class="cr-desc">Eccentric pull-ups (4 sets) + ring row (3 sets) + 1 push set. Focus on pull quality.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Day R2</div></div><div class="cr-right"><div class="cr-val">Push-dominant</div><div class="cr-desc">Push-up with tempo (3 sets) + KB press (3 sets) + 1 pull set. Total sets unchanged across the week.</div></div></div>
-  </div>
-
-  <div class="colophon" style="margin-top:32px;">
-    <div class="col-bar"></div>
-    <div class="col-text">
-      Upper body addition v6.0. Clamshell → Hip Abduction v6.1. Upper body added to Day C as optional v6.2. <strong>Pull asymmetry is intentional</strong> — 7 pull sets vs 3 push sets until 3×5 pull-ups, then rebalance to equal. No collagen on Day R or Day C. Not a substitute for clinical diagnosis or physiotherapy. · v6.2 — March 2026
-    </div>
-  </div>
-
-</div>
-</div>
 
 <script>
 // ── Navigation ─────────────────────────────────────────
@@ -2790,7 +2769,7 @@ const BLOCKS = {
       {id:'sC_glut', time:'Morning', title:'Glute', sub:'~2 min', navPage:'base',
        detail:[{n:'Hip Abduction',rx:'2×12 each · 2s hold top',d:''},
                {n:'Supine Hip External Rotation with Block',rx:'3 × 30–45s each side',d:''}]},
-      {id:'sC_ub',   time:'Optional', title:'Upper Body', sub:'~35–40 min · optional · see Upper Body page', navPage:'upperbody',
+      {id:'sC_ub',   time:'Optional', title:'Upper Body', sub:'~35–40 min · optional · see Day C schedule tab',
        detail:[{n:'Scap Pull-Up',rx:'2 × 8 warmup',d:'Depress and retract from dead hang. No elbow bend.'},
                {n:'Shoulder CARs',rx:'1 × 5 each warmup',d:'Full controlled articular rotation.'},
                {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder.'},
@@ -2857,44 +2836,6 @@ const BLOCKS = {
     }
   },
 
-  'R': {
-    type:'R', title:'DAY R — UPPER BODY', titleClass:'',
-    pills:[{t:'Rest day only',c:''},{t:'No collagen',c:''},{t:'~35–40 min',c:'green'}],
-    note:'Upper body strength. Flexible day — 1–2× per week on available rest days. No knee loading. Pull volume asymmetric until pull-ups reach 3×5.',
-    steps:[
-      {id:'sR_wu',  time:'Warmup', title:'Scap Pull-Up + Shoulder CARs', sub:'~5 min',
-       detail:[{n:'Scap Pull-Up',rx:'2 × 8',d:'Dead hang. Depress and retract scapulae without bending elbows. Hold 1s at top.'},
-               {n:'Shoulder CARs',rx:'1 × 5 each side',d:'Controlled articular rotation. Full shoulder circle, slow and deliberate. Maintains range before loading.'}]},
-      {id:'sR_pA',  time:'Pull A', title:'Eccentric Pull-Up', sub:'4 × 3–5 negatives · 5s down',
-       detail:[{n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives · 5s down · 90s rest',d:'Jump or step to top position (chin over bar). Lower over exactly 5 seconds. Full dead hang at bottom — do not release tension early. Rest 90s between sets. Fastest path from 1–3 reps to 5+ full pull-ups. Same eccentric principle as step-downs and hamstring slides.',timer:5}]},
-      {id:'sR_pB',  time:'Pull B', title:'Ring Row', sub:'3 × 10 · horizontal pull',
-       detail:[{n:'Ring Row',rx:'3 × 10 · 2s pause at chest',d:'Rings at height giving ~45° body angle to floor (entry rung). Pull rings to chest, 2s hold, lower controlled. Body rigid head to heel. Rung progression: (1) feet flat 45° → (2) feet flat more horizontal → (3) feet elevated on box → (4) feet elevated + 2s pause. Move to next rung when 3×12 is clean.'}]},
-      {id:'sR_pu',  time:'Push A', title:'Push-Up with Tempo', sub:'3 × 8 · 3s eccentric · 1s pause',
-       detail:[{n:'Push-Up',rx:'3 × 8 · 3s eccentric · 1s pause at bottom',d:'3s down. 1s pause at chest. Press up controlled. Hollow body throughout — glutes and abs engaged, no hip sag. Technical failure only. Progression: 3×8 → 3×12 → 3×15 → archer push-up → weighted push-up.'}]},
-      {id:'sR_kb',  time:'Push B', title:'Bottom-Up KB Press', sub:'3 × 8 each · 15 lbs',
-       detail:[{n:'Bottom-Up KB Press',rx:'3 × 8 each side · 15 lbs',d:'Kettlebell inverted, bottom up. Press overhead. High rotator cuff and wrist co-activation required. Trains shoulder to self-organise under load. Transition signal: 3×10 stable and symmetric both sides, no wrist collapse or shoulder hitch → retain as 1 warmup set, add pike push-up working sets for overhead strength.'}]},
-      {id:'sR_acc', time:'Acc',    title:'Face Pull / Band Pull-Apart', sub:'2 × 15',
-       detail:[{n:'Face Pull or Band Pull-Apart',rx:'2 × 15',d:'Face pull: band at face height, pull to forehead, elbows flared, external rotation at end range. Pull-apart: band at chest height, pull to T, 1s hold. Posterior shoulder balance.'}]},
-    ],
-    micro:[
-      {n:'Tibialis Raise',     rx:'1 × 20 · 1s hold top', req:true},
-      {n:'Backward Walk',      rx:'2–3 rounds',            req:true},
-      {n:'Dead Hang',          rx:'90s total',             req:true},
-      {n:'Single-Leg Balance', rx:'60s total · both legs', req:true},
-    ],
-    briefing:{
-      warn:['No knee loading today — no wall sit, step-down, or split squat.',
-            'No collagen — no connective tissue loading event today.',
-            'Rest day only — do not run on a Day A or B.'],
-      ok:['Pull volume (7 sets) intentionally higher than push (3 sets) — corrects current imbalance. Normal.',
-          'Eccentric pull-up DOMS in lats/biceps for 24–48h is expected — not a signal to stop.',
-          'If 2 rest days available: split pull-dominant day 1, push-dominant day 2. Total sets unchanged.'],
-      sub:['No rings: substitute towel row from door handle or table edge.',
-           'No kettlebell: substitute pike push-up 3×8 for overhead work.'],
-      caution:['Rebalance trigger: when 3×5 full pull-ups consistent, drop eccentrics to 2 sets, add one push set.',
-               'KB press transition: when 3×10 stable and symmetric, add pike push-up working sets alongside 1 warmup set of bottom-up.'],
-    }
-  }
 };
 
 let currentBlock = 'A';
