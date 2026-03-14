@@ -823,6 +823,105 @@ body { font-size: 14px; }
 }
 
 /* ─────────────────────────────────────────────────── */
+/*  TELEPORT COMMAND PALETTE                           */
+/* ─────────────────────────────────────────────────── */
+.tp-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 500;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: max(80px, calc(15vh + var(--safe-top)));
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.15s;
+}
+.tp-overlay.open { opacity: 1; pointer-events: all; }
+
+.tp-box {
+  background: var(--bg2);
+  border: 1px solid var(--border2);
+  width: min(480px, calc(100vw - 32px));
+  max-height: 60vh;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+.tp-search-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.tp-slash {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px; color: var(--amber);
+  flex-shrink: 0;
+}
+.tp-input {
+  flex: 1;
+  background: none; border: none; outline: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 15px; color: var(--text);
+  caret-color: var(--amber);
+}
+.tp-input::placeholder { color: var(--muted); }
+.tp-hint {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; color: var(--muted);
+  letter-spacing: 0.1em; flex-shrink: 0;
+}
+
+.tp-results {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.tp-results::-webkit-scrollbar { display: none; }
+
+.tp-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 13px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.08s;
+  -webkit-tap-highlight-color: transparent;
+}
+.tp-item:last-child { border-bottom: none; }
+.tp-item:hover, .tp-item.active { background: var(--bg3); }
+.tp-item.active .tp-item-name { color: var(--white); }
+.tp-item.active .tp-item-icon { color: var(--amber); }
+.tp-item-icon { font-size: 14px; color: var(--muted2); width: 18px; text-align: center; flex-shrink: 0; }
+.tp-item-name { font-size: 15px; color: var(--text2); flex: 1; }
+.tp-item-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); flex-shrink: 0;
+}
+.tp-empty {
+  padding: 20px 16px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; color: var(--muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+.tp-footer {
+  border-top: 1px solid var(--border);
+  padding: 8px 16px;
+  display: flex; gap: 16px; align-items: center;
+}
+.tp-key {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; color: var(--muted2);
+  letter-spacing: 0.08em;
+}
+.tp-key kbd {
+  display: inline-block;
+  background: var(--bg3); border: 1px solid var(--border2);
+  padding: 1px 5px; font-size: 9px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--muted2);
+}
+
+/* ─────────────────────────────────────────────────── */
 /*  TODAY TAB                                          */
 /* ─────────────────────────────────────────────────── */
 .day-selector {
@@ -1149,6 +1248,25 @@ body { background: #fff; color: #000; }
       <button class="tbtn tbtn-rst" onclick="tModalReset()" style="flex:1">RESET</button>
     </div>
     <button class="tmodal-close" onclick="tModalClose()">CLOSE</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════ -->
+<!--  TELEPORT COMMAND PALETTE                          -->
+<!-- ══════════════════════════════════════════════════ -->
+<div class="tp-overlay" id="tpOverlay" onclick="tpBgClick(event)">
+  <div class="tp-box" id="tpBox">
+    <div class="tp-search-row">
+      <span class="tp-slash">/</span>
+      <input class="tp-input" id="tpInput" type="text" placeholder="jump to…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" oninput="tpFilter()" onkeydown="tpKeyDown(event)">
+      <span class="tp-hint">ESC to close</span>
+    </div>
+    <div class="tp-results" id="tpResults"></div>
+    <div class="tp-footer">
+      <span class="tp-key"><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span class="tp-key"><kbd>↵</kbd> go</span>
+      <span class="tp-key"><kbd>/</kbd> open · <kbd>esc</kbd> close</span>
+    </div>
   </div>
 </div>
 
@@ -3195,4 +3313,112 @@ metroUpdateDots();
   const firstBtn = document.querySelector('.day-btn[data-block="A"]');
   if (firstBtn) { firstBtn.classList.add('active'); renderBlock('A'); }
 })();
+
+// ── Teleport Command Palette ────────────────────────
+const TP_PAGES = [
+  { id: 'today',     tab: 'tb-today',     icon: '▣', name: 'Today',                tag: 'tab'  },
+  { id: 'cover',     tab: 'tb-cover',     icon: '◼', name: 'Home',                 tag: 'tab'  },
+  { id: 'exercises', tab: 'tb-exercises', icon: '●', name: 'Exercises',             tag: 'tab'  },
+  { id: 'timer',     tab: 'tb-timer',     icon: '⧖', name: 'Timer',                tag: 'tab'  },
+  { id: 'overview',  tab: null,           icon: '◈', name: 'Program Overview',      tag: 'more' },
+  { id: 'schedule',  tab: null,           icon: '≡', name: 'Schedule Reference',    tag: 'more' },
+  { id: 'phases',    tab: null,           icon: '▲', name: 'Phases & Progression',  tag: 'more' },
+  { id: 'rules',     tab: null,           icon: '◉', name: 'Key Rules',             tag: 'more' },
+  { id: 'supps',     tab: null,           icon: '◐', name: 'Supplements',           tag: 'more' },
+];
+
+let tpActiveIdx = 0;
+
+function tpOpen() {
+  const overlay = document.getElementById('tpOverlay');
+  overlay.classList.add('open');
+  const input = document.getElementById('tpInput');
+  input.value = '';
+  tpActiveIdx = 0;
+  tpRender(TP_PAGES);
+  setTimeout(() => input.focus(), 30);
+}
+
+function tpClose() {
+  document.getElementById('tpOverlay').classList.remove('open');
+  document.getElementById('tpInput').blur();
+}
+
+function tpBgClick(e) {
+  if (e.target === document.getElementById('tpOverlay')) tpClose();
+}
+
+function tpFilter() {
+  const q = document.getElementById('tpInput').value.trim().toLowerCase();
+  const filtered = q
+    ? TP_PAGES.filter(p => p.name.toLowerCase().includes(q) || p.tag.toLowerCase().includes(q))
+    : TP_PAGES;
+  tpActiveIdx = 0;
+  tpRender(filtered);
+}
+
+function tpRender(items) {
+  const el = document.getElementById('tpResults');
+  if (!items.length) {
+    el.innerHTML = '<div class="tp-empty">no match</div>';
+    return;
+  }
+  el.innerHTML = items.map((p, i) =>
+    `<div class="tp-item${i === tpActiveIdx ? ' active' : ''}" onclick="tpGo('${p.id}','${p.tab || ''}')" data-tp-idx="${i}">` +
+    `<span class="tp-item-icon">${p.icon}</span>` +
+    `<span class="tp-item-name">${p.name}</span>` +
+    `<span class="tp-item-tag">${p.tag}</span>` +
+    `</div>`
+  ).join('');
+}
+
+function tpKeyDown(e) {
+  const results = document.getElementById('tpResults');
+  const items = results.querySelectorAll('.tp-item');
+  if (!items.length) return;
+
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    tpActiveIdx = Math.min(tpActiveIdx + 1, items.length - 1);
+    tpSetActive(items);
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    tpActiveIdx = Math.max(tpActiveIdx - 1, 0);
+    tpSetActive(items);
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const active = items[tpActiveIdx];
+    if (active) active.click();
+  } else if (e.key === 'Escape') {
+    tpClose();
+  }
+}
+
+function tpSetActive(items) {
+  items.forEach((el, i) => el.classList.toggle('active', i === tpActiveIdx));
+  items[tpActiveIdx]?.scrollIntoView({ block: 'nearest' });
+}
+
+function tpGo(pageId, tabBtnId) {
+  tpClose();
+  if (tabBtnId) {
+    navTab(pageId, tabBtnId);
+  } else {
+    nav(pageId, null);
+  }
+}
+
+// Keyboard trigger: "/" opens teleport (unless typing in an input)
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    tpClose();
+    return;
+  }
+  const tag = document.activeElement?.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
+    e.preventDefault();
+    tpOpen();
+  }
+});
 </script>
