@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v7.0</title>
+<title>Knee Rehab v7.1</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1132,7 +1132,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v7.0</div>
+  <div class="ms-title">KNEE REHAB v7.1</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
@@ -1237,10 +1237,10 @@ body { background: #fff; color: #000; }
   <div class="cover-page">
     <div class="cover-grid"></div>
     <div class="cover-stripe"></div>
-    <div class="cover-big-num">7.0</div>
+    <div class="cover-big-num">7.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v7.0</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v7.1</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1285,7 +1285,13 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes from v6.9 — Scientific review, protocol rebuild, progressive overload</div>
+    <div class="changes-title">Changes from v7.0 — Floor L-Sit added</div>
+    <ul class="changes-list">
+      <li><strong>Floor L-Sit added to optional casual micro-session pool.</strong> Seated, heels on floor, hands beside hips, press down through straight arms. 2–3 × 20–30s. Unique contributions not covered elsewhere in the program: active shoulder depression under vertical load (lower trap, serratus anterior in compression pattern vs. shear pattern of Scap Push-Up) and tricep isometric. Partial overlap with hollow body hold (anterior core isometric) and RKC plank (co-contraction) but not redundant — different arm pattern and hip position. Not added to Core block — micro-session placement preferred because isometric adaptation is driven by frequency across the day, not single-session volume. Floor access required. No recovery demand. Progress by reducing heel support height over weeks.</li>
+    </ul>
+  </div>
+  <div class="changes" style="margin-top:8px;border-color:var(--border);">
+    <div class="changes-title" style="color:var(--muted2);font-size:11px;">Changes from v6.9 — Scientific review, protocol rebuild, progressive overload</div>
     <ul class="changes-list">
       <li><strong>Collagen protocol rebuilt.</strong> Day-label rules replaced with a single universal rule: 15g + 200mg vit C, 45–60 min before any qualifying mechanical load session, minimum 2h after last protein meal. Explicit load session table added. "No collagen on Day C" rule replaced with loading-event logic — collagen warranted on Day C only if upper body block is included. "Minimize saturated fat" and "no food 90 min before sleep" removed from collagen section — general dietary advice, not collagen-specific.</li>
       <li><strong>Wall sit duplication resolved.</strong> Wall sit appeared in both Knee &amp; Lower Body block (6×30s) and mandatory knee micro-sessions (5×20–30s) — 11 sets total on Days A and B. Main block version removed. Micro-session version retained: 5 sets per session.</li>
@@ -2144,6 +2150,7 @@ body { background: #fff; color: #000; }
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Wall Sit Short Hold</span><span class="ex-rx">2–3 × 20–30s</span></div><div class="ex-desc">Before stairs, prolonged standing, or any activity. Isometric pain modulation effect (Rio protocol) persists ~45 min post-hold. Practical analgesic utility on any day.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Shoulder CARs</span><span class="ex-rx">1 × 5 each arm · full rotation</span></div><div class="ex-desc">Controlled articular rotation of the shoulder joint through full range. 60s total. Use if no bar access that day — maintains shoulder capsule health relevant to daily dead hang loading.</div></div>
       <div class="ex-card"><div class="ex-top"><span class="ex-name">Neck CARs</span><span class="ex-rx">3–5 slow rotations each direction</span></div><div class="ex-desc">After prolonged screen time. Maintains cervical mobility degraded by desk work. Peripheral to knee program — consistent with longevity framing. 30s total.</div></div>
+      <div class="ex-card"><div class="ex-top"><span class="ex-name">Floor L-Sit</span><span class="ex-rx">2–3 × 20–30s · heels on floor</span></div><div class="ex-desc">Seated on floor, hands beside hips, press down through straight arms. Posterior pelvic tilt, slight hip lift if possible. Heels remain on floor — this is not the full unsupported L-sit. <strong>Unique contributions:</strong> active shoulder depression under vertical load (lower trap, serratus anterior) and tricep isometric — neither is covered elsewhere in the program. <strong>Progress:</strong> reduce heel support height over weeks as hip flexor and shoulder depression strength develops. Floor access required. No recovery demand — do at any point during the day.</div></div>
     </div>
   </div>
 
@@ -2455,7 +2462,7 @@ body { background: #fff; color: #000; }
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v7.0 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v7.1 — March 2026
     </div>
   </div>
 
@@ -2950,6 +2957,7 @@ const BLOCKS = {
           'Easy walking, kayaking, swimming all fine.',
           'Upper body block is a valid addition — take collagen 45–60 min before if doing it. Skip if fatigued.',
           'Bellemans Bike optional on Day C (10–12 min, hard stop 15 min) — no collagen unless upper body block also done.',
+          'Floor L-Sit (casual pool): good Day C exercise — floor access, 2–3 × 20–30s, no recovery demand.',
           'If before an activity day (ski/hike): rest only — skip this session entirely.'],
       sub:['MVD mode: tap the toggle above the steps to switch to the 4-exercise floor version (~5 min). Counts as a valid Day C execution.',
            'Short on time: mobility + dead hang is the standard short version (~8 min).',

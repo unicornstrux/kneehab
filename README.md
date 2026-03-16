@@ -1,4 +1,4 @@
-# Knee Rehab Program — Summary v7.0
+# Knee Rehab Program — Summary v7.1
 *March 2026 · Based on Bellemans, Baar, ATG (Ben Patrick)*
 
 ---
@@ -210,6 +210,7 @@ Day A: 4 exercises. Day B: 6 exercises. Day C: all 7. Bird Dog, WLYT, Face Pull 
 | Wall Sit Short Hold | 2–3 × 20–30s before stairs or prolonged activity |
 | Shoulder CARs | If no bar access |
 | Neck CARs | After prolonged screen time |
+| Floor L-Sit | Floor access, any time — shoulder depression + tricep isometric |
 
 ---
 
@@ -289,6 +290,12 @@ Full single-leg wall sit, step down 20–25cm loaded, Bulgarian with weight, ply
 
 ---
 
+## Changes from v7.0
+
+1. **Floor L-Sit added to optional casual micro-session pool.** Seated, heels on floor, hands beside hips, press down through straight arms. 2–3 × 20–30s. Unique contributions: active shoulder depression under vertical load and tricep isometric — neither covered elsewhere. Not added to Core block — micro-session placement preferred because isometric adaptation is driven by frequency across the day. Progress by reducing heel support height over weeks. No recovery demand.
+
+---
+
 ## Changes from v6.9
 
 1. Collagen protocol rebuilt — single universal rule, loading-event table, day-label logic removed
@@ -311,4 +318,4 @@ Full single-leg wall sit, step down 20–25cm loaded, Bulgarian with weight, ply
 
 ---
 
-*Not a substitute for clinical diagnosis or physiotherapy. · v7.0 — March 2026*
+*Not a substitute for clinical diagnosis or physiotherapy. · v7.1 — March 2026*
