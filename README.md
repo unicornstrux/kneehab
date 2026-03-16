@@ -1,4 +1,4 @@
-# Knee Rehab Program — Summary v7.1
+# Knee Rehab Program — Summary v8.0
 *March 2026 · Based on Bellemans, Baar, ATG (Ben Patrick)*
 
 ---
@@ -46,11 +46,11 @@
 
 | Day | Type | Collagen | Bike | Duration |
 |-----|------|----------|------|----------|
-| A | Full + Bellemans Bike | 45–60 min before session | T+57, 10–12 min | ~50 min |
-| B | Full + Skater Squat + Hamstring Slides | 45–60 min before session | None | ~40 min |
+| A | Full + Bellemans Bike | 45–60 min before session | T+57, 10–12 min | ~46 min |
+| B | Full + Skater Squat + Hamstring Slides | 45–60 min before session | None | ~33 min |
 | C | Recovery | Only if upper body block included | Optional standalone 10–12 min | ~18 min base · ~45 min with UB |
 
-**7-day cycle:** A → C → B → C → A → C → rest/activity
+**Weekly cycle:** Mon MVD → Tue A → Wed C → Thu B → Fri C → Sat/Sun activity (X)
 
 ---
 
@@ -78,8 +78,8 @@ Pull one lever at a time. Never increase two variables simultaneously.
 | Time | Block |
 |------|-------|
 | T=0 | Collagen 15g + Vitamin C 200mg |
-| T+5 | Mobility — 5 min |
-| T+10 | Spinal & Shoulder — 8–10 min |
+| T+5 | Mobility — ~7 min |
+| T+10 | Spinal & Shoulder — ~6 min (Days A & B) · ~10 min (Day C) |
 | T+20 | Push & Pull — 4 min |
 | T+24 | Core — ~4 min |
 | T+31 | Glute — ~3 min |
@@ -90,24 +90,25 @@ Pull one lever at a time. Never increase two variables simultaneously.
 
 ## Exercise Blocks
 
-### Mobility — Daily, 5 min
+### Mobility — Daily, ~7 min
 - 90/90 Hip Rotations — 10 × each side, 3s hold
 - Cat-Cow — 10 reps slow
 - World's Greatest Stretch — 5 × each side, 2s hold
 - Wall Ankle Dorsiflexion — 10 each side, 2s hold
 - Couch Stretch — 2 × 30s each
+- Lateral Quad Roll — 60s each side · foam roller (VL tightness / lateral retinaculum — the lateral pull opposing VMO on the patella)
 
 ### Spinal & Shoulder
-Day A: 4 exercises. Day B: 6 exercises. Day C: all 7. Bird Dog, WLYT, Face Pull on all load days.
+Day A: 3 exercises. Day B: 3 exercises. Day C: all 7. Bird Dog, WLYT, Face Pull on all load days.
 
 | Exercise | Day A | Day B | Day C |
 |---|---|---|---|
 | Bird Dog | ✓ | ✓ | ✓ |
-| Down Dog → Upward Dog | — | ✓ | ✓ |
+| Down Dog → Upward Dog | — | — | ✓ |
 | WLYT | ✓ | ✓ | ✓ |
 | Floor Slide | — | — | ✓ |
-| Scap Push-Up | ✓ | — | ✓ |
-| Shoulder Tap | — | ✓ | ✓ |
+| Scap Push-Up | — | — | ✓ |
+| Shoulder Tap | — | — | ✓ |
 | Face Pull | ✓ | ✓ | ✓ |
 
 ### Core — ~4 min, daily
@@ -172,7 +173,7 @@ Day A: 4 exercises. Day B: 6 exercises. Day C: all 7. Bird Dog, WLYT, Face Pull 
 | Terminal Knee Extension ★ | Standard first pick once posterior resolved |
 | Single-Leg Wall Sit | Phase 1 → Phase 2 progression |
 | Deep Squat Hold | Mobility + posterior chain |
-| Hanging Knee Raise ★ | Primary hip flexor exercise. Bar required |
+| Hanging Knee Raise ★ | **Recommended second pick.** Primary hip flexor load in the program — weak hip flexors drive anterior pelvic tilt under fatigue (ski, long hike), directly increasing PFPS load. Bar required; substitute: Standing Hip Flexion Hold with ankle weight. |
 
 ---
 
@@ -190,7 +191,7 @@ Day A: 4 exercises. Day B: 6 exercises. Day C: all 7. Bird Dog, WLYT, Face Pull 
 ### Mandatory Daily — No Equipment
 - Tibialis Raise — 1 × 20, 1s hold top
 - Backward Walk — 2–3 rounds 30–60s
-- Single-Leg Balance — 60s total, both legs
+- Single-Leg Balance — 60s total, both legs · progress levels: eyes open flat → eyes closed → knee bend (10–15°) → foam pad → eyes closed on foam → arm reach/head turn (apply 2×2 rule to advance)
 - Short Foot Isometric — 30s each side, barefoot *(promoted from optional)*
 - Standing Hamstring ISO — Near Extension — 3 × 20–30s each leg *(promoted from optional)*
 
@@ -290,6 +291,15 @@ Full single-leg wall sit, step down 20–25cm loaded, Bulgarian with weight, ply
 
 ---
 
+## Changes from v7.1
+
+1. **Spinal & Shoulder trimmed on Days A & B** — Scap Push-Up removed from A; Down Dog, Floor Slide, Shoulder Tap removed from B. All four remain on Day C. Saves ~4 min on Day A, ~7 min on Day B.
+2. **Weekly cycle replaced abstract 7-day numbering** — Mon–Sun layout now matches the real training week (Mon MVD → Tue A → Wed C → Thu B → Fri C → Sat/Sun activity).
+3. **Monday formalized as Day C in MVD mode** — active recovery after weekend activity days. ~5 min floor session, no equipment.
+4. **Activity day schedule reference expanded** — pre-activity warm-up (6 exercises from BLOCKS data) now visible in Schedule tab.
+
+---
+
 ## Changes from v7.0
 
 1. **Floor L-Sit added to optional casual micro-session pool.** Seated, heels on floor, hands beside hips, press down through straight arms. 2–3 × 20–30s. Unique contributions: active shoulder depression under vertical load and tricep isometric — neither covered elsewhere. Not added to Core block — micro-session placement preferred because isometric adaptation is driven by frequency across the day. Progress by reducing heel support height over weeks. No recovery demand.
@@ -318,4 +328,4 @@ Full single-leg wall sit, step down 20–25cm loaded, Bulgarian with weight, ply
 
 ---
 
-*Not a substitute for clinical diagnosis or physiotherapy. · v7.1 — March 2026*
+*Not a substitute for clinical diagnosis or physiotherapy. · v8.0 — March 2026*
