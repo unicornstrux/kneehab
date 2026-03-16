@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(gh auth:*)",
+      "Bash(cmdkey:*)",
+      "Bash(cd \"/c/Users/cpboa/Dropbox/Cal/Cal Active/coffee roaster/arduino code/kneehab\" && git push 2>&1)"
+    ]
+  }
+}
