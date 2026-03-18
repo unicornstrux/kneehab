@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Knee Rehab v9.1</title>
+<title>Knee Rehab v9.2</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1132,7 +1132,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">KNEE REHAB v9.1</div>
+  <div class="ms-title">KNEE REHAB v9.2</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Reference</div>
@@ -1240,7 +1240,7 @@ body { background: #fff; color: #000; }
     <div class="cover-big-num">7.1</div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">KNEE<br>REHAB<br><em>v9.1</em></div>
+<div class="cover-h1">KNEE<br>REHAB<br><em>v9.2</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1552,51 +1552,24 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="sh"><span class="sh-title">Today</span></div>
+  <p class="body" style="margin-bottom:14px;">Pick the block that fits today.</p>
 
-  <div class="sched-tabs" id="todayTabs">
-    <button class="sched-tab on" onclick="todayTab('today-session',this)">Session</button>
-    <button class="sched-tab"   onclick="todayTab('today-habits',this)">Daily Habits</button>
+  <div class="day-selector" id="daySelector">
+    <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
+      <span class="day-btn-type">Load</span>
+    </button>
+    <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
+      <span class="day-btn-type">Recovery</span>
+    </button>
+    <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
+      <span class="day-btn-type">Activity</span>
+    </button>
+    <button class="day-btn" data-block="D" onclick="selectBlock('D',this)">
+      <span class="day-btn-type">Daily Habits</span>
+    </button>
   </div>
 
-  <div id="today-session" class="sched-pane on" style="padding-top:14px;">
-    <p class="body" style="margin-bottom:14px;">Pick the block that fits today.</p>
-    <div class="day-selector" id="daySelector">
-      <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
-        <span class="day-btn-type">Load</span>
-      </button>
-      <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
-        <span class="day-btn-type">Recovery</span>
-      </button>
-      <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
-        <span class="day-btn-type">Activity</span>
-      </button>
-    </div>
-    <div id="dayCard"></div>
-  </div>
-
-  <div id="today-habits" class="sched-pane" style="padding-top:14px;">
-    <div class="sub-head">Daily Habits</div>
-    <p class="note" style="margin-bottom:8px;">No tracking obligation. No recovery demand. Do throughout the day.</p>
-    <div class="ex-group open">
-      <div class="ex-group-head" onclick="togEx(this)" style="background:var(--green-bg);border-bottom-color:#1A3020;">
-        <span class="eg-title" style="color:#80C0A0;">Daily Habits</span>
-        <span class="eg-freq" style="color:#4A7A5A;border-color:#1A3020;background:var(--bg);">every day</span>
-        <span class="eg-chev" style="color:#4A7A5A;">▼</span>
-      </div>
-      <div class="ex-body" id="today-daily"></div>
-    </div>
-
-    <div class="sub-head" style="margin-top:16px;">Optional Casual Pool</div>
-    <p class="note" style="margin-bottom:8px;">Pull opportunistically. No obligation.</p>
-    <div class="ex-group">
-      <div class="ex-group-head" onclick="togEx(this)">
-        <span class="eg-title">Casual Pool</span>
-        <span class="eg-freq">any time · no tracking</span>
-        <span class="eg-chev">▼</span>
-      </div>
-      <div class="ex-body" id="today-casual"></div>
-    </div>
-  </div>
+  <div id="dayCard"></div>
 
 </div>
 </div>
@@ -2447,7 +2420,7 @@ body { background: #fff; color: #000; }
     <div class="col-bar"></div>
     <div class="col-text">
       Based on <strong>Bellemans</strong> cyclic loading, <strong>Baar</strong> connective tissue loading &amp; nutrition, and <strong>ATG</strong> (Ben Patrick) anterior chain &amp; deep range principles.<br>
-      Not a substitute for clinical diagnosis or physiotherapy. · v9.1 — March 2026
+      Not a substitute for clinical diagnosis or physiotherapy. · v9.2 — March 2026
     </div>
   </div>
 
@@ -2505,14 +2478,6 @@ function schedTab(paneId, btn) {
   btn.classList.add('on');
 }
 
-// ── Today sub-tabs ─────────────────────────────────────
-function todayTab(paneId, btn) {
-  document.querySelectorAll('#today .sched-pane').forEach(p => p.classList.remove('on'));
-  document.querySelectorAll('#todayTabs .sched-tab').forEach(b => b.classList.remove('on'));
-  document.getElementById(paneId).classList.add('on');
-  btn.classList.add('on');
-}
-
 // ── Exercises hub sub-tabs ─────────────────────────────
 function exTab(paneId, btn) {
   document.querySelectorAll('#exercises .sched-pane').forEach(p => p.classList.remove('on'));
@@ -2536,8 +2501,6 @@ function exTab(paneId, btn) {
     ['src-gen',    'ex-load-gen'],
     ['src-daily',  'ex-micro-daily'],
     ['src-casual', 'ex-micro-casual'],
-    ['src-daily',  'today-daily'],
-    ['src-casual', 'today-casual'],
   ];
   map.forEach(([srcId, destId]) => {
     const src  = document.getElementById(srcId);
@@ -2833,6 +2796,42 @@ const BLOCKS = {
     }
   },
 
+  'D': {
+    type:'D', title:'DAILY HABITS', titleClass:'', stepLabel:'Daily Habits', microLabel:'Casual Pool — Opportunistic',
+    pills:[{t:'Every day',c:'green'},{t:'No tracking',c:''},{t:'No recovery demand',c:''}],
+    note:'Informal daily habits. No obligation — frequency is the mechanism. Safe on any day type including Recovery.',
+    steps:[
+      {id:'sD_tib',  time:'Any', title:'Tibialis Raise',                sub:'1 × 20 · 1s hold top',
+       detail:[{n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Heels against wall. Lift toes as high as possible, 1s hold at top, lower slowly. At desk, kitchen counter, anywhere. Anterior tibialis stimulus is highest at dorsiflexion end-range.'}]},
+      {id:'sD_bw',   time:'Any', title:'Backward Walk',                 sub:'2–3 rounds 30–60s',
+       detail:[{n:'Backward Walk',rx:'2–3 rounds 30–60s',d:'Walk backward slowly. Resistance band optional. Trains anterior tibial chain in decompressed knee position. Daily is the point — not a workout.'}]},
+      {id:'sD_hang', time:'Any', title:'Dead Hang',                     sub:'90s total · bar required',
+       detail:[{n:'Dead Hang',rx:'90s total',d:'Hang from bar, relaxed shoulders. Spinal decompression, grip, scapular stability. Skip or reduce if any shoulder discomfort or overhead history.',timer:90}]},
+      {id:'sD_bal',  time:'Any', title:'Single-Leg Balance',            sub:'60s total · both legs · progress levels',
+       detail:[{n:'Single-Leg Balance',rx:'60s total · both legs',d:'L1: eyes open flat. L2: eyes closed flat. L3: eyes open + slight knee bend. L4: eyes closed + knee bend. L5: foam pad. L6: eyes closed + foam. L7: arm reach or slow head turn. Apply 2×2 rule to advance levels.'}]},
+      {id:'sD_sf',   time:'Any', title:'Short Foot Isometric',          sub:'30s each side · barefoot',
+       detail:[{n:'Short Foot Isometric',rx:'30s each side · barefoot',d:'Dome arch without curling toes. Wk 1–2: seated unloaded. Wk 3–4: standing bilateral. Wk 5+: standing single-leg.'}]},
+      {id:'sD_hiso', time:'Any', title:'Standing Hamstring ISO',        sub:'3 × 20–30s each leg · near extension',
+       detail:[{n:'Standing Hamstring ISO — Near Extension',rx:'3 × 20–30s each leg',d:'Stand facing wall, slight knee bend (10–15°). Press heel back and into floor as if dragging it toward you. Builds hamstring endurance at near-full extension for prolonged standing, hiking flats, ski lift queues.'}]},
+    ],
+    micro:[
+      {n:'Short Arc Quad Hold',        rx:'2–3 × 5–10s each · seated',         tag:'Casual'},
+      {n:'Single-Leg Calf Raise',      rx:'1–2 × 12 each · slow eccentric',     tag:'Casual'},
+      {n:'Wall Sit Short Hold',        rx:'2–3 × 20–30s',                        tag:'Casual'},
+      {n:'Deep Squat Hold',            rx:'3 × 20–30s · heels elevated as needed',tag:'Casual'},
+      {n:'Floor L-Sit',                rx:'2–3 × 20–30s · heels on floor',       tag:'Casual'},
+      {n:'Shoulder CARs',              rx:'1 × 5 each arm',                      tag:'Casual'},
+      {n:'Neck CARs',                  rx:'3–5 rotations each direction',         tag:'Casual'},
+    ],
+    briefing:{
+      ok:['All habits have no recovery demand — safe on any day type.',
+          'Deep Squat Hold: pain-free at depth, daily is appropriate. Reduce heel elevation incrementally.',
+          'Frequency is the mechanism — accumulated low-load stimulus, not single-session volume.'],
+      sub:['No bar for dead hang: substitute chest opener stretch 30s standing.',
+           'No space for backward walk: substitute tibialis raise or short arc quad hold at desk.'],
+    }
+  },
+
 };
 
 let currentBlock = 'A';
@@ -2919,8 +2918,9 @@ function renderBlock(key) {
   // Steps
   let stepsHtml = '';
   if (d.steps && d.steps.length) {
+    const seqLabel = d.stepLabel || 'Morning Sequence';
     stepsHtml = `<div class="today-card">
-      <div class="today-card-head"><div class="today-day-label">Morning Sequence</div></div>
+      <div class="today-card-head"><div class="today-day-label">${seqLabel}</div></div>
       <ul class="step-list">`;
 
     d.steps.forEach(step => {
@@ -2966,12 +2966,15 @@ function renderBlock(key) {
   // Micro
   let microHtml = '';
   if (d.micro && d.micro.length) {
-    microHtml = `<div class="today-sh">During the Day</div><div class="today-card"><ul class="step-list">`;
+    const microLabel = d.microLabel || 'During the Day';
+    microHtml = `<div class="today-sh">${microLabel}</div><div class="today-card"><ul class="step-list">`;
     d.micro.forEach(m => {
       const dotCls  = m.req ? 'req' : '';
       const tagHtml = m.req
         ? `<span class="micro-tag req">Required</span>`
-        : `<span class="micro-tag">Pick 2</span>`;
+        : m.tag
+          ? `<span class="micro-tag">${m.tag}</span>`
+          : `<span class="micro-tag">Pick 2</span>`;
       microHtml += `<li class="micro-item">
         <div class="micro-dot ${dotCls}"></div>
         <div class="micro-main">
