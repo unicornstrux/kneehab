@@ -1552,21 +1552,51 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="sh"><span class="sh-title">Today</span></div>
-  <p class="body" style="margin-bottom:14px;">Pick the block that fits today.</p>
 
-  <div class="day-selector" id="daySelector">
-    <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
-      <span class="day-btn-type">Load</span>
-    </button>
-    <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
-      <span class="day-btn-type">Recovery</span>
-    </button>
-    <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
-      <span class="day-btn-type">Activity</span>
-    </button>
+  <div class="sched-tabs" id="todayTabs">
+    <button class="sched-tab on" onclick="todayTab('today-session',this)">Session</button>
+    <button class="sched-tab"   onclick="todayTab('today-habits',this)">Daily Habits</button>
   </div>
 
-  <div id="dayCard"></div>
+  <div id="today-session" class="sched-pane on" style="padding-top:14px;">
+    <p class="body" style="margin-bottom:14px;">Pick the block that fits today.</p>
+    <div class="day-selector" id="daySelector">
+      <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
+        <span class="day-btn-type">Load</span>
+      </button>
+      <button class="day-btn type-c" data-block="C" onclick="selectBlock('C',this)">
+        <span class="day-btn-type">Recovery</span>
+      </button>
+      <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
+        <span class="day-btn-type">Activity</span>
+      </button>
+    </div>
+    <div id="dayCard"></div>
+  </div>
+
+  <div id="today-habits" class="sched-pane" style="padding-top:14px;">
+    <div class="sub-head">Daily Habits</div>
+    <p class="note" style="margin-bottom:8px;">No tracking obligation. No recovery demand. Do throughout the day.</p>
+    <div class="ex-group open">
+      <div class="ex-group-head" onclick="togEx(this)" style="background:var(--green-bg);border-bottom-color:#1A3020;">
+        <span class="eg-title" style="color:#80C0A0;">Daily Habits</span>
+        <span class="eg-freq" style="color:#4A7A5A;border-color:#1A3020;background:var(--bg);">every day</span>
+        <span class="eg-chev" style="color:#4A7A5A;">▼</span>
+      </div>
+      <div class="ex-body" id="today-daily"></div>
+    </div>
+
+    <div class="sub-head" style="margin-top:16px;">Optional Casual Pool</div>
+    <p class="note" style="margin-bottom:8px;">Pull opportunistically. No obligation.</p>
+    <div class="ex-group">
+      <div class="ex-group-head" onclick="togEx(this)">
+        <span class="eg-title">Casual Pool</span>
+        <span class="eg-freq">any time · no tracking</span>
+        <span class="eg-chev">▼</span>
+      </div>
+      <div class="ex-body" id="today-casual"></div>
+    </div>
+  </div>
 
 </div>
 </div>
@@ -2475,6 +2505,14 @@ function schedTab(paneId, btn) {
   btn.classList.add('on');
 }
 
+// ── Today sub-tabs ─────────────────────────────────────
+function todayTab(paneId, btn) {
+  document.querySelectorAll('#today .sched-pane').forEach(p => p.classList.remove('on'));
+  document.querySelectorAll('#todayTabs .sched-tab').forEach(b => b.classList.remove('on'));
+  document.getElementById(paneId).classList.add('on');
+  btn.classList.add('on');
+}
+
 // ── Exercises hub sub-tabs ─────────────────────────────
 function exTab(paneId, btn) {
   document.querySelectorAll('#exercises .sched-pane').forEach(p => p.classList.remove('on'));
@@ -2498,6 +2536,8 @@ function exTab(paneId, btn) {
     ['src-gen',    'ex-load-gen'],
     ['src-daily',  'ex-micro-daily'],
     ['src-casual', 'ex-micro-casual'],
+    ['src-daily',  'today-daily'],
+    ['src-casual', 'today-casual'],
   ];
   map.forEach(([srcId, destId]) => {
     const src  = document.getElementById(srcId);
