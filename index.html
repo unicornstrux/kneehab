@@ -2639,6 +2639,7 @@ function tSet(s, label) {
   // highlight selected preset
   document.querySelectorAll('.tpre').forEach(b => b.classList.remove('selected'));
   event.currentTarget.classList.add('selected');
+  tStartPause();
 }
 
 function tStartPause() {
@@ -2658,6 +2659,8 @@ function tStartPause() {
         document.getElementById('tBtn').className='tbtn tbtn-go';
         document.getElementById('tNote').textContent='✓ Done';
         document.getElementById('tFace').className='timer-face done';
+        if (navigator.vibrate) navigator.vibrate([200,100,200]);
+        setTimeout(()=>{ tReset(); document.getElementById('tNote').textContent=tLabel; }, 1500);
         return;
       }
       tUpdateFace();
