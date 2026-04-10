@@ -26,6 +26,10 @@
 - Use a versioning header in the HTML (e.g., ``).
 - Generate summary in a MD document `kneehab V##.MD`
 - update index.html to latest version
+- **Version locations to update (all 3):**
+  1. `<title>` tag (line ~9)
+  2. `.ms-title` in the More menu (search `ms-title`)
+  3. `.cover-h1` on the Home page (search `cover-h1`)
 - every minor change update version number .01.
   - medium change .1
   - major change 1.
