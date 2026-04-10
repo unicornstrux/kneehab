@@ -1191,8 +1191,8 @@ body { background: #fff; color: #000; }
   <button class="tab-btn" id="tb-exercises" onclick="navTab('exercises','tb-exercises')">
     <span class="tab-icon">●</span><span class="tab-label">Exercises</span>
   </button>
-  <button class="tab-btn on" id="tb-cover" onclick="navTab('cover','tb-cover')">
-    <span class="tab-icon">◼</span><span class="tab-label">Home</span>
+  <button class="tab-btn" id="tb-cover" onclick="navTab('cover','tb-cover')">
+    <span class="tab-icon">▲</span><span class="tab-label">Home</span>
   </button>
   <button class="tab-btn" id="tb-timer" onclick="navTab('timer','tb-timer')">
     <span class="tab-icon">⧖</span><span class="tab-label">Timer</span>
@@ -1208,7 +1208,7 @@ body { background: #fff; color: #000; }
 
 <!-- ══════════════════════════════════════════════════ -->
 
-<div id="cover" class="page on">
+<div id="cover" class="page">
   <div class="cover-page">
     <div class="cover-grid"></div>
     <div class="cover-stripe"></div>
@@ -1574,7 +1574,7 @@ body { background: #fff; color: #000; }
 
 <!-- ══════════════════════════════════════════════════ -->
 
-<div id="today" class="page">
+<div id="today" class="page on">
 <div class="doc">
 
   <div id="dayCard"></div>
@@ -3299,7 +3299,7 @@ requestWakeLock();
 
 // Init Today tab
 (function() {
-  const firstBtn = document.querySelector('.day-btn[data-block="A"]');
-  if (firstBtn) { firstBtn.classList.add('active'); renderBlock('A'); }
+  const firstBtn = document.querySelector('.day-btn[data-block="R"]');
+  if (firstBtn) { firstBtn.classList.add('active'); renderBlock('R'); }
 })();
 </script>
