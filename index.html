@@ -1077,62 +1077,6 @@ flex-shrink: 0;
 body { background: #fff; color: #000; }
 }
 
-/* – Minimum Viable Day –––––––––––––––– */
-.mvd-toggle {
-  width: 100%;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 0; height: 42px;
-  background: none;
-  border: 1px solid var(--border2);
-  color: var(--muted2);
-  cursor: pointer;
-  margin-bottom: 16px;
-  -webkit-tap-highlight-color: transparent;
-  transition: all 0.15s;
-}
-.mvd-toggle:active { background: var(--bg3); }
-.mvd-toggle.active {
-  border-color: var(--amber2);
-  color: var(--amber);
-  background: var(--amber-bg);
-}
-.mvd-card {
-  border: 1px solid var(--amber2);
-  background: var(--amber-bg);
-  margin-bottom: 16px;
-  display: none;
-}
-.mvd-card.open { display: block; }
-.mvd-card-head {
-  padding: 14px 16px 10px;
-  border-bottom: 1px solid var(--amber2);
-}
-.mvd-card-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px; letter-spacing: 0.05em;
-  color: var(--amber); margin-bottom: 4px;
-}
-.mvd-card-note {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px; color: #907030;
-  line-height: 1.55;
-}
-.mvd-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 13px 16px;
-  border-bottom: 1px solid rgba(255,159,10,0.12);
-}
-.mvd-item:last-child { border-bottom: none; }
-.mvd-num {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px; color: var(--amber2);
-  flex-shrink: 0; width: 22px; opacity: 0.6;
-  line-height: 1.2;
-}
-.mvd-main { flex: 1; }
-.mvd-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
-.mvd-rx { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--muted2); }
 /* —————————————————–– */
 
 .briefing { border: 1px solid var(--border2); border-top: none; margin-bottom: 16px; overflow: hidden; }
@@ -1282,7 +1226,7 @@ body { background: #fff; color: #000; }
   <span class="cover-chip">LATERAL STEP-UP</span>
   <span class="cover-chip">SKATER SQUAT</span>
   <span class="cover-chip">UPPER BODY · DAY C</span>
-  <span class="cover-chip">MVD MODE</span>
+  <span class="cover-chip">RECOVERY DAY</span>
 </div>
 
 <div class="cover-divider"></div>
@@ -2457,7 +2401,7 @@ body { background: #fff; color: #000; }
     <div class="rule-row"><div class="rule-n">12</div><div class="rule-c"><div class="rule-t">Short ruck: not same day as Zone 2 bike</div><div class="rule-d">Evening option on Day A or B. 20–30 min loaded pack. No collagen needed — nocturnal GH pulse covers. Progression via 2×2 rule.</div></div></div>
     <div class="rule-row"><div class="rule-n">13</div><div class="rule-c"><div class="rule-t">Pain guide</div><div class="rule-d">Dull ache acceptable. Sharp or >4/10 = reduce load or angle immediately.</div></div></div>
     <div class="rule-row"><div class="rule-n">14</div><div class="rule-c"><div class="rule-t">Upper body is mandatory on Day B</div><div class="rule-d">Full upper body block. Pull volume asymmetric until pull-ups reach 3×5, then rebalance.</div></div></div>
-    <div class="rule-row"><div class="rule-n">15</div><div class="rule-c"><div class="rule-t">MVD is a valid Day B execution</div><div class="rule-d">4 exercises, ~5 min: 90/90, Cat-Cow, Dead Hang, Backward Walk. Use on high-fatigue days. Not a missed day.</div></div></div>
+    <div class="rule-row"><div class="rule-n">15</div><div class="rule-c"><div class="rule-t">Low energy: do Primer + Mobility only, or Day R</div><div class="rule-d">~10 min minimum. High fatigue and poor sleep impair synthesis — doing less is correct. Day R (Recovery & Mobility) is the dedicated recovery option.</div></div></div>
     <div class="rule-row"><div class="rule-n">18</div><div class="rule-c"><div class="rule-t">Day R is adaptive — pick 2–3 categories based on current state</div><div class="rule-d">Recovery & Mobility day. Longer holds (60s) for deeper tissue adaptation. No collagen, no knee eccentric loading. Insert anywhere in rotation. Not mandatory. If a position feels like hard work, you are pushing too deep — back off.</div></div></div>
     <div class="rule-row"><div class="rule-n">16</div><div class="rule-c"><div class="rule-t">Bird Dog: pick one variation per session</div><div class="rule-d">Slow Return, Elbow-to-Knee, or Bird Dog Row. All 90s total. Rotate for progression and variety.</div></div></div>
     <div class="rule-row"><div class="rule-n">17</div><div class="rule-c"><div class="rule-t">Hip Flexor: pick one option per session</div><div class="rule-d">Hanging Knee Raise, Tuck L-Sit, or Foot-Supported L-Sit. Both Day A and Day B.</div></div></div>
@@ -2838,17 +2782,10 @@ const BLOCKS = {
           'Zone 1 completely free — no protocol interaction.',
           'Knee maintenance block is isometric only — no recovery conflict with Day A.',
           'Easy walking, kayaking, swimming all fine.'],
-      sub:['MVD mode: tap the toggle above for the 4-exercise floor version (~5 min).',
-           'Short on time: mobility + dead hang + upper body is the minimum.',
+      sub:['Short on time: mobility + dead hang + upper body is the minimum.',
            'Skip knee maintenance if truly pressed for time — these are maintenance, not primary.'],
       caution:['If before an activity day (ski/hike): consider skipping upper body to preserve energy. Keep mobility and primer.'],
     },
-    mvd:[
-      {n:'90/90 Hip Rotations', rx:'5 each side · 3s hold · floor'},
-      {n:'Cat-Cow → Down Dog → Up Dog', rx:'5 Cat-Cows · 2–3 cycles · floor'},
-      {n:'Dead Hang',           rx:'30s total · or standing chest opener if no bar'},
-      {n:'Backward Walk',       rx:'1 round 30s · anywhere'},
-    ]
   },
 
   'X': {
@@ -2958,31 +2895,10 @@ const BLOCKS = {
 
 let currentBlock = 'A';
 let openSteps = {};
-let mvdActive = false;
-
-function toggleMvd() {
-  mvdActive = !mvdActive;
-  const btn  = document.getElementById('mvdToggleBtn');
-  const card = document.getElementById('mvdCard');
-  const steps = document.getElementById('dayStepsSection');
-  if (!btn || !card) return;
-  if (mvdActive) {
-    btn.textContent  = '▲ MINIMUM VIABLE DAY — ACTIVE — TAP TO RESTORE FULL SESSION';
-    btn.classList.add('active');
-    card.classList.add('open');
-    if (steps) steps.style.opacity = '0.25';
-  } else {
-    btn.textContent  = '▼ LOW ENERGY? TAP FOR MINIMUM VIABLE DAY (~5 MIN)';
-    btn.classList.remove('active');
-    card.classList.remove('open');
-    if (steps) steps.style.opacity = '1';
-  }
-}
 
 function selectBlock(key, btn) {
   currentBlock = key;
   openSteps = {};
-  mvdActive = false;
   document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderBlock(key);
@@ -3130,28 +3046,6 @@ function renderBlock(key) {
     microHtml += `</ul></div>`;
   }
 
-  // MVD toggle (Day C only)
-  let mvdHtml = '';
-  if (key === 'B' && d.mvd && d.mvd.length) {
-    const mvdItems = d.mvd.map((item, i) => `
-      <div class="mvd-item">
-        <div class="mvd-num">${i+1}</div>
-        <div class="mvd-main">
-          <div class="mvd-name">${item.n}</div>
-          <div class="mvd-rx">${item.rx}</div>
-        </div>
-      </div>`).join('');
-    mvdHtml = `
-      <button class="mvd-toggle" id="mvdToggleBtn" onclick="toggleMvd()">▼ LOW ENERGY? TAP FOR MINIMUM VIABLE DAY (~5 MIN)</button>
-      <div class="mvd-card" id="mvdCard">
-        <div class="mvd-card-head">
-          <div class="mvd-card-title">MINIMUM VIABLE DAY</div>
-          <div class="mvd-card-note">4 exercises · ~5 min · no equipment · valid Day C execution<br>High fatigue and poor sleep impair synthesis capacity — doing less is mechanistically correct.</div>
-        </div>
-        ${mvdItems}
-      </div>`;
-  }
-
   card.innerHTML = `
     <div class="today-card-head" style="border:1px solid var(--border2);margin-bottom:0;border-bottom:none;">
       <div class="today-day-label">${key === 'D' ? '' : key}</div>
@@ -3160,7 +3054,6 @@ function renderBlock(key) {
     </div>
     ${d.note ? `<p class="note" style="font-size:14px;border:1px solid var(--border2);border-top:none;padding:12px 16px;margin-bottom:16px;">${d.note}</p>` : ''}
     ${briefingHtml}
-    ${mvdHtml}
     <div id="dayStepsSection">
     ${stepsHtml}
     ${microHtml}
