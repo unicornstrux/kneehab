@@ -73,7 +73,7 @@ margin: 0 auto;
 position: fixed;
 bottom: 0; left: 0; right: 0;
 z-index: 200;
-background: rgba(28,28,30,0.95);
+background: rgba(22,13,58,0.95);
 backdrop-filter: saturate(180%) blur(20px);
 -webkit-backdrop-filter: saturate(180%) blur(20px);
 border-top: 1px solid var(--border2);
@@ -93,7 +93,7 @@ background: none; border: none; cursor: pointer;
 position: relative;
 transition: background 0.1s;
 }
-.tab-btn:active { background: var(--bg3); }
+.tab-btn:active { background: var(--bg3); transform: scale(0.93); }
 
 .tab-icon {
 font-size: 18px; color: var(--muted2);
@@ -439,6 +439,8 @@ flex-shrink: 0;
 .ex-card {
 border-bottom: 1px solid var(--border);
 background: var(--bg2);
+border-radius: 8px;
+margin: 4px 0;
 }
 .ex-card:last-child { border-bottom: none; }
 .ex-card:nth-child(odd) { background: var(--bg); }
@@ -459,7 +461,7 @@ line-height: 1.5;
 .ex-desc {
 padding: 4px 14px 12px;
 font-size: 13px; color: var(--muted2);
-line-height: 1.55;
+line-height: 1.75;
 }
 .ex-card.warn { background: var(--red-bg) !important; }
 .ex-card.warn .ex-name { color: #C09090; }
@@ -854,12 +856,13 @@ padding: 10px 12px;
 min-width: 56px;
 background: var(--bg3);
 border: 1px solid var(--border2);
+border-radius: 12px;
 cursor: pointer;
 -webkit-tap-highlight-color: transparent;
 transition: all 0.12s;
 }
-.day-btn:active { opacity: 0.7; }
-.day-btn.active { background: var(--amber-bg); border-color: var(--amber); }
+.day-btn:active { transform: scale(0.95); }
+.day-btn.active { background: linear-gradient(135deg, var(--amber-bg), var(--bg3)); border-color: var(--amber); }
 .day-btn-num {
 font-family: ‘Bebas Neue’, sans-serif;
 font-size: 28px;
@@ -878,7 +881,7 @@ color: var(--muted);
 }
 .day-btn.active .day-btn-type { color: var(--amber2); }
 
-.today-card { border: 1px solid var(--border2); margin-bottom: 16px; }
+.today-card { border: 1px solid var(--border2); margin-bottom: 16px; border-radius: 10px; overflow: hidden; }
 .today-card-head { padding: 16px 16px 14px; border-bottom: 1px solid var(--border2); }
 .today-day-label {
 font-family: ‘IBM Plex Mono’, monospace;
@@ -906,6 +909,7 @@ text-transform: uppercase;
 padding: 4px 9px;
 border: 1px solid var(--border2);
 color: var(--muted2);
+border-radius: 20px;
 }
 .today-pill.amber { border-color: var(--amber2); color: var(--amber); background: var(--amber-bg); }
 .today-pill.green { border-color: var(--green); color: var(--green); background: var(--green-bg); }
@@ -927,7 +931,7 @@ min-height: 64px;
 cursor: pointer;
 transition: background 0.1s;
 }
-.step-row:active { background: var(--bg3); }
+.step-row:active { background: var(--bg3); transform: scale(0.98); }
 
 .step-main { flex: 1; }
 .step-time {
@@ -974,9 +978,9 @@ padding-bottom: 14px;
 border-bottom: 1px solid var(--border);
 }
 .step-detail-ex:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
-.sde-name { font-size: 15px; font-weight: 500; color: var(--amber); margin-bottom: 3px; }
+.sde-name { font-size: 17px; font-weight: 500; color: var(--amber); margin-bottom: 3px; }
 .sde-rx { font-family: ‘IBM Plex Mono’, monospace; font-size: 12px; color: var(--muted2); margin-bottom: 6px; }
-.sde-desc { font-size: 14px; color: var(--text2); line-height: 1.6; }
+.sde-desc { font-size: 14px; color: var(--text2); line-height: 1.75; }
 .sde-timer-btn {
 margin-top: 10px;
 font-family: ‘IBM Plex Mono’, monospace;
@@ -1552,19 +1556,19 @@ body { background: #fff; color: #000; }
 
 <div class="day-selector" id="daySelector">
   <button class="day-btn type-a" data-block="A" onclick="selectBlock('A',this)">
-    <span class="day-btn-type">Lower</span>
+    <span class="day-btn-num">🦵</span><span class="day-btn-type">Lower</span>
   </button>
   <button class="day-btn type-c" data-block="B" onclick="selectBlock('B',this)">
-    <span class="day-btn-type">Upper</span>
+    <span class="day-btn-num">💪</span><span class="day-btn-type">Upper</span>
   </button>
   <button class="day-btn" data-block="R" onclick="selectBlock('R',this)">
-    <span class="day-btn-type">Recovery</span>
+    <span class="day-btn-num">🧘</span><span class="day-btn-type">Recovery</span>
   </button>
   <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
-    <span class="day-btn-type">Activity</span>
+    <span class="day-btn-num">⛷️</span><span class="day-btn-type">Activity</span>
   </button>
   <button class="day-btn" data-block="D" onclick="selectBlock('D',this)">
-    <span class="day-btn-type">Habits</span>
+    <span class="day-btn-num">✨</span><span class="day-btn-type">Habits</span>
   </button>
 </div>
 
@@ -3048,7 +3052,7 @@ function renderBlock(key) {
   }
 
   card.innerHTML = `
-    <div class="today-card-head" style="border:1px solid var(--border2);margin-bottom:0;border-bottom:none;">
+    <div class="today-card-head" style="border:1px solid var(--border2);margin-bottom:0;border-bottom:none;border-radius:10px 10px 0 0;">
       <div class="today-day-label">${key === 'D' ? '' : key}</div>
       <div class="today-day-title ${d.titleClass}">${d.title}</div>
       <div class="today-pills">${pillsHtml}</div>
