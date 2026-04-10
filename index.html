@@ -2451,7 +2451,7 @@ body { background: #fff; color: #000; }
     <div class="rule-row"><div class="rule-n">07</div><div class="rule-c"><div class="rule-t">Skin-sourced collagen only</div><div class="rule-d">Type I. Bone broth and gelatin are not equivalent.</div></div></div>
     <div class="rule-row"><div class="rule-n">08</div><div class="rule-c"><div class="rule-t">Hamstring slides on every Day A</div><div class="rule-d">A/B alternation guarantees 48h+ eccentric recovery between sessions.</div></div></div>
     <div class="rule-row"><div class="rule-n">09</div><div class="rule-c"><div class="rule-t">Curtsy Squat and Lateral Step-Up alternate each session</div><div class="rule-d">Both are frontal plane but different vectors. Do one per Day A, not both. Alternate each session.</div></div></div>
-    <div class="rule-row"><div class="rule-n">10</div><div class="rule-c"><div class="rule-t">Informal daily habits: short foot, SL balance, backward walk, wall slide</div><div class="rule-d">No recovery demand. Do opportunistically. Tibialis raise and dead hang moved to Primer block on Day A/B.</div></div></div>
+    <div class="rule-row"><div class="rule-n">10</div><div class="rule-c"><div class="rule-t">Informal daily habits: short foot, SL balance, wall slide, lateral quad roll</div><div class="rule-d">No recovery demand. Do opportunistically. Tibialis raise and dead hang in Primer block. Backward walk part of evening ruck.</div></div></div>
     <div class="rule-row" style="border-left:3px solid var(--amber);"><div class="rule-n" style="color:var(--amber);">2×2</div><div class="rule-c"><div class="rule-t">2×2 Progression Rule — universal</div><div class="rule-d">≤2/10 pain during AND morning after, two consecutive sessions → pull the next lever. Pain >2/10 → hold current level one full week. Pull one lever at a time only. Applies to all exercises.</div></div></div>
     <div class="rule-row"><div class="rule-n">11</div><div class="rule-c"><div class="rule-t">Activity days replace a training day</div><div class="rule-d">Do not stack Day A or B work on top of an activity day.</div></div></div>
     <div class="rule-row"><div class="rule-n">12</div><div class="rule-c"><div class="rule-t">Short ruck: not same day as Zone 2 bike</div><div class="rule-d">Evening option on Day A or B. 20–30 min loaded pack. No collagen needed — nocturnal GH pulse covers. Progression via 2×2 rule.</div></div></div>
@@ -2770,7 +2770,8 @@ const BLOCKS = {
        detail:[{n:'Bellemans Protocol',rx:'10–12 min · hard stop 15 min',d:'Stationary bike. Seat: knee at 15–20° flexion at bottom of stroke. Steady moderate resistance. Cyclic cartilage loading at collagen peak. Window closes at 15 min — stop. A Zone 2 ride does NOT replace this — different seat height and loading angle.',timer:720},
                {n:'Substitute',rx:'10 min elliptical if no stationary bike',d:'Not equivalent but preserves cyclic loading.'}]},
       {id:'sA_ruck', time:'Evening', title:'Short Ruck (optional)',      sub:'20–30 min · loaded pack · not same day as Zone 2 bike',
-       detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Evening option on Day A or B. Sustained loaded walking — cyclic cartilage stimulus under functional gait. No collagen needed (nocturnal GH pulse covers connective tissue adaptation from evening load). Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → increase duration first → increase weight → add hills.'}]},
+       detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Evening option on Day A or B. Sustained loaded walking — cyclic cartilage stimulus under functional gait. No collagen needed (nocturnal GH pulse covers connective tissue adaptation from evening load). Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → increase duration first → increase weight → add hills.'},
+              {n:'Backward Walk',rx:'2–3 rounds 30–60s',d:'Include as part of the ruck route or standalone after. Anterior tibial chain in a decompressed knee position. Frequency is the mechanism.'}]},
     ],
     micro:[],
     briefing:{
@@ -2826,7 +2827,8 @@ const BLOCKS = {
                {n:'Face Pull / Pull-Apart',rx:'2 × 15',d:'Posterior shoulder balance. Band at face height, elbows flared, external rotation at end range.'},
                {n:'Scap Push-Up',rx:'2 × 12',d:'Serratus anterior activation — scapular protraction and winging control.'}]},
       {id:'sB_ruck', time:'Evening', title:'Short Ruck (optional)',      sub:'20–30 min · loaded pack · not same day as Zone 2 bike',
-       detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Same protocol as Day A. Evening option. Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → duration → weight → hills.'}]},
+       detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Same protocol as Day A. Evening option. Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → duration → weight → hills.'},
+              {n:'Backward Walk',rx:'2–3 rounds 30–60s',d:'Include as part of the ruck route or standalone after. Anterior tibial chain in a decompressed knee position.'}]},
     ],
     micro:[],
     briefing:{
@@ -2924,14 +2926,12 @@ const BLOCKS = {
   'D': {
     type:'D', title:'DAILY HABITS', titleClass:'', stepLabel:'Informal — Do Opportunistically', microLabel:'Casual Pool',
     pills:[{t:'Every day',c:'green'},{t:'No tracking',c:''},{t:'No recovery demand',c:''}],
-    note:'Informal habits — do opportunistically throughout the day. Tibialis Raise and Dead Hang are now in the Day A/B Primer block. These remaining habits are desk/floor friendly and benefit from frequency across the day.',
+    note:'Informal habits — do opportunistically throughout the day. Tibialis Raise and Dead Hang are in the Primer block. Backward Walk is part of the evening ruck. These remaining habits are desk/floor friendly and benefit from frequency.',
     steps:[
       {id:'sD_sf',   time:'Any', title:'Short Foot Isometric',          sub:'30s each side · barefoot',
        detail:[{n:'Short Foot Isometric',rx:'30s each side · barefoot',d:'Intrinsic foot muscle activation for arch stability during ground contact. Motor pattern drill — desk friendly, barefoot.'}]},
       {id:'sD_bal',  time:'Any', title:'Single-Leg Balance',            sub:'60s total · both legs',
        detail:[{n:'Single-Leg Balance',rx:'60s total · both legs',d:'Patellofemoral proprioception — directly addresses the deficit PFPS creates. Do while waiting, at standing desk, etc.'}]},
-      {id:'sD_bw',   time:'Any', title:'Backward Walk',                 sub:'2–3 rounds 30–60s',
-       detail:[{n:'Backward Walk',rx:'2–3 rounds 30–60s',d:'Anterior tibial chain in a decompressed knee position. Requires space — outdoors or hallway.'}]},
       {id:'sD_ws',   time:'Any', title:'Wall Slide',                    sub:'2 × 10 · slow',
        detail:[{n:'Wall Slide',rx:'2 × 10 · slow controlled',d:'Stand with back to wall, arms overhead in contact with wall. Slide arms down to shoulder height and back up. Scapular retraction and depression under load — same target as floor slide, standing position. Desk-friendly.'}]},
       {id:'sD_qlr',  time:'Any', title:'Lateral Quad Roll',             sub:'60s each side · foam roller',
@@ -2949,7 +2949,7 @@ const BLOCKS = {
       ok:['All habits have no recovery demand — safe on any day.',
           'Frequency is the mechanism — accumulated low-load stimulus, not single-session volume.',
           'Tibialis Raise and Dead Hang moved to Primer block in Day A/B — no longer needed here.'],
-      sub:['No space for backward walk: substitute short foot or SL balance at desk.'],
+      sub:['Backward walk moved to evening ruck block on Day A/B.'],
     }
   },
 
