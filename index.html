@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>kneehab v11.42</title>
+<title>kneehab v11.43</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1115,7 +1115,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">kneehab v11.42</div>
+  <div class="ms-title">kneehab v11.43</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Exercises</div>
@@ -1218,7 +1218,7 @@ body { background: #fff; color: #000; }
     <div class="cover-stripe"></div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">kneehab<br><em>v11.42</em></div>
+<div class="cover-h1">kneehab<br><em>v11.43</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1263,10 +1263,10 @@ body { background: #fff; color: #000; }
 <div class="doc">
 
   <div class="changes">
-    <div class="changes-title">Changes v11.42 — elbow rehab protocol</div>
+    <div class="changes-title">Changes v11.43 — remove elbow rehab, yoga day reorder</div>
     <ul class="changes-list">
-      <li><strong>Elbow Rehab session added (🦴).</strong> Standalone daily protocol for lateral epicondylitis: Tyler Twist (FlexBar), Wrist Extension Eccentric, Wrist Extension Isometric, Forearm Supination/Pronation. ~5 min, daily frequency. New day type button in selector.</li>
-      <li><strong>Day B grip modification note.</strong> Bottom-Up KB Press flagged — switch to standard rack position while lateral epicondyle is symptomatic.</li>
+      <li><strong>Elbow Rehab session removed.</strong> Protocol no longer needed — 🦴 button and all elbow-specific content removed.</li>
+      <li><strong>Yoga Day R: General Full Flow moved to top.</strong> Default pick instead of last option. Flow formatted as individual steps for easier following.</li>
     </ul>
   </div>
   <div class="changes">
@@ -1598,10 +1598,10 @@ body { background: #fff; color: #000; }
   <button class="day-btn" data-block="X" onclick="selectBlock('X',this)">
     <span class="day-btn-num">⛷️</span>
   </button>
-  <button class="day-btn" data-block="E" onclick="selectBlock('E',this)">
-    <span class="day-btn-num">🦴</span>
+  <button class="day-btn" data-block="N" onclick="selectBlock('N',this)">
+    <span class="day-btn-num">🥩</span>
   </button>
-  <button class="day-btn" data-block="D" onclick="selectBlock('D',this)">
+<button class="day-btn" data-block="D" onclick="selectBlock('D',this)">
     <span class="day-btn-num">✨</span>
   </button>
 </div>
@@ -1735,12 +1735,20 @@ body { background: #fff; color: #000; }
   <div id="s-rec" class="sched-pane">
     <p class="note" style="margin-bottom:12px;">Day R — Recovery & Mobility. No collagen. ~15–20 min. Pick 2–3 categories based on what feels tight. Longer holds than Day A/B.</p>
     <div class="card">
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Flow</div></div><div class="cr-right"><div class="cr-val">General — Full Flow ~12 min</div><div class="cr-note">Default pick · no specific complaint</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">1</div></div><div class="cr-right"><div class="cr-desc">Cat-Cow — 10 slow cycles</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">2</div></div><div class="cr-right"><div class="cr-desc">Down Dog — 60s</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">3</div></div><div class="cr-right"><div class="cr-desc">Lizard right — 60s → Down Dog 30s → Lizard left — 60s</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">4</div></div><div class="cr-right"><div class="cr-desc">Down Dog — 30s</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">5</div></div><div class="cr-right"><div class="cr-desc">Pigeon right — 60s → Pigeon left — 60s</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">6</div></div><div class="cr-right"><div class="cr-desc">Supine Twist — 30s each side</div></div></div>
+      <div class="card-row" style="padding-left:12px;"><div class="cr-left"><div class="cr-key">7</div></div><div class="cr-right"><div class="cr-desc">Child's Pose — 60s</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-key">Or</div></div><div class="cr-right"><div class="cr-val">Target a specific area:</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Pick</div></div><div class="cr-right"><div class="cr-val">Hips Tight</div><div class="cr-note">Pigeon 60s each · Lizard 60s each · 90/90 slow</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Pick</div></div><div class="cr-right"><div class="cr-val">Hamstrings Tight</div><div class="cr-note">Down Dog holds 3×30s · Standing Forward Fold 60s</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Pick</div></div><div class="cr-right"><div class="cr-val">Thoracic Stiff</div><div class="cr-note">Supine Twist 30s each · Thread-the-Needle 30s each · Cat-Cow extended</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Pick</div></div><div class="cr-right"><div class="cr-val">Quads / IT Band</div><div class="cr-note">Lateral Quad Roll 2 min each · Couch Stretch 60s each</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-key">Pick</div></div><div class="cr-right"><div class="cr-val">Shoulders Tight</div><div class="cr-note">Dead Hang 90s · Shoulder CARs slow · Child's Pose with Reach 60s</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-key">Or</div></div><div class="cr-right"><div class="cr-val">General — Full Flow ~12 min</div><div class="cr-note">Cat-Cow → Down Dog → Lizard → Pigeon → Twist → Child's Pose · 60s each position</div></div></div>
     </div>
     <p class="note">No collagen. No knee eccentric loading. Insert anywhere in the rotation. Not mandatory — skip if recovered.</p>
   </div>
@@ -2791,7 +2799,7 @@ const BLOCKS = {
                {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder. 90s rest between sets.'},
                {n:'Ring Row',rx:'3 × 10',d:'Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull — mid trap, rhomboids, rear delt.'},
                {n:'Push-Up with Tempo',rx:'3 × 8',d:'3s eccentric, 1s pause at bottom. Hollow body — glutes and abs engaged throughout.'},
-               {n:'Bottom-Up KB Press',rx:'3 × 8 each · 15 lbs',d:'Vertical push, stability-dominant. Progress bell weight, not reps. <strong>Elbow note:</strong> if lateral epicondyle is symptomatic, switch to standard rack position — removes extreme grip demand while preserving pressing pattern.'},
+               {n:'Bottom-Up KB Press',rx:'3 × 8 each · 15 lbs',d:'Vertical push, stability-dominant. Progress bell weight, not reps.'},
                {n:'Face Pull / Pull-Apart',rx:'2 × 15',d:'Posterior shoulder balance. Band at face height, elbows flared, external rotation at end range.'},
                {n:'Scap Push-Up',rx:'2 × 12',d:'Serratus anterior activation — scapular protraction and winging control.'}]},
       {id:'sB_ruck', time:'Evening', title:'Short Ruck (optional)',      sub:'20–30 min · loaded pack · not same day as Zone 2 bike',
@@ -2851,6 +2859,18 @@ const BLOCKS = {
     note:'Adaptive recovery session. Pick 2–3 categories based on what feels tight or sore. Hold durations are doubled from Day A/B (60s vs 30s) — recovery day is the opportunity for deeper tissue adaptation (Mitchell: longer holds = more viscoelastic creep). No collagen needed. No knee eccentric loading. Insert anywhere in the rotation.',
     stepLabel:'Pick 2–3 Categories',
     steps:[
+      {id:'sR_gen', time:'Pick', title:'General — Full Flow',          sub:'No specific complaint · ~12 min',
+       detail:[{n:'Cat-Cow',rx:'10 slow cycles',d:'Full spinal flexion and extension. Slow, controlled, breathe into each end range.'},
+               {n:'Down Dog',rx:'60s',d:'Press heels toward floor, straighten knees as range allows. Full posterior chain loading.',timer:60},
+               {n:'Lizard right',rx:'60s',d:'Deep hip flexor and adductor stretch. Drop to forearms if flexibility allows.',timer:60},
+               {n:'Down Dog',rx:'30s',d:'Transition. Reset posterior chain.',timer:30},
+               {n:'Lizard left',rx:'60s',d:'Match the right side. Notice asymmetries.',timer:60},
+               {n:'Down Dog',rx:'30s',d:'Transition.',timer:30},
+               {n:'Pigeon right',rx:'60s',d:'Deep piriformis and external rotator stretch under bodyweight.',timer:60},
+               {n:'Pigeon left',rx:'60s',d:'Match the right side.',timer:60},
+               {n:'Supine Twist right',rx:'30s',d:'Knees together, drop to one side. Opposite shoulder stays on floor.',timer:30},
+               {n:'Supine Twist left',rx:'30s',d:'Match the right side.',timer:30},
+               {n:'Child\'s Pose',rx:'60s',d:'Knees wide, arms extended. Final decompression. Mitchell principle: sustained positions, not flowing through quickly.',timer:60}]},
       {id:'sR_hips', time:'Pick', title:'Hips Tight',                  sub:'After long sitting, ski days · ~6 min',
        detail:[{n:'Pigeon Pose — Extended',rx:'60s each side',d:'Double the Day A/B hold. Deeper piriformis and obturator stretch under sustained bodyweight. <strong>Regression:</strong> Supine Hip ER with Block.',timer:60},
                {n:'Lizard Pose — Extended',rx:'60s each side',d:'Double the Day A/B hold. Sink deeper into hip flexor and adductor stretch. Drop to forearms if flexibility allows.',timer:60},
@@ -2871,8 +2891,6 @@ const BLOCKS = {
                {n:'Child\'s Pose with Reach',rx:'60s',d:'Knees wide, arms extended overhead on floor. Walk fingers forward for maximal lat and shoulder stretch. Sustained traction through the entire anterior shoulder chain.',timer:60}]},
       {id:'sR_walk', time:'Always', title:'Walk',                      sub:'20–30 min · easy pace · any terrain',
        detail:[{n:'Walk',rx:'20–30 min · easy pace',d:'Low-intensity movement. Promotes circulation and tissue recovery without loading demand. Zone 1 — conversational pace. Flat or gentle terrain. Can include backward walk segments (2–3 rounds 30–60s) for anterior tibial chain.'}]},
-      {id:'sR_gen', time:'Pick', title:'General — Full Flow',          sub:'No specific complaint · ~12 min',
-       detail:[{n:'Full Yoga Flow',rx:'~12 min · continuous',d:'Continuous sequence, 60s each position: Cat-Cow (10 slow cycles) → Down Dog (60s) → Lizard right (60s) → Down Dog (30s) → Lizard left (60s) → Down Dog (30s) → Pigeon right (60s) → Pigeon left (60s) → Supine Spinal Twist right (30s) → Supine Spinal Twist left (30s) → Child\'s Pose (60s). No rushing. Mitchell principle: sustained positions, not flowing through quickly.'}]},
     ],
     micro:[],
     briefing:{
@@ -2884,35 +2902,6 @@ const BLOCKS = {
       sub:['Short on time: pick 1 category only (~4–6 min). Still counts.',
            'High fatigue: General flow at lower intensity — skip any position that feels effortful.'],
       caution:['This is recovery, not training. If a position feels like hard work, you are pushing too deep. Back off.'],
-    }
-  },
-
-  'E': {
-    type:'E', title:'ELBOW REHAB', titleClass:'',
-    pills:[{t:'Daily',c:'green'},{t:'~5 min',c:''},{t:'Lateral epicondylitis',c:''}],
-    note:'Tennis elbow protocol — eccentric wrist extensor loading at the common extensor tendon origin. Daily frequency is critical. Can follow collagen timing on Day A/B, or standalone. FlexBar is the primary tool. <strong>Stop if sharp pain at the lateral epicondyle during any exercise.</strong>',
-    steps:[
-      {id:'sE_twist', time:'Any', title:'Tyler Twist (FlexBar)',           sub:'3 × 15 · slow eccentric',
-       detail:[{n:'Tyler Twist',rx:'3 × 15 · slow eccentric',d:'Hold FlexBar in affected hand (wrist extended). Twist bar with opposite hand into wrist flexion. Release the unaffected hand — affected wrist controls the slow eccentric return to neutral. This is the gold standard for lateral epicondylitis. <strong>Key:</strong> the work is in the slow release, not the twist. 3s eccentric minimum. <strong>Progression:</strong> green bar → blue bar → black bar.'}]},
-      {id:'sE_ext',   time:'Any', title:'Wrist Extension Eccentric',      sub:'3 × 10 · light DB · 3s down',
-       detail:[{n:'Wrist Extension Eccentric',rx:'3 × 10 each · 1–2 kg DB · 3s down',d:'Forearm on table, wrist over edge, palm down. Lift weight with wrist extension, lower over 3s. Use opposite hand to assist the concentric if painful. Direct eccentric load on ECRB and ECRL — the two muscles inserting at the lateral epicondyle. <strong>Watch for:</strong> sharp pain = too heavy or too fast on the lowering.'}]},
-      {id:'sE_iso',   time:'Before aggravating activity', title:'Wrist Extension Isometric',    sub:'3 × 20s · fist on table',
-       detail:[{n:'Wrist Extension Isometric',rx:'3 × 20s',d:'Fist on table, push down into table through back of wrist (wrist extension against immovable surface). Analgesic effect — same principle as isometric wall sit for patellar tendon (Rio protocol). Do before typing, gripping, or upper body training. Pain inhibition lasts ~45 min.',timer:20}]},
-      {id:'sE_sup',   time:'Any', title:'Forearm Supination/Pronation',   sub:'2 × 10 · hammer or weighted bar',
-       detail:[{n:'Forearm Supination/Pronation',rx:'2 × 10 each direction · hammer grip',d:'Hold hammer or weighted bar at one end. Slowly rotate forearm from full pronation to full supination and back. The supinator muscle shares the lateral epicondyle — often a missed contributor to tennis elbow. Slow and controlled. <strong>Progression:</strong> choke up on hammer → grip at end for longer lever.'}]},
-    ],
-    micro:[],
-    briefing:{
-      warn:['Sharp pain at the lateral epicondyle during any exercise = stop and reduce load.',
-            'Do NOT push through increasing pain — tendinopathy responds to progressive load, not aggressive overload.',
-            'If symptoms worsen over 2 weeks of daily protocol, reassess (may need imaging or manual therapy).'],
-      ok:['Mild discomfort (2–3/10) during eccentrics is acceptable and expected.',
-          'Daily frequency is the mechanism — do not skip days.',
-          'Can do before or after Day A/B. Can also do standalone on rest days.',
-          'FlexBar eccentrics have strong evidence base (Tyler 2006) for lateral epicondylitis.'],
-      sub:['No FlexBar: substitute towel twist (wring towel in eccentric wrist extension pattern).',
-           'No dumbbell: use a filled water bottle or can for wrist eccentrics.'],
-      caution:['Modify grip-heavy exercises on Day B while symptomatic: switch Bottom-Up KB Press to standard rack, reduce Dead Hang hold times, use thicker bar/towel grip on rows if available.'],
     }
   },
 
