@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>kneehab v11.61</title>
+<title>kneehab v11.7</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -307,6 +307,7 @@ font-size: 11px; font-weight: 500;
 color: var(--amber); margin-bottom: 1px;
 }
 .cs-desc { font-size: 12px; color: var(--muted2); }
+
 
 /* ─────────────────────────────────────────────────── */
 /*  CARDS — mobile-native list style                   */
@@ -1115,7 +1116,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">kneehab v11.61</div>
+  <div class="ms-title">kneehab v11.7</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Exercises</div>
@@ -1218,7 +1219,7 @@ body { background: #fff; color: #000; }
     <div class="cover-stripe"></div>
 
 <div class="cover-eyebrow">Full Body Training · Phase 1</div>
-<div class="cover-h1">kneehab<br><em>v11.6</em></div>
+<div class="cover-h1">kneehab<br><em>v11.7</em></div>
 
 <div class="cover-chips">
   <span class="cover-chip">PFPS</span>
@@ -1261,6 +1262,19 @@ body { background: #fff; color: #000; }
 
 <div id="overview" class="page">
 <div class="doc">
+
+  <div class="changes" style="margin-bottom:18px;">
+    <div class="changes-title">Changes v11.7 — collagen timing restructure</div>
+    <ul class="changes-list">
+      <li><strong>Collagen decoupled from morning sessions.</strong> Day A and Day B no longer start with collagen at T=0. Morning sessions are pure training — start immediately with Mobility.</li>
+      <li><strong>New Collagen Block tab (🦴).</strong> Standalone afternoon session. Take collagen + vit C + creatine during eating window, load 45–60 min later. Four loading options: Bellemans Bike (cartilage), Isometric Circuit (tendons), Yoga Holds (fascia/capsules), Loaded Walk (general CT). Pick one per day.</li>
+      <li><strong>Diet & Supplements → Daily Habits.</strong> Protein target, cold/heat exposure, and sleep protocol moved to Daily Habits tab. 🥩 button replaced with 🦴.</li>
+      <li><strong>IF-compatible.</strong> Collagen timing works within 16:8 intermittent fasting — afternoon dosing avoids breaking the fast while honoring the 2+ hour post-protein spacing.</li>
+      <li><strong>Activity days unchanged.</strong> Collagen still taken 45 min before heading out on activity days.</li>
+      <li><strong>Morning session times shortened.</strong> Day A: ~55 → ~45 min. Day B: ~40 → ~35 min (collagen wait removed).</li>
+      <li><strong>Rules updated.</strong> Rules 02, 03, 04, 06 rewritten for afternoon collagen model. Morning sequence recommended but no longer collagen-dependent.</li>
+    </ul>
+  </div>
 
   <div class="changes">
     <div class="changes-title">Changes v11.6 — activity & recovery day overhaul</div>
@@ -1507,7 +1521,7 @@ body { background: #fff; color: #000; }
       <div class="lc-main">
         <div class="lc-title amber">BELLEMANS BIKE</div>
         <div class="lc-body">Full morning routine<br>+ Bellemans bike (T+57)<br>+ Knee micro-sessions</div>
-        <div class="lc-rule">Days 1 &amp; 5 in cycle<br>Collagen at T=0</div>
+        <div class="lc-rule">Days 1 &amp; 5 in cycle<br>Collagen PM block</div>
       </div>
     </div>
     <div class="layer-card">
@@ -1515,7 +1529,7 @@ body { background: #fff; color: #000; }
       <div class="lc-main">
         <div class="lc-title">FULL · NO BIKE</div>
         <div class="lc-body">Full morning routine<br>No bike<br>+ Knee micro-sessions</div>
-        <div class="lc-rule">Day 3 in cycle<br>Collagen at T=0</div>
+        <div class="lc-rule">Day 3 in cycle<br>Collagen PM block</div>
       </div>
     </div>
     <div class="layer-card">
@@ -1537,7 +1551,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row card-highlight">
       <div class="cr-left"><div class="cr-time">Tue</div></div>
-      <div class="cr-right"><div class="cr-val">Load Day</div><div class="cr-desc">Full routine + Bellemans bike (optional). Collagen T=0.</div></div>
+      <div class="cr-right"><div class="cr-val">Load Day</div><div class="cr-desc">Full routine + Bellemans bike (optional). Collagen PM block.</div></div>
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Wed</div></div>
@@ -1545,7 +1559,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row card-highlight">
       <div class="cr-left"><div class="cr-time">Thu</div></div>
-      <div class="cr-right"><div class="cr-val">Load Day</div><div class="cr-desc">Full routine + Bellemans bike (optional). Collagen T=0.</div></div>
+      <div class="cr-right"><div class="cr-val">Load Day</div><div class="cr-desc">Full routine + Bellemans bike (optional). Collagen PM block.</div></div>
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Fri</div></div>
@@ -1553,7 +1567,7 @@ body { background: #fff; color: #000; }
     </div>
     <div class="card-row card-green">
       <div class="cr-left"><div class="cr-time">Sat</div></div>
-      <div class="cr-right"><div class="cr-val">Activity — Ski / Hike / Ride</div><div class="cr-desc">Collagen 45 min before. Pre-activity warm-up during window. No structured knee work.</div></div>
+      <div class="cr-right"><div class="cr-val">Activity — Ski / Hike / Ride</div><div class="cr-desc">Collagen 45 min before heading out. Pre-activity warm-up during window. No structured knee work.</div></div>
     </div>
     <div class="card-row">
       <div class="cr-left"><div class="cr-time">Sun</div></div>
@@ -1576,14 +1590,14 @@ body { background: #fff; color: #000; }
       <div class="cr-left"><div class="cr-key">Zone 2<br><span style="font-size:11px;color:var(--muted);">harder effort</span></div></div>
       <div class="cr-right">
         <div class="cr-val">Replaces Bellemans session</div>
-        <div class="cr-desc">Take collagen 45 min before commuting. Commute is the bike stimulus. Skip Bellemans that day — do not stack both.</div>
+        <div class="cr-desc">Zone 2 commute can serve as the Collagen Block loading option. Time collagen 45–60 min before commuting. Skip Bellemans that day — do not stack both.</div>
       </div>
     </div>
     <div class="card-row card-warn">
       <div class="cr-left"><div class="cr-key">Zone 2<br><span style="font-size:11px;color:var(--muted);">on Load Day</span></div></div>
       <div class="cr-right">
         <div class="cr-val">Commute replaces the Bellemans bike</div>
-        <div class="cr-desc">Run full Load Day morning routine but skip the Bellemans session. Collagen timing still applies — commute should leave ~45--60 min after collagen if possible.</div>
+        <div class="cr-desc">Run full morning routine but skip the Bellemans session. Zone 2 commute can serve as the Collagen Block loading option if timed within the window.</div>
       </div>
     </div>
   </div>
@@ -1620,7 +1634,7 @@ body { background: #fff; color: #000; }
     <span class="day-btn-num">⛷️</span>
   </button>
   <button class="day-btn" data-block="N" onclick="selectBlock('N',this)">
-    <span class="day-btn-num">🥩</span>
+    <span class="day-btn-num">🦴</span>
   </button>
   <button class="day-btn" data-block="D" onclick="selectBlock('D',this)">
     <span class="day-btn-num">✨</span>
@@ -1663,37 +1677,35 @@ body { background: #fff; color: #000; }
   <!-- Day A — Lower Body -->
 
   <div id="s-bike" class="sched-pane on">
-    <p class="note" style="margin-bottom:12px;">Day A — Lower Body. Collagen T=0. Alternates with Day B. ~50 min.</p>
+    <p class="note" style="margin-bottom:12px;">Day A — Lower Body. Alternates with Day B. ~45 min. Collagen is a separate afternoon block.</p>
     <div class="card">
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Collagen + vitamin C</div><div class="cr-note">2+ hours after any protein meal</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+5</div></div><div class="cr-right"><div class="cr-val">Mobility <span style="color:var(--muted);font-size:12px;">5 min</span></div><div class="cr-note">90/90 · Cat-Cow flow · Lizard · Kneeling Ankle · Pigeon</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+10</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~6 min</span></div><div class="cr-note">Bird Dog (pick variation) · Hollow Body · Side Plank · Hip Flexor (pick one)</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+16</div></div><div class="cr-right"><div class="cr-val">Glute <span style="color:var(--muted);font-size:12px;">~3 min</span></div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+19</div></div><div class="cr-right"><div class="cr-val">Dead Hang <span style="color:var(--muted);font-size:12px;">60s</span></div><div class="cr-note">Spinal decompression · bar</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+20</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">~18 min</span></div><div class="cr-note">Tib Raise · SL Wall Sit · Step Down · Split Squat (2s pause) · ISO Step-Up · Ham Slide · SL RDL · Soleus Calf Raise</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+38</div></div><div class="cr-right"><div class="cr-val">Bellemans Bike <span style="color:var(--muted2);font-size:12px;">aim to do</span></div><div class="cr-note">10–12 min · hard stop 15 min · sub elliptical if no bike</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Mobility <span style="color:var(--muted);font-size:12px;">5 min</span></div><div class="cr-note">90/90 · Cat-Cow flow · Lizard · Kneeling Ankle · Pigeon</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+5</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~6 min</span></div><div class="cr-note">Bird Dog (pick variation) · Hollow Body · Side Plank · Hip Flexor (pick one)</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+11</div></div><div class="cr-right"><div class="cr-val">Glute <span style="color:var(--muted);font-size:12px;">~3 min</span></div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+14</div></div><div class="cr-right"><div class="cr-val">Dead Hang <span style="color:var(--muted);font-size:12px;">60s</span></div><div class="cr-note">Spinal decompression · bar</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+15</div></div><div class="cr-right"><div class="cr-val">Knee &amp; Lower Body <span style="color:var(--muted2);font-size:12px;">~18 min</span></div><div class="cr-note">Tib Raise · SL Wall Sit · Step Down · Split Squat (2s pause) · ISO Step-Up · Ham Slide · SL RDL · Soleus Calf Raise</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+33</div></div><div class="cr-right"><div class="cr-val">Bellemans Bike <span style="color:var(--muted2);font-size:12px;">aim to do</span></div><div class="cr-note">10–12 min · hard stop 15 min · sub elliptical if no bike</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">PM</div></div><div class="cr-right"><div class="cr-val">Short Ruck (optional)</div><div class="cr-note">20–30 min loaded pack · not same day as Zone 2 bike</div></div></div>
     </div>
-    <p class="note">Sequence order is fixed. Reordering disrupts the collagen timing architecture.</p>
+    <p class="note">Sequence order is recommended but no longer collagen-dependent.</p>
   </div>
 
   <!-- Day B — Upper Body -->
 
   <div id="s-base" class="sched-pane">
-    <p class="note" style="margin-bottom:12px;">Day B — Upper Body. Collagen T=0. Alternates with Day A. ~40 min.</p>
+    <p class="note" style="margin-bottom:12px;">Day B — Upper Body. Alternates with Day A. ~35 min. Collagen is a separate afternoon block.</p>
     <div class="card">
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Collagen + vitamin C</div><div class="cr-note">Required — upper body qualifies</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+5</div></div><div class="cr-right"><div class="cr-val">Mobility <span style="color:var(--muted);font-size:12px;">6 min</span></div><div class="cr-note">90/90 · Cat-Cow flow · Lizard · Kneeling Ankle · Couch Stretch · Pigeon</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+11</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~7 min</span></div><div class="cr-note">Bird Dog (pick variation) · WLYT · Hollow/RKC · Side Plank · Hip Flexor</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+18</div></div><div class="cr-right"><div class="cr-val">Dead Hang <span style="color:var(--muted);font-size:12px;">60s</span></div><div class="cr-note">Spinal decompression · transition to bar</div></div></div>
-      <div class="card-row"><div class="cr-left"><div class="cr-time">T+19</div></div><div class="cr-right"><div class="cr-val">Knee Maintenance <span style="color:var(--muted);font-size:12px;">~6 min</span></div><div class="cr-note">Tib Raise · SL Wall Sit (3×20s) · Copenhagen (reduced volume)</div></div></div>
-      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+25</div></div><div class="cr-right"><div class="cr-val">Upper Body <span style="color:var(--muted2);font-size:12px;">~20 min</span></div><div class="cr-note">Scap Pull-Up · Pull-Up · Ring Row · Push-Up · KB Press · Face Pull · Scap Push-Up</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T=0</div></div><div class="cr-right"><div class="cr-val">Mobility <span style="color:var(--muted);font-size:12px;">6 min</span></div><div class="cr-note">90/90 · Cat-Cow flow · Lizard · Kneeling Ankle · Couch Stretch · Pigeon</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+6</div></div><div class="cr-right"><div class="cr-val">Core <span style="color:var(--muted);font-size:12px;">~7 min</span></div><div class="cr-note">Bird Dog (pick variation) · WLYT · Hollow/RKC · Side Plank · Hip Flexor</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+13</div></div><div class="cr-right"><div class="cr-val">Dead Hang <span style="color:var(--muted);font-size:12px;">60s</span></div><div class="cr-note">Spinal decompression · transition to bar</div></div></div>
+      <div class="card-row"><div class="cr-left"><div class="cr-time">T+14</div></div><div class="cr-right"><div class="cr-val">Knee Maintenance <span style="color:var(--muted);font-size:12px;">~6 min</span></div><div class="cr-note">Tib Raise · SL Wall Sit (3×20s) · Copenhagen (reduced volume)</div></div></div>
+      <div class="card-row card-highlight"><div class="cr-left"><div class="cr-time">T+20</div></div><div class="cr-right"><div class="cr-val">Upper Body <span style="color:var(--muted2);font-size:12px;">~20 min</span></div><div class="cr-note">Scap Pull-Up · Pull-Up · Ring Row · Push-Up · KB Press · Face Pull · Scap Push-Up</div></div></div>
       <div class="card-row"><div class="cr-left"><div class="cr-time">PM</div></div><div class="cr-right"><div class="cr-val">Short Ruck (optional)</div><div class="cr-note">20–30 min loaded pack · not same day as Zone 2 bike</div></div></div>
     </div>
     <p class="note">Upper body is mandatory. Knee maintenance is isometric only — no recovery conflict with Day A. Zone 2 cycling unrestricted.</p>
 
     <div class="sub-head">Upper Body — Day B (~20 min)</div>
-    <p class="note" style="margin-bottom:10px;">Mandatory on Day B. Pull: 7 sets total. Push: 6 sets. Intentionally asymmetric until pull-ups reach 3×5 — corrects current imbalance. Collagen required (upper body qualifies).</p>
+    <p class="note" style="margin-bottom:10px;">Mandatory on Day B. Pull: 7 sets total. Push: 6 sets. Intentionally asymmetric until pull-ups reach 3×5 — corrects current imbalance.</p>
     <div class="changes" style="margin-bottom:14px;">
       <div class="changes-title">Current Baseline</div>
       <ul class="changes-list">
@@ -1881,7 +1893,7 @@ body { background: #fff; color: #000; }
 
   <!-- Load Day pane -->
   <div id="ex-load" class="sched-pane">
-    <p class="note" style="margin-bottom:12px;">Load Day only. Collagen at T=0. Sequence is fixed.</p>
+    <p class="note" style="margin-bottom:12px;">Load Day only. Sequence is recommended.</p>
 
     <div class="sub-head">Glute Load — T+24</div>
     <div class="ex-group open">
@@ -2045,7 +2057,7 @@ body { background: #fff; color: #000; }
 <div id="load" class="page">
 <div class="doc">
   <div class="sh"><span class="sh-title">Load Day Exercises</span><span class="sh-tag">Load Day Only</span></div>
-  <p class="body">Added on Load Days only. Collagen at T=0. Sequence is fixed.</p>
+  <p class="body">Added on Load Days only.</p>
 
   <div class="sub-head">Push &amp; Pull — Recovery only (not Load day)</div>
   <div class="ex-group">
@@ -2073,7 +2085,7 @@ body { background: #fff; color: #000; }
   </div>
 
   <div class="sub-head">Knee &amp; Lower Body — T+20 (~18 min)</div>
-  <p class="note" style="margin-bottom:8px;">Collagen rising into peak window. Day A only. Tib Raise opens the block. Overcoming ISO Step-Up is the current default; swap Curtsy Squat as optional variation.</p>
+  <p class="note" style="margin-bottom:8px;">Day A only. Tib Raise opens the block. Overcoming ISO Step-Up is the current default; swap Curtsy Squat as optional variation.</p>
   <div class="ex-group open">
     <div class="ex-group-head" onclick="togEx(this)">
       <span class="eg-title">Knee &amp; Lower Body</span>
@@ -2096,7 +2108,7 @@ body { background: #fff; color: #000; }
   <div class="card">
     <div class="card-row"><div class="cr-left"><div class="cr-key">Seat</div></div><div class="cr-right"><div class="cr-val">Knee 15--20° flexion at bottom of stroke</div></div></div>
     <div class="card-row card-warn"><div class="cr-left"><div class="cr-key">Stop</div></div><div class="cr-right"><div class="cr-val">HARD STOP AT 15 MIN</div><div class="cr-desc">Cartilage adaptation window closes. 10--12 min target.</div></div></div>
-    <div class="card-row"><div class="cr-left"><div class="cr-key">Timing</div></div><div class="cr-right"><div class="cr-val">T+45 — inside collagen peak window</div></div></div>
+    <div class="card-row"><div class="cr-left"><div class="cr-key">Timing</div></div><div class="cr-right"><div class="cr-val">After knee block — aim to do</div></div></div>
     <div class="card-row"><div class="cr-left"><div class="cr-key">Sub</div></div><div class="cr-right"><div class="cr-val">10 min elliptical if no stationary bike</div></div></div>
   </div>
 
@@ -2184,7 +2196,7 @@ body { background: #fff; color: #000; }
   <div class="card">
     <div class="card-row card-highlight">
       <div class="cr-right">
-        <div class="cr-val">Take 15g hydrolyzed collagen (skin-sourced, Type I) + 200mg vitamin C approximately 45–60 minutes before any qualifying mechanical load session. Minimum 2 hours after your last protein meal.</div>
+        <div class="cr-val">Take 15g hydrolyzed collagen (skin-sourced, Type I) + 200mg vitamin C + 5g creatine during your eating window, then load mechanically 45–60 min later (~10 min). Minimum 2 hours after your last protein meal. On Activity days, take 45 min before heading out. Rest days: before bed.</div>
       </div>
     </div>
   </div>
@@ -2193,32 +2205,24 @@ body { background: #fff; color: #000; }
   <div class="card">
     <div class="card-head"><span class="ch-title">Session · Notes</span></div>
     <div class="card-row card-highlight">
-      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Load Day — full morning sequence</div></div>
-      <div class="cr-right"><div class="cr-desc">Primary load day. Always take. 45–60 min before starting the session.</div></div>
-    </div>
-    <div class="card-row card-highlight">
-      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Day C — with upper body block</div></div>
-      <div class="cr-right"><div class="cr-desc">Upper body block is the qualifying mechanical event. Take 45–60 min before starting it.</div></div>
-    </div>
-    <div class="card-row card-highlight">
-      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Zone 2 commute</div></div>
-      <div class="cr-right"><div class="cr-desc">Qualifies. Take 45–60 min before. Does not stack with same-day morning session or Bellemans Bike. Non-morning: only if ≥2h post last protein and session ends ≥2h before sleep.</div></div>
+      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Day A / Day B — afternoon block</div></div>
+      <div class="cr-right"><div class="cr-desc">Standalone Collagen Block. Pick a loading option: Bellemans Bike, isometric circuit, yoga holds, or loaded walk.</div></div>
     </div>
     <div class="card-row card-highlight">
       <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Activity day — hike, ski, sport</div></div>
-      <div class="cr-right"><div class="cr-desc">Take 45–60 min before heading out.</div></div>
+      <div class="cr-right"><div class="cr-desc">Take 45–60 min before heading out. Activity is the loading stimulus.</div></div>
+    </div>
+    <div class="card-row card-highlight">
+      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Zone 2 ride (if timed in collagen window)</div></div>
+      <div class="cr-right"><div class="cr-desc">Can serve as the Collagen Block loading option if taken 45–60 min after collagen.</div></div>
     </div>
   </div>
 
   <div class="sub-head">Collagen Not Warranted</div>
   <div class="card">
     <div class="card-row card-warn">
-      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Day C — without upper body block</div></div>
-      <div class="cr-right"><div class="cr-desc">Bellemans Bike and mobility alone are sub-threshold for meaningful mechanotransduction.</div></div>
-    </div>
-    <div class="card-row">
-      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">True rest day</div></div>
-      <div class="cr-right"><div class="cr-desc">No qualifying loading event.</div></div>
+      <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">True rest day (daytime)</div></div>
+      <div class="cr-right"><div class="cr-desc">No qualifying loading event during the day. Take before bed to target GH pulse instead.</div></div>
     </div>
     <div class="card-row">
       <div class="cr-left" style="min-width:0;flex:0 0 auto;width:50%;"><div class="cr-key">Zone 1 easy walk or commute</div></div>
@@ -2447,11 +2451,11 @@ body { background: #fff; color: #000; }
   <div class="rules">
     <div class="rule-row" style="border-left:3px solid var(--amber);"><div class="rule-n" style="color:var(--amber);">00</div><div class="rule-c"><div class="rule-t">Alternate Day A and Day B — never two Day A's in a row</div><div class="rule-d">Day A (Lower Body) has eccentric knee loading. Day B (Upper Body) has isometric knee maintenance only. Alternating guarantees 48h+ eccentric recovery. Activity days replace whichever day is next.</div></div></div>
     <div class="rule-row"><div class="rule-n">01</div><div class="rule-c"><div class="rule-t">Mobility is non-negotiable — daily on both days</div><div class="rule-d">Full mobility block runs on both days. Couch Stretch on Day B only (active recovery for rectus femoris after Day A loading).</div></div></div>
-    <div class="rule-row"><div class="rule-n">02</div><div class="rule-c"><div class="rule-t">Collagen on both Day A and Day B</div><div class="rule-d">Both days have qualifying mechanical load (lower body or upper body). 15g + 200mg vit C, 45–60 min before training, 2+ hrs after protein. Zone 1 does not require collagen.</div></div></div>
-    <div class="rule-row"><div class="rule-n">03</div><div class="rule-c"><div class="rule-t">All collagen: 2+ hours after any protein meal</div><div class="rule-d">Leucine blunts connective tissue synthesis response.</div></div></div>
-    <div class="rule-row"><div class="rule-n">04</div><div class="rule-c"><div class="rule-t">Morning sequence is fixed on both days</div><div class="rule-d">Reordering disrupts the collagen timing architecture.</div></div></div>
+    <div class="rule-row"><div class="rule-n">02</div><div class="rule-c"><div class="rule-t">Collagen Block is a separate afternoon session on Day A and Day B</div><div class="rule-d">Take collagen + vit C + creatine during eating window (early afternoon for 16:8 IF). 45–60 min later, pick a loading option (~10 min). Skip on Activity days — collagen timing stays pre-activity. Rest days: collagen before bed.</div></div></div>
+    <div class="rule-row"><div class="rule-n">03</div><div class="rule-c"><div class="rule-t">All collagen: 2+ hours after any protein meal</div><div class="rule-d">Leucine blunts connective tissue synthesis response. Plan collagen dose around your meal schedule — early afternoon works well with 16:8 IF (first meal ~11-12, collagen ~2 PM, load ~3 PM).</div></div></div>
+    <div class="rule-row"><div class="rule-n">04</div><div class="rule-c"><div class="rule-t">Morning sequence is recommended on both days</div><div class="rule-d">Mobility → Core → strength progression warms tissues in the right order. No longer collagen-dependent but the sequence is still optimal.</div></div></div>
     <div class="rule-row"><div class="rule-n">05</div><div class="rule-c"><div class="rule-t">Bellemans Bike: aim to do every Day A</div><div class="rule-d">10–12 min, hard stop 15 min. Specific seat height (15–20° flexion at bottom). A Zone 2 ride does NOT replace it — different seat height and loading angle. Sub 10 min elliptical if no bike.</div></div></div>
-    <div class="rule-row"><div class="rule-n">06</div><div class="rule-c"><div class="rule-t">Zone 2 cycling unrestricted</div><div class="rule-d">Collagen 45 min before any Zone 2 ride. Zone 1 unrestricted on all days, no collagen needed.</div></div></div>
+    <div class="rule-row"><div class="rule-n">06</div><div class="rule-c"><div class="rule-t">Zone 2 cycling unrestricted</div><div class="rule-d">Zone 1 unrestricted on all days. Zone 2 rides can serve as the Collagen Block loading option if timed within the collagen window.</div></div></div>
     <div class="rule-row"><div class="rule-n">07</div><div class="rule-c"><div class="rule-t">Skin-sourced collagen only</div><div class="rule-d">Type I. Bone broth and gelatin are not equivalent.</div></div></div>
     <div class="rule-row"><div class="rule-n">08</div><div class="rule-c"><div class="rule-t">Hamstring slides on every Day A</div><div class="rule-d">A/B alternation guarantees 48h+ eccentric recovery between sessions.</div></div></div>
     <div class="rule-row"><div class="rule-n">10</div><div class="rule-c"><div class="rule-t">Informal daily habits: short foot, SL balance, wall slide, lateral quad roll, shoulder CARs, dead hang</div><div class="rule-d">No recovery demand. Do opportunistically. Tibialis raise and dead hang are in structured knee blocks on Day A/B — listed here for frequency on off days. Backward walk part of evening ruck.</div></div></div>
@@ -2733,31 +2737,27 @@ wsRenderDots();
 const BLOCKS = {
   'A': {
     type:'A', title:'DAY A<br>LOWER BODY', titleClass:'',
-    pills:[{t:'Collagen T=0',c:'amber'},{t:'~55 min',c:''},{t:'Bike aim to do',c:''},{t:'Ruck optional PM',c:''}],
+    pills:[{t:'~45 min',c:''},{t:'Bike aim to do',c:''},{t:'Ruck optional PM',c:''},{t:'Collagen PM',c:'amber'}],
     note:'Lower body training day. Alternates with Day B. <strong>Asymmetry Rule:</strong> On all alternating exercises, start with the weaker side and add one extra set to the weaker side. <strong>Soreness Rule:</strong> Muscle soreness >2/10 → replace dynamic exercises with their isometric modifier. Articular soreness (behind kneecap or inside joint) → rest day.',
     steps:[
-      {id:'sA_col',  time:'T=0',    title:'Collagen + Vitamin C + Creatine', sub:'15g · 200mg vit C · 5g creatine · 2+ hrs after protein',
-       detail:[{n:'Collagen',rx:'15g hydrolyzed, skin-sourced',d:'Take on waking. 2+ hrs after any protein meal — leucine blunts connective tissue synthesis. Skin-sourced (Type I) only.'},
-               {n:'Vitamin C',rx:'200mg',d:'Take with collagen.'},
-               {n:'Creatine Monohydrate',rx:'5g',d:'Mix with collagen drink. No absorption interaction — timing doesn\'t matter, just daily consistency. Increases phosphocreatine stores for better force output and faster recovery between sets.'}]},
-      {id:'sA_mob',  time:'T+5',    title:'Mobility',                   sub:'~5 min', navPage:'base',
+      {id:'sA_mob',  time:'T=0',    title:'Mobility',                   sub:'~5 min', navPage:'base',
        detail:[{n:'90/90 Hip Rotations',rx:'10 × each side',d:'Restores hip rotation range. Poor hip ER is a primary upstream driver of patellofemoral load.'},
                {n:'Cat-Cow → Down Dog → Up Dog',rx:'5 Cat-Cows · 3–5 cycles · ~90s',d:'Spinal segmental warm-up flowing into posterior chain loading. Down Dog lengthens hamstrings and calves. Up Dog opens hip flexors and thoracic extension.'},
                {n:'Lizard Pose',rx:'30s each side',d:'Deep hip flexor and adductor stretch under bodyweight. Replaces World\'s Greatest Stretch — deeper sustained hold targets the same tissues with greater connective tissue adaptation (Baar model). Keep back knee down, sink hips forward and slightly lateral.',timer:30},
                {n:'Kneeling Ankle Drive',rx:'10 each side · 2s hold',d:'Half-kneeling lunge position. Drive knee forward over toes, load through hands and upper body weight. 2s hold at end range. Same joint action as wall version (tibial glide over talus) with better loading control. Flows naturally from Cat-Cow/Lizard floor position.'},
                {n:'Pigeon Pose',rx:'30s each side',d:'Deep hip external rotator stretch — targets piriformis and obturator group under bodyweight. Replaces Supine Hip ER with Block in v11.0 — same target, more functional loaded position. <strong>Regression:</strong> Supine Hip ER with Block (on back, knees bent, block between knees, let one knee drop outward).',timer:30}]},
-      {id:'sA_core', time:'T+10',   title:'Core',                       sub:'~6 min', navPage:'base',
+      {id:'sA_core', time:'T+5',    title:'Core',                       sub:'~6 min', navPage:'base',
        detail:[{n:'Bird Dog — pick variation',rx:'90s total',d:'Anti-rotation posterior chain activation. <strong>Variations (pick one per session):</strong> (1) Slow Return — 3–5s controlled return to start, doubles eccentric anti-rotation demand; (2) Elbow-to-Knee — extend, round to touch elbow to knee, extend again — dynamic spinal control through range; (3) Bird Dog Row — hold leg extended, light DB in opposite hand, row from floor to hip — anti-rotation under dynamic upper body load.',timer:90},
                {n:'Hollow Body Hold',rx:'60s total',d:'Anterior core tension under spinal neutral. Trains the bracing position that supports loaded single-leg work.',timer:60},
                {n:'Side Plank',rx:'90s total · both sides',d:'Lateral core and hip stability. Prevents trunk lateral shift during single-leg exercises.',timer:90},
                {n:'Hip Flexor — pick one',rx:'2 × 8–10 or 2 × 15–20s',d:'Dedicated hip flexor strength. Weak hip flexors drive anterior pelvic tilt under fatigue, increasing PFPS load. <strong>Options (pick one per session):</strong> (1) Hanging Knee Raise — 2 × 8–10 controlled, bar required, highest demand; (2) Tuck L-Sit — 2 × 15–20s, parallettes or floor, isometric; (3) Foot-Supported L-Sit — 2 × 20–30s, floor, heels on ground, lowest demand. <strong>Progression:</strong> Foot-Supported → Tuck → Hanging Knee Raise → Straight Leg Raise.',timer:20}]},
-      {id:'sA_glut', time:'T+16',   title:'Glute',                      sub:'~3 min', navPage:'load',
+      {id:'sA_glut', time:'T+11',   title:'Glute',                      sub:'~3 min', navPage:'load',
        detail:[{n:'Copenhagen Plank — Short Lever',rx:'3 × 20–30s each side',d:'Side plank with bottom knee (not ankle) on bench or step. Targets adductor magnus and longus under high demand. Apply asymmetry rule — weaker side first. <strong>Progression:</strong> advance to long lever (ankle on bench) when 3 × 30s is manageable.',timer:25},
                {n:'Hip Abduction',rx:'3 × 12 weak / 2 × 12 strong · 2s hold top',d:'Glute medius isolation in the frontal plane. Controls contralateral pelvic drop — the primary upstream driver of dynamic knee valgus. Side-lying, pelvis stacked. Band at ankle optional. Apply asymmetry rule.'},
                {n:'Single-Leg Glute Bridge',rx:'2 × 10 each · 2s hold top',d:'Posterior chain integration under single-leg load.'}]},
-      {id:'sA_hang', time:'T+19',   title:'Dead Hang',                   sub:'60s · bar',
+      {id:'sA_hang', time:'T+14',   title:'Dead Hang',                   sub:'60s · bar',
        detail:[{n:'Dead Hang',rx:'60s total',d:'Spinal decompression, grip strength, and scapular stability. Placed after floor work — all prior blocks are floor-based. Skip if shoulder discomfort.',timer:60}]},
-      {id:'sA_knee', time:'T+20',   title:'Knee & Lower Body',          sub:'~18 min · collagen rising into peak', navPage:'load',
+      {id:'sA_knee', time:'T+15',   title:'Knee & Lower Body',          sub:'~18 min', navPage:'load',
        detail:[{n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Anterior tibialis strengthening — ATG anterior chain driver. Addresses dorsiflexion deficit and reduces knee valgus tendency under load. Warm-up for the knee block.'},
                {n:'Single-Leg Wall Sit',rx:'5 × 20–30s · 45s rest',d:'Unilateral isometric cartilage load — Bellemans stimulus. Start 45° flexion, build toward 60°. Dull ache OK — sharp or >4/10 = reduce angle. <strong>Levers:</strong> 20s→30s / 45°→60° / add light load.',timer:25},
                {n:'Slant Board Step Down',rx:'2×10 primary · 2×8 secondary',d:'Eccentric quad load under single-leg knee control. 2s pause at bottom mimics sustained ski descent. <strong>Weaker side pre-activation:</strong> 5s single-leg stance before each set on weaker side. <strong>Isometric modifier (soreness >2/10):</strong> hold at working angle 30–45s each side.'},
@@ -2767,8 +2767,8 @@ const BLOCKS = {
 
                {n:'Single-Leg Romanian Deadlift',rx:'2 × 8 each side · BW or light DB',d:'Hip hinge under single-leg load. Primary: glute max, hamstrings (lengthened), erector spinae. <strong>Watch for:</strong> lumbar rounding, hip hiking, trunk rotation. <strong>Regression:</strong> Kickstand RDL. <strong>Progression:</strong> increase load → barbell RDL.'},
                {n:'Single-Leg Calf Raise — Soleus',rx:'2 × 12–15 each · 3s down',d:'Knee bent ~30°. Soleus isolation — primary plantarflexor under all knee-flexed positions: wall sit, step down, split squat, ski descent. <strong>Levers:</strong> flat→step edge / 3s→5s eccentric / bodyweight→weighted.'}]},
-      {id:'sA_bike', time:'T+38',   title:'Bellemans Bike',             sub:'Aim to do — 10–12 min · sub elliptical if no bike', navPage:'load', timer:720,
-       detail:[{n:'Bellemans Protocol',rx:'10–12 min · hard stop 15 min',d:'Stationary bike. Seat: knee at 15–20° flexion at bottom of stroke. Steady moderate resistance. Cyclic cartilage loading at collagen peak. Window closes at 15 min — stop. A Zone 2 ride does NOT replace this — different seat height and loading angle.',timer:720},
+      {id:'sA_bike', time:'T+33',   title:'Bellemans Bike',             sub:'Aim to do — 10–12 min · sub elliptical if no bike', navPage:'load', timer:720,
+       detail:[{n:'Bellemans Protocol',rx:'10–12 min · hard stop 15 min',d:'Stationary bike. Seat: knee at 15–20° flexion at bottom of stroke. Steady moderate resistance. Cyclic cartilage loading. Window closes at 15 min — stop. A Zone 2 ride does NOT replace this — different seat height and loading angle.',timer:720},
                {n:'Substitute',rx:'10 min elliptical if no stationary bike',d:'Not equivalent but preserves cyclic loading.'}]},
       {id:'sA_ruck', time:'Evening', title:'Short Ruck (optional)',      sub:'20–30 min · loaded pack · not same day as Zone 2 bike',
        detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Evening option on Day A or B. Sustained loaded walking — cyclic cartilage stimulus under functional gait. No collagen needed (nocturnal GH pulse covers connective tissue adaptation from evening load). Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → increase duration first → increase weight → add hills.'},
@@ -2776,11 +2776,10 @@ const BLOCKS = {
     ],
     micro:[],
     briefing:{
-      warn:['Do not skip collagen timing — if you miss T=0, delay the whole sequence.',
-            'Pain >4/10 on wall sit or step down: reduce angle or step height immediately.',
+      warn:['Pain >4/10 on wall sit or step down: reduce angle or step height immediately.',
             'Short ruck: not on the same day as a Zone 2 bike ride.'],
       ok:['Dull ache during wall sit is acceptable and expected.',
-          'Zone 2 cycling unrestricted — collagen 45 min before any Zone 2 ride.',
+          'Collagen is a separate afternoon block — not part of this session.',
           'Zone 1 commute is fine — no protocol interaction.',
           'Overcoming ISO Step-Up is the current default — progress to full Lateral Step-Up when range allows. Curtsy available for adductor emphasis.'],
       sub:['No stationary bike: substitute 10 min easy elliptical at T+41.',
@@ -2791,33 +2790,29 @@ const BLOCKS = {
   },
   'B': {
     type:'B', title:'DAY B<br>UPPER BODY', titleClass:'',
-    pills:[{t:'Collagen T=0',c:'amber'},{t:'~40 min',c:''},{t:'Knee maintenance',c:''},{t:'Ruck optional PM',c:''}],
+    pills:[{t:'~35 min',c:''},{t:'Knee maintenance',c:''},{t:'Ruck optional PM',c:''},{t:'Collagen PM',c:'amber'}],
     note:'Upper body training day. Alternates with Day A. Includes knee maintenance (isometrics only — no eccentric demand, no recovery conflict). <strong>Asymmetry Rule</strong> applies to all alternating exercises.',
     steps:[
-      {id:'sB_col',  time:'T=0',    title:'Collagen + Vitamin C + Creatine', sub:'15g · 200mg vit C · 5g creatine · 2+ hrs after protein',
-       detail:[{n:'Collagen',rx:'15g hydrolyzed, skin-sourced',d:'Required — upper body mechanical loading qualifies under Baar protocol. Take on waking, 2+ hrs after any protein meal.'},
-               {n:'Vitamin C',rx:'200mg',d:'Take with collagen.'},
-               {n:'Creatine Monohydrate',rx:'5g',d:'Mix with collagen drink. No absorption interaction — timing doesn\'t matter, just daily consistency.'}]},
-      {id:'sB_mob',  time:'T+5',    title:'Mobility',                   sub:'~6 min', navPage:'base',
+      {id:'sB_mob',  time:'T=0',    title:'Mobility',                   sub:'~6 min', navPage:'base',
        detail:[{n:'90/90 Hip Rotations',rx:'10 × each side',d:'Restores hip rotation range — daily.'},
                {n:'Cat-Cow → Down Dog → Up Dog',rx:'5 Cat-Cows · 3–5 cycles · ~90s',d:'Spinal segmental warm-up flowing into posterior chain loading.'},
                {n:'Lizard Pose',rx:'30s each side',d:'Deep hip flexor and adductor stretch under bodyweight.',timer:30},
                {n:'Kneeling Ankle Drive',rx:'10 each side · 2s hold',d:'Half-kneeling lunge, drive knee forward over toes. Ankle dorsiflexion maintenance — daily.'},
-               {n:'Couch Stretch',rx:'1 × 30s each side',d:'Targets rectus femoris — the hip flexor that crosses the knee joint. Day B placement: active recovery stretch for rec fem after Day A loading. Stretching during the remodeling window promotes better collagen fiber alignment.',timer:30},
+               {n:'Couch Stretch',rx:'1 × 30s each side',d:'Targets rectus femoris — the hip flexor that crosses the knee joint. Day B placement: active recovery stretch for rec fem after Day A loading. Stretching during the remodeling window promotes better tissue alignment.',timer:30},
                {n:'Pigeon Pose',rx:'30s each side',d:'Deep hip external rotator stretch. <strong>Regression:</strong> Supine Hip ER with Block.',timer:30}]},
-      {id:'sB_core', time:'T+11',   title:'Core',                       sub:'~7 min', navPage:'base',
+      {id:'sB_core', time:'T+6',    title:'Core',                       sub:'~7 min', navPage:'base',
        detail:[{n:'Bird Dog — pick variation',rx:'90s total',d:'Anti-rotation posterior chain activation. <strong>Variations:</strong> (1) Slow Return; (2) Elbow-to-Knee; (3) Bird Dog Row.',timer:90},
                {n:'WLYT',rx:'60s total',d:'Lower and mid trapezius activation. Corrects scapular depression deficit — pairs with upper body pulling.',timer:60},
                {n:'Hollow Body Hold OR RKC Plank',rx:'60s total',d:'Alternate each session. Hollow Body: anterior core under spinal neutral. RKC Plank: full-body co-contraction, significantly harder than standard plank. Both 60s total.',timer:60},
                {n:'Side Plank',rx:'90s total · both sides',d:'Lateral core stability.',timer:90},
                {n:'Hip Flexor — pick one',rx:'2 × 8–10 or 2 × 15–20s',d:'Same options as Day A: (1) Hanging Knee Raise — 2 × 8–10; (2) Tuck L-Sit — 2 × 15–20s; (3) Foot-Supported L-Sit — 2 × 20–30s.',timer:20}]},
-      {id:'sB_hang', time:'T+18',   title:'Dead Hang',                   sub:'60s · bar',
+      {id:'sB_hang', time:'T+13',   title:'Dead Hang',                   sub:'60s · bar',
        detail:[{n:'Dead Hang',rx:'60s total',d:'Spinal decompression, grip strength, scapular stability. Placed after floor work — transition to bar before upper body. Skip if shoulder discomfort.',timer:60}]},
-      {id:'sB_knee', time:'T+19',   title:'Knee Maintenance',           sub:'~6 min · isometrics only', navPage:'load',
+      {id:'sB_knee', time:'T+14',   title:'Knee Maintenance',           sub:'~6 min · isometrics only', navPage:'load',
        detail:[{n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Anterior tibialis strengthening. Moved to knee blocks — frequency maintained via Daily Habits on off days.'},
                {n:'Single-Leg Wall Sit',rx:'3 × 20s · 45s rest',d:'Reduced volume maintenance dose. Isometric cartilage stimulus — no eccentric demand, no recovery conflict with Day A.',timer:20},
                {n:'Copenhagen Plank — Short Lever',rx:'2 × 20s each side',d:'Adductor maintenance dose. Reduced from Day A volume. Apply asymmetry rule.',timer:20}]},
-      {id:'sB_ub',   time:'T+25',   title:'Upper Body',                 sub:'~20 min', navPage:'base',
+      {id:'sB_ub',   time:'T+20',   title:'Upper Body',                 sub:'~20 min', navPage:'base',
        detail:[{n:'Scap Pull-Up',rx:'2 × 8 warmup',d:'Depress and retract from dead hang. No elbow bend. 1s hold at top.'},
                {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder. 90s rest between sets.'},
                {n:'Ring Row',rx:'3 × 10',d:'Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull — mid trap, rhomboids, rear delt.'},
@@ -2831,9 +2826,8 @@ const BLOCKS = {
     ],
     micro:[],
     briefing:{
-      warn:['Do not skip collagen — upper body mechanical loading qualifies under Baar protocol.',
-            'Short ruck: not on the same day as a Zone 2 bike ride.'],
-      ok:['Zone 2 cycling unrestricted — collagen 45 min before any Zone 2 ride.',
+      warn:['Short ruck: not on the same day as a Zone 2 bike ride.'],
+      ok:['Collagen is a separate afternoon block — not part of this session.',
           'Zone 1 completely free — no protocol interaction.',
           'Knee maintenance block is isometric only — no recovery conflict with Day A.',
           'Easy walking, kayaking, swimming all fine.'],
@@ -2943,42 +2937,50 @@ const BLOCKS = {
   },
 
   'N': {
-    type:'N', title:'DIET & SUPPLEMENTS', titleClass:'', stepLabel:'Reference',
-    pills:[{t:'Daily',c:'green'},{t:'Reference',c:''},{t:'No tracking',c:''}],
-    note:'Protein targets, supplement stack, timing rules, and recovery factors. Not a training day — reference card for daily nutrition.',
+    type:'N', title:'COLLAGEN<br>BLOCK', titleClass:'', stepLabel:'Afternoon — Pick a Loading Option',
+    pills:[{t:'Afternoon',c:'amber'},{t:'~10 min loading',c:''},{t:'Pick one option',c:''}],
+    note:'Standalone collagen synthesis block. Take collagen + vit C + creatine during your eating window (early afternoon ideal for 16:8 IF). 45–60 min later, pick one loading option. The goal is to maximise the number of connective tissues seeing mechanical stimulus at peak circulating hydroxyproline. Loading only needs ~10 min — after that, the tissue enters a 6-hour refractory period (Baar). On Activity days, collagen timing stays pre-activity — skip this block.',
     steps:[
-      {id:'sN_prot', time:'Daily', title:'Protein',                         sub:'140–180g per day',
-       detail:[{n:'Protein Target',rx:'140–180g / day',d:'Distribute across meals — ~35-45g per feeding to maximise muscle protein synthesis (Attia). Four meals is ideal. Quality sources: meat, fish, eggs, dairy.'},
-               {n:'Collagen Spacing',rx:'2+ hr gap',d:'Keep 2+ hours between any protein meal and collagen dose. Dietary amino acids (especially leucine) compete with collagen peptides for absorption and blunt the connective tissue synthesis signal.'}]},
-      {id:'sN_stack', time:'Daily', title:'Daily Stack',                    sub:'Collagen 15g + Vit C 200mg + Creatine 5g',
-       detail:[{n:'Collagen + Vitamin C',rx:'15g collagen + 200mg vit C',d:'Connective tissue synthesis (Baar / Shaw 2017). Hydrolyzed collagen provides glycine, proline, hydroxyproline — rate-limiting substrates for tendon and ligament remodelling. Vitamin C is a required cofactor for collagen crosslinking.'},
-               {n:'Creatine Monohydrate',rx:'5g / day',d:'Most evidence-backed supplement in sports science. Increases phosphocreatine stores — more force output, faster recovery between sets. Timing does not matter — just daily consistency. Can be taken with collagen, no absorption interaction.'},
-               {n:'Day A/B Timing',rx:'45–60 min before training',d:'Take the full stack 45–60 min before mechanical loading. Peak circulating hydroxyproline aligns with the training stimulus — maximises collagen synthesis at the loaded tissue.'},
-               {n:'Activity Day Timing',rx:'45–60 min before heading out',d:'Same window as Day A/B. The warm-up fills the gap.'},
-               {n:'Rest Day Timing',rx:'Before bed',d:'No training stimulus — target the nocturnal GH pulse instead. GH drives IGF-1 locally in connective tissue, upregulating collagen synthesis overnight. This window is training-independent — it happens every night.'}]},
-      {id:'sN_time', time:'Daily', title:'Timing Rules',                    sub:'Meal spacing and sleep',
-       detail:[{n:'Stop Eating Before Bed',rx:'2–3 hrs before sleep',d:'Late eating blunts the nocturnal GH pulse (Baar\'s second connective tissue synthesis window) and degrades sleep quality. Metabolic health benefit (Attia).'},
-               {n:'Rest Day Exception',rx:'Collagen before bed is OK',d:'Small collagen dose is not a meal — does not trigger the insulin response that suppresses GH. Take it as the last thing before bed on rest days.'}]},
-      {id:'sN_cold', time:'Day A/B', title:'Cold Exposure',                 sub:'Avoid within 4–6 hrs of training',
-       detail:[{n:'Post-Training Window',rx:'No cold for 4–6 hrs after Day A/B',d:'Cold suppresses mTOR signalling — the pathway that drives muscle protein synthesis and hypertrophy. Even short dips (2–5 min) are not proven safe post-training. The blunting is dose-dependent (colder + longer = worse) but no threshold has been established (Roberts 2015, Petersen & Fyfe 2021).'},
-               {n:'Safe Windows',rx:'Off days · mornings · after Zone 2',d:'OK on Recovery days, Activity days, or morning before training. Endurance / Zone 2 adaptations are unaffected — cold only blunts the strength/hypertrophy (mTOR) pathway.'}]},
-      {id:'sN_heat', time:'Any', title:'Heat (Sauna / Hot Bath)',           sub:'No timing restriction',
-       detail:[{n:'Heat Exposure',rx:'Post-training or evening',d:'No blunting effect on muscle adaptation. Increases blood flow and may aid recovery. No timing restriction relative to training. Use as desired.'}]},
+      {id:'sN_col', time:'T=0',       title:'Collagen + Vitamin C + Creatine',  sub:'During eating window · 2+ hrs after protein',
+       detail:[{n:'Collagen',rx:'15g hydrolyzed, skin-sourced (Type I)',d:'Take during eating window — early afternoon works well with 16:8 IF. Must be 2+ hours after any protein meal (leucine blunts connective tissue synthesis). Skin-sourced only — bone broth is not equivalent.'},
+               {n:'Vitamin C',rx:'200mg',d:'Required cofactor for collagen crosslinking. Take with collagen.'},
+               {n:'Creatine Monohydrate',rx:'5g',d:'Mix with collagen drink. No absorption interaction — timing doesn\'t matter, just daily consistency.'}]},
+      {id:'sN_bike', time:'T+45',     title:'Option 1: Bellemans Bike',         sub:'10 min · stationary bike · cartilage',
+       detail:[{n:'Bellemans Protocol',rx:'10–12 min · hard stop 15 min',d:'Stationary bike. Seat height: knee at 15–20° flexion at bottom of stroke. Steady moderate resistance. Cyclic compressive loading drives fluid exchange in articular cartilage — nutrients in, waste out. Cartilage is avascular, so this is the only way to feed it. Window closes at 15 min — stop. A Zone 2 ride does NOT replace this (different seat height and loading angle).',timer:720},
+               {n:'Substitute',rx:'10 min elliptical if no stationary bike',d:'Not equivalent but preserves cyclic loading pattern.'}]},
+      {id:'sN_iso',  time:'T+45',     title:'Option 2: Isometric Circuit',      sub:'~8 min · no equipment · tendons',
+       detail:[{n:'Tibialis Raise',rx:'1 × 20 · 1s hold top',d:'Anterior tibialis tendon loading. Dorsiflexion under load.'},
+               {n:'Single-Leg Wall Sit',rx:'3 × 20s each · 45s rest',d:'Patellar and quad tendon isometric loading. 45° flexion. Isometric = sustained tendon tension without joint shear.',timer:20},
+               {n:'Soleus Calf Raise',rx:'2 × 12 each · 3s down',d:'Achilles tendon and soleus under eccentric load. Knee bent ~30° isolates soleus over gastrocnemius.'},
+               {n:'Copenhagen Plank',rx:'2 × 20s each side',d:'Adductor tendon loading. Short lever (knee on bench).',timer:20}]},
+      {id:'sN_yoga', time:'T+45',     title:'Option 3: Yoga Holds',             sub:'~10 min · mat · fascia & joint capsules',
+       detail:[{n:'Lizard Pose',rx:'60s each side',d:'Hip flexor and adductor fascia under sustained bodyweight load. Drop to forearms if flexibility allows. Mitchell principle: 60s holds drive viscoelastic creep — connective tissue adaptation, not just stretching.',timer:60},
+               {n:'Pigeon Pose',rx:'60s each side',d:'Deep external rotator and hip capsule loading. Piriformis, obturator group. Sustained load at collagen peak = tissue-loading opportunity (Mitchell + Baar synergy).',timer:60},
+               {n:'Down Dog',rx:'60s',d:'Full posterior chain connective tissue — hamstring fascia, Achilles, plantar fascia, thoracolumbar fascia. Press heels toward floor.',timer:60},
+               {n:'Child\'s Pose with Reach',rx:'60s',d:'Shoulder capsule, lat fascia, thoracolumbar fascia. Arms extended overhead, walk fingers forward.',timer:60}]},
+      {id:'sN_walk', time:'T+45',     title:'Option 4: Loaded Walk / Ruck',     sub:'15–20 min · general CT',
+       detail:[{n:'Loaded Walk',rx:'15–20 min · easy pace',d:'Cyclic loading across all lower limb connective tissues under functional gait — Achilles, plantar fascia, knee joint capsule, hip capsule. Backpack optional (10–15 lbs). This is Zone 1 — conversational pace. Include 2–3 rounds of backward walking (30–60s each) for anterior tibial chain.'},
+               {n:'Barefoot Walk Option',rx:'10–15 min · soft surface',d:'If available — grass, sand, carpet. Intrinsic foot connective tissue stimulus. Short foot musculature and plantar fascia under natural loading.'}]},
     ],
     micro:[],
     briefing:{
-      ok:['This is a reference card — no exercises, no tracking.',
-          'Collagen + Creatine can be mixed in the same drink.',
-          'Protein target assumes active adult in rehab/training context (Attia: 1.6–2.2 g/kg).'],
-      caution:['Collagen must be separated from protein meals by 2+ hours.',
-               'Cold water after Day A/B blunts strength gains — even brief exposure.'],
+      warn:['Skip this block on Activity days — collagen timing stays pre-activity on those days.',
+            'Must be 2+ hours after any protein meal — leucine blunts connective tissue synthesis.'],
+      ok:['Pick whichever loading option fits your day — all are effective.',
+          'Bellemans Bike is the best option for cartilage specifically (cyclic compression).',
+          'Isometric circuit is the best no-equipment option for tendons.',
+          'Yoga holds complement Baar with Mitchell — sustained loading at collagen peak.',
+          'Rotate options across the week for maximum tissue coverage.',
+          'Rest day (no training): take collagen before bed instead — target the nocturnal GH pulse.'],
+      caution:['Loading only needs ~10 min. More does not increase synthesis — tissue enters a 6-hour refractory period.',
+               'Collagen without mechanical load is metabolised as general protein — not directed to connective tissue.'],
     }
   },
 
   'D': {
     type:'D', title:'DAILY HABITS', titleClass:'', stepLabel:'Informal — Do Opportunistically', microLabel:'Casual Pool',
     pills:[{t:'Every day',c:'green'},{t:'No tracking',c:''},{t:'No recovery demand',c:''}],
-    note:'Informal habits — do opportunistically throughout the day. Tibialis Raise and Dead Hang are in structured knee blocks on Day A/B — listed here for frequency on off days. Backward Walk is part of the evening ruck.',
+    note:'Informal habits and daily reference. Habits: do opportunistically throughout the day. Tibialis Raise and Dead Hang are in structured knee blocks on Day A/B — listed here for frequency on off days. Backward Walk is part of the evening ruck. Diet, cold/heat exposure, and sleep protocol are reference items — not exercises.',
     steps:[
       {id:'sD_sf',   time:'Any', title:'Short Foot Isometric',          sub:'30s each side · barefoot',
        detail:[{n:'Short Foot Isometric',rx:'30s each side · barefoot',d:'Intrinsic foot muscle activation for arch stability during ground contact. Motor pattern drill — desk friendly, barefoot.'}]},
@@ -2992,6 +2994,18 @@ const BLOCKS = {
        detail:[{n:'Shoulder CARs',rx:'1 × 5 each arm',d:'Full controlled articular rotation — maintains shoulder capsule health. Slow, deliberate, full ROM. Equipment-free — do anywhere.'}]},
       {id:'sD_hang', time:'Any', title:'Dead Hang',                    sub:'60–90s total · bar required',
        detail:[{n:'Dead Hang',rx:'60–90s total',d:'Spinal decompression, grip strength, scapular stability. No recovery demand. Bar required. Skip or reduce if any shoulder discomfort.',timer:60}]},
+      {id:'sD_prot', time:'Daily', title:'Protein Target',               sub:'140–180g per day',
+       detail:[{n:'Protein Target',rx:'140–180g / day',d:'Distribute across meals — ~35-45g per feeding to maximise muscle protein synthesis (Attia). Four meals is ideal. Quality sources: meat, fish, eggs, dairy.'},
+               {n:'Collagen Spacing',rx:'2+ hr gap',d:'Keep 2+ hours between any protein meal and collagen dose. Dietary amino acids (especially leucine) compete with collagen peptides for absorption and blunt the connective tissue synthesis signal.'}]},
+      {id:'sD_cold', time:'Day A/B', title:'Cold Exposure',              sub:'Avoid within 4–6 hrs of training',
+       detail:[{n:'Post-Training Window',rx:'No cold for 4–6 hrs after Day A/B',d:'Cold suppresses mTOR signalling — the pathway that drives muscle protein synthesis and hypertrophy. Even short dips (2–5 min) are not proven safe post-training. The blunting is dose-dependent (colder + longer = worse) but no threshold has been established (Roberts 2015, Petersen & Fyfe 2021).'},
+               {n:'Safe Windows',rx:'Off days · mornings · after Zone 2',d:'OK on Recovery days, Activity days, or morning before training. Endurance / Zone 2 adaptations are unaffected — cold only blunts the strength/hypertrophy (mTOR) pathway.'}]},
+      {id:'sD_heat', time:'Any', title:'Heat (Sauna / Hot Bath)',        sub:'No timing restriction',
+       detail:[{n:'Heat Exposure',rx:'Post-training or evening',d:'No blunting effect on muscle adaptation. Increases blood flow and may aid recovery. No timing restriction relative to training. Use as desired.'}]},
+      {id:'sD_sleep', time:'Nightly', title:'Sleep & GH Protocol',       sub:'7–8h · no food 90 min before',
+       detail:[{n:'Sleep Duration',rx:'7–8h minimum',d:'GH pulse amplitude is sleep-duration dependent. Chronic short sleep suppresses the nocturnal collagen synthesis peak regardless of supplementation.'},
+               {n:'No Food Before Bed',rx:'90 min before sleep',d:'Insulin response from any macronutrient suppresses GH pulse. Any protein meal within 90 min of sleep blunts the overnight synthesis window.'},
+               {n:'Rest Day Collagen',rx:'Before bed on rest days',d:'No training stimulus — target the nocturnal GH pulse. Small collagen dose is not a meal — does not trigger the insulin response that suppresses GH.'}]},
     ],
     micro:[
       {n:'Short Arc Quad Hold',        rx:'2–3 × 5–10s each · seated',          tag:'Casual', d:'VMO terminal extension at zero setup.'},
@@ -3006,8 +3020,12 @@ const BLOCKS = {
           'Frequency is the mechanism — accumulated low-load stimulus, not single-session volume.',
           'Tibialis Raise is in the knee block on Day A/B — do here on off days for frequency.',
           'Dead Hang is in the structured day on Day A/B — do here on off days or anytime you have a bar.',
-          'Shoulder CARs moved here from Mobility block — do anytime, no equipment needed.'],
+          'Shoulder CARs moved here from Mobility block — do anytime, no equipment needed.',
+          'Protein target assumes active adult in rehab/training context (Attia: 1.6–2.2 g/kg).',
+          'Collagen + Creatine can be mixed in the same drink.'],
       sub:['Backward walk moved to evening ruck block on Day A/B.'],
+      caution:['Collagen must be separated from protein meals by 2+ hours.',
+               'Cold water after Day A/B blunts strength gains — even brief exposure.'],
     }
   },
 
