@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>kneehab v11.7</title>
+<title>kneehab v11.72</title>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet">
 <style>
 /* ── Variables ───────────────────────────────────── */
@@ -1116,7 +1116,7 @@ body { background: #fff; color: #000; }
 
 <div class="menu-sheet" id="menuSheet">
   <div class="ms-handle" onclick="closeMenu()"></div>
-  <div class="ms-title">kneehab v11.7</div>
+  <div class="ms-title">kneehab v11.72</div>
   <div class="ms-sub">BAAR · BELLEMANS · ATG · PHASE 1</div>
 
   <div class="ms-group">Exercises</div>
@@ -2814,12 +2814,12 @@ const BLOCKS = {
                {n:'Copenhagen Plank — Short Lever',rx:'2 × 20s each side',d:'Adductor maintenance dose. Reduced from Day A volume. Apply asymmetry rule.',timer:20}]},
       {id:'sB_ub',   time:'T+20',   title:'Upper Body',                 sub:'~20 min', navPage:'base',
        detail:[{n:'Scap Pull-Up',rx:'2 × 8 warmup',d:'Depress and retract from dead hang. No elbow bend. 1s hold at top.'},
-               {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder. 90s rest between sets.'},
-               {n:'Ring Row',rx:'3 × 10',d:'Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull — mid trap, rhomboids, rear delt.'},
-               {n:'Push-Up with Tempo',rx:'3 × 8',d:'3s eccentric, 1s pause at bottom. Hollow body — glutes and abs engaged throughout.'},
-               {n:'Bottom-Up KB Press',rx:'3 × 8 each · 15 lbs',d:'Vertical push, stability-dominant. Progress bell weight, not reps.'},
+               {n:'Eccentric Pull-Up',rx:'4 × 3–5 negatives',d:'Jump to top, 5s down, full hang at bottom. Primary pull-up builder. 90s rest between sets. <strong>Elbow swap:</strong> Band-Assisted Pull-Up (concentric + 3s controlled lower) — band takes load at bottom where elbow is most vulnerable.'},
+               {n:'Ring Row',rx:'3 × 10',d:'Feet flat, ~45° body angle. 2s pause at chest. Horizontal pull — mid trap, rhomboids, rear delt. <strong>Elbow swap:</strong> Neutral grip (rings allow this), stop 2–3 inches before chest — reduces peak grip demand at end range.'},
+               {n:'Push-Up with Tempo',rx:'3 × 8',d:'3s eccentric, 1s pause at bottom. Hollow body — glutes and abs engaged throughout. <strong>Elbow swap:</strong> Push-up on fists or parallettes — wrist stays neutral instead of extended, eliminates extensor chain load through the wrist.'},
+               {n:'Bottom-Up KB Press',rx:'3 × 8 each · 15 lbs',d:'Vertical push, stability-dominant. Progress bell weight, not reps. <strong>Elbow swap:</strong> Standard KB Press in rack position — removes extreme grip stabilization demand. Same shoulder pattern, no wrist extensor overload.'},
                {n:'Face Pull / Pull-Apart',rx:'2 × 15',d:'Posterior shoulder balance. Band at face height, elbows flared, external rotation at end range.'},
-               {n:'Scap Push-Up',rx:'2 × 12',d:'Serratus anterior activation — scapular protraction and winging control.'}]},
+               {n:'Scap Push-Up',rx:'2 × 12',d:'Serratus anterior activation — scapular protraction and winging control. <strong>Elbow note:</strong> do on fists if wrist extension is symptomatic.'}]},
       {id:'sB_ruck', time:'Evening', title:'Short Ruck (optional)',      sub:'20–30 min · loaded pack · not same day as Zone 2 bike',
        detail:[{n:'Short Ruck',rx:'20–30 min · loaded pack',d:'Same protocol as Day A. Evening option. Not on the same day as a Zone 2 bike ride. <strong>Progression (2×2 rule):</strong> 20 min 10–15 lbs flat → duration → weight → hills.'},
               {n:'Backward Walk',rx:'2–3 rounds 30–60s',d:'Include as part of the ruck route or standalone after. Anterior tibial chain in a decompressed knee position.'}]},
@@ -2832,8 +2832,10 @@ const BLOCKS = {
           'Knee maintenance block is isometric only — no recovery conflict with Day A.',
           'Easy walking, kayaking, swimming all fine.'],
       sub:['Short on time: mobility + upper body is the minimum.',
-           'Skip knee maintenance if truly pressed for time — these are maintenance, not primary.'],
-      caution:['If before an activity day (ski/hike): consider skipping upper body to preserve energy. Keep mobility and primer.'],
+           'Skip knee maintenance if truly pressed for time — these are maintenance, not primary.',
+           'Elbow flare-up: use elbow swaps on all grip-heavy exercises (marked in each exercise detail). Do not skip upper body — swaps preserve the training stimulus while reducing wrist extensor load.'],
+      caution:['If before an activity day (ski/hike): consider skipping upper body to preserve energy. Keep mobility and primer.',
+               'Lateral epicondyle pain during any exercise: switch to that exercise\'s elbow swap immediately. Do not push through — tendinopathy responds to load management, not rest.'],
     },
   },
 
@@ -2992,6 +2994,8 @@ const BLOCKS = {
        detail:[{n:'Lateral Quad Roll',rx:'60s each side · foam roller',d:'VL tightness reduction — tight VL creates lateral patellar pull opposing VMO tracking. Foam roller on outer quad. Roll slowly; 2s pause on tender spots.',timer:60}]},
       {id:'sD_car',  time:'Any', title:'Shoulder CARs',                sub:'1 × 5 each arm',
        detail:[{n:'Shoulder CARs',rx:'1 × 5 each arm',d:'Full controlled articular rotation — maintains shoulder capsule health. Slow, deliberate, full ROM. Equipment-free — do anywhere.'}]},
+      {id:'sD_wrist', time:'Any', title:'Eccentric Wrist Extension',    sub:'1 × 15 each arm · 3s lowering · light DB',
+       detail:[{n:'Eccentric Wrist Extension',rx:'1 × 15 each arm · 3s lowering',d:'Lateral epicondylitis prehab — gold-standard treatment for wrist extensor tendinopathy (Stasinopoulos & Johnson 2005). Forearm pronated on knee or table edge, light DB (2–5 lbs). Start at full wrist extension, lower slowly (3s) to full flexion. Reset at top. This is the Tyler Twist equivalent with a dumbbell. <strong>Progression:</strong> increase weight by 1 lb when 15 reps feel easy. Do daily — frequency is the mechanism.'}]},
       {id:'sD_hang', time:'Any', title:'Dead Hang',                    sub:'60–90s total · bar required',
        detail:[{n:'Dead Hang',rx:'60–90s total',d:'Spinal decompression, grip strength, scapular stability. No recovery demand. Bar required. Skip or reduce if any shoulder discomfort.',timer:60}]},
       {id:'sD_prot', time:'Daily', title:'Protein Target',               sub:'140–180g per day',
@@ -3021,6 +3025,7 @@ const BLOCKS = {
           'Tibialis Raise is in the knee block on Day A/B — do here on off days for frequency.',
           'Dead Hang is in the structured day on Day A/B — do here on off days or anytime you have a bar.',
           'Shoulder CARs moved here from Mobility block — do anytime, no equipment needed.',
+          'Eccentric Wrist Extension: daily prehab for lateral epicondylitis. Light DB, desk-friendly.',
           'Protein target assumes active adult in rehab/training context (Attia: 1.6–2.2 g/kg).',
           'Collagen + Creatine can be mixed in the same drink.'],
       sub:['Backward walk moved to evening ruck block on Day A/B.'],
